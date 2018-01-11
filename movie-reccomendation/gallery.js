@@ -1,7 +1,7 @@
 var galleryDiv = document.getElementById("gallery");
 
 $.getJSON("moviedictionary.json", function(data) {
-    console.log(data);
+    console.log(data["2"]);
     // data is a JavaScript object now. Handle it as such
 
 });
