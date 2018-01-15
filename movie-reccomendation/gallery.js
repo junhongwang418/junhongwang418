@@ -24,7 +24,7 @@ $.getJSON("moviedictionary.json", function(data) {
 		var li = document.createElement("li");
 		var textNode = document.createElement(data["1"]);
 		li.appendChild(textNode);
-		ul.appendChild(div);
+		ul.appendChild(li);
 
 	}
 
