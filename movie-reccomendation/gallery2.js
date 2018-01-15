@@ -8,11 +8,11 @@ $.getJSON("moviedictionary.json", function(data) {
 
 });
 
-$("#loadmore").click(function(){
-  var galleryDiv = document.getElementById("gallery");
-	var ul = document.createElement("ul");
+var movies = moviedictionary.values();
 
-	// var movies = moviedictionary.values();
+$("#loadmore").click(function(){
+  var ul = document.getElementById("gallerylist");
+	
 
 	for (var i = start; i < end; i++) {
 
@@ -29,7 +29,7 @@ $("#loadmore").click(function(){
 		// div.appendChild(a);
 		
 		var li = document.createElement("li");
-		var textNode = document.createTextNode("a");
+		var textNode = document.createTextNode(movies[i]);
 		li.appendChild(textNode);
 		ul.appendChild(li);
 
@@ -38,7 +38,7 @@ $("#loadmore").click(function(){
 	start += 10;
 	end += 10;
 
-	galleryDiv.appendChild(ul);
+
  });
 
 
