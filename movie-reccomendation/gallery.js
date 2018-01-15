@@ -1,5 +1,3 @@
-
-
 $.getJSON("moviedictionary.json", function(data) {
 
 	var galleryDiv = document.getElementById("gallery");
@@ -23,6 +21,7 @@ $.getJSON("moviedictionary.json", function(data) {
 		
 		var li = document.createElement("li");
 		var textNode = document.createTextNode(data[key]);
+		console.log(data[key]);
 		li.appendChild(textNode);
 		ul.appendChild(li);
 
