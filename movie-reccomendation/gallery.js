@@ -1,7 +1,7 @@
 $.getJSON("moviedictionary.json", function(data) {
 
 	var galleryDiv = document.getElementById("gallery");
-  var ul = document.createElement("ul");
+	var ul = document.createElement("ul");
 
 	for (var key in data) {
 
