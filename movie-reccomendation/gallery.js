@@ -3,8 +3,12 @@ $.getJSON("moviedictionary.json", function(data) {
 	var start = 0;
 	var end = 10;
 
-	movies = data.values();
+	movies = [];
 
+	for (var key in data) {
+		movies.push(data[key]);
+	}
+	
 	$("#loadmore").click(function(){
 	  var ul = document.getElementById("gallerylist");
 		
