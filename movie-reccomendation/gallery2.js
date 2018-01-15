@@ -30,7 +30,6 @@ $("#loadmore").click(function(){
 		
 		var li = document.createElement("li");
 		var textNode = document.createTextNode("a");
-		console.log(data[key]);
 		li.appendChild(textNode);
 		ul.appendChild(li);
 
