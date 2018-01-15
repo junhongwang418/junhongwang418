@@ -12,7 +12,7 @@ $("#loadmore").click(function(){
   var galleryDiv = document.getElementById("gallery");
 	var ul = document.createElement("ul");
 
-	var movies = moviedictionary.values();
+	// var movies = moviedictionary.values();
 
 	for (var i = start; i < end; i++) {
 
@@ -29,7 +29,7 @@ $("#loadmore").click(function(){
 		// div.appendChild(a);
 		
 		var li = document.createElement("li");
-		var textNode = document.createTextNode(movies[i]);
+		var textNode = document.createTextNode("a");
 		console.log(data[key]);
 		li.appendChild(textNode);
 		ul.appendChild(li);
