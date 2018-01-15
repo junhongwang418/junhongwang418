@@ -5,6 +5,8 @@ $.getJSON("moviedictionary.json", function(data) {
     // data is a JavaScript object now. Handle it as such
 });
 
+var ul = document.createElement("ul");
+
 for (var i = 0; i < 10; i++) {
 
 
@@ -20,8 +22,12 @@ for (var i = 0; i < 10; i++) {
 
 	// a.appendChild(img);
 	// div.appendChild(a);
-	var p = document.createElement("p");
-	p.
-	galleryDiv.appendChild(div);
+	
+	var li = document.createElement("li");
+	var textNode = document.createElement(data["1"]);
+	li.appendChild(textNode);
+	ul.appendChild(div);
 
 }
+
+galleryDiv.appendChild(ul);
