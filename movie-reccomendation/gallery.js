@@ -5,7 +5,7 @@ $.getJSON("moviedictionary.json", function(data) {
 	var galleryDiv = document.getElementById("gallery");
   var ul = document.createElement("ul");
 
-	for (var i = 0; i < 10; i++) {
+	for (var key in data) {
 
 
 
@@ -22,7 +22,7 @@ $.getJSON("moviedictionary.json", function(data) {
 		// div.appendChild(a);
 		
 		var li = document.createElement("li");
-		var textNode = document.createElement(data["2"]);
+		var textNode = document.createTextNode(data[key]);
 		li.appendChild(textNode);
 		ul.appendChild(li);
 
