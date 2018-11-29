@@ -1,3 +1,7 @@
+img.profile {
+    border-radius: 50%;
+}
+
 p.italic {
   font-style: italic;
 }
