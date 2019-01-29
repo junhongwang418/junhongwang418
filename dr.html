@@ -21,9 +21,20 @@
       </div>
       <div>
         <h2>Digit Recognizer</h2>
+        <p><a href="https://github.com/ioneone/ML/tree/master/Projects/DigitRecognizer/src">Github</a></p>
         <canvas id="canvas" width=140 height=140></canvas>
-        <p>True Label: <span id="true_lbl"></span></p>
-        <p>Decision Tree Prediction (accuracy 87.21%): <span id="dt_pred"></span></p>
+        <p>True Label: <span id="true_label"></span></p>
+        <p>Decision Tree Prediction (accuracy 87.21%): <span id="decision_tree_pred"></span></p>
+        <p>K Nearest Neighbors Prediction: Takes too long to predict</p>
+        <p>Perceptron (accuracy 89.23%): <span id="perceptron_pred"></span></p>
+      </div>
+      <div>
+        <h3>Dev Log</h3>
+        <ul>
+          <li><a href="https://medium.com/@ionejunhong/my-machine-learning-diary-day-100-a469bf770da4">MLD Day 100</a>: Decision Tree</li>
+          <li><a href="https://medium.com/@ionejunhong/my-machine-learning-diary-day-101-56f91f4bc57a">MLD Day 101</a>: Display Project on browser</li>
+          <li><a href="https://medium.com/@ionejunhong/my-machine-learning-diary-day-102-a38b3fa6ed17">MLD Day 102</a>: KNN, Perceptron</li>
+        </ul>
       </div>
     </div>
 
@@ -37,9 +48,10 @@
       var imgData = context.createImageData(imageSize*scale, imageSize*scale);
 
       var x_test = JSON.parse(x_test);
-      var y_pred = JSON.parse(y_pred);
       var y_test = JSON.parse(y_test);
-      console.log(x_test.length);
+
+      var y_decision_tree_pred = JSON.parse(y_decision_tree_pred);
+      var y_perceptron_pred = JSON.parse(y_perceptron_pred);
 
       function showRandomMNIST() {
         var index = Math.floor(Math.random() * x_test.length)
@@ -66,12 +78,20 @@
         
         context.putImageData(imgData, 0, 0);
 
-        document.getElementById("true_lbl").innerHTML = y_test[index];
-        document.getElementById("dt_pred").innerHTML = y_pred[index];
-        if (y_pred[index] == y_test[index]) {
-          document.getElementById("dt_pred").innerHTML += ' &#x2713;'
+        document.getElementById("true_label").innerHTML = y_test[index];
+
+        document.getElementById("decision_tree_pred").innerHTML = y_decision_tree_pred[index];
+        if (y_decision_tree_pred[index] == y_test[index]) {
+          document.getElementById("decision_tree_pred").innerHTML += ' &#x2713;'
         } else {
-          document.getElementById("dt_pred").innerHTML += ' &#x2717;'
+          document.getElementById("decision_tree_pred").innerHTML += ' &#x2717;'
+        }
+
+        document.getElementById("perceptron_pred").innerHTML = y_perceptron_pred[index];
+        if (y_perceptron_pred[index] == y_test[index]) {
+          document.getElementById("perceptron_pred").innerHTML += ' &#x2713;'
+        } else {
+          document.getElementById("perceptron_pred").innerHTML += ' &#x2717;'
         }
         
       }
