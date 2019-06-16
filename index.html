@@ -14,8 +14,11 @@
     <link rel="stylesheet" href="styles.css">
     <title>Junhong Wang</title>
   </head>
-  <body>
+  <body id="body">
     <div>
+      <div>
+          <button type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛</button>
+      </div>
       <div>
         <h1>Junhong Wang</h1>
         <!-- <img class="profile" src="profile.jpg"> -->
@@ -131,5 +134,17 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+    
+    function toggleDarkLight() {
+      var body = document.getElementById("body");
+      var currentClass = body.className;
+      body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+      localStorage.setItem('mode', body.className == "dark-mode" ? "dark" : "light");
+    }
+
+    if (localStorage.getItem('mode') == "dark") toggleDarkLight();
+
+  </script>
 
 </html>
