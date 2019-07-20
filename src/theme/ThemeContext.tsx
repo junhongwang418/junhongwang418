@@ -7,6 +7,11 @@ interface State {
   hasThemeMounted: boolean
 }
 
+const initialState: State = {
+  dark: true,
+  hasThemeMounted: false
+};
+
 const defaultContextData = {
   dark: true,
   toggle: () => {}
@@ -15,15 +20,10 @@ const defaultContextData = {
 const ThemeContext = React.createContext(defaultContextData);
 const useTheme = () => React.useContext(ThemeContext);
 
-const initialState: State = {
-  dark: true,
-  hasThemeMounted: false
-};
-
 const useEffectDarkMode = () => {
   const [themeState, setThemeState] = React.useState(initialState);
   React.useEffect(() => {
-    const isDark = localStorage.getItem(ThemeMode.DARK) === "true";
+    const isDark = localStorage.getItem(ThemeMode.DARK) === JSON.stringify(true);
     setThemeState({ ...themeState, dark: isDark, hasThemeMounted: true });
   }, [themeState]);
 
@@ -39,11 +39,11 @@ const MyThemeProvider = ({ children }: any) => {
 
   const toggle = () => {
     const dark = !themeState.dark;
-    localStorage.setItem("dark", JSON.stringify(dark));
+    localStorage.setItem(ThemeMode.DARK, JSON.stringify(dark));
     setThemeState({ ...themeState, dark });
   };
 
-  const computedTheme  = themeState.dark ? theme(ThemeMode.DARK) : theme(ThemeMode.LIGHT);
+  const computedTheme = themeState.dark ? theme(ThemeMode.DARK) : theme(ThemeMode.LIGHT);
 
   const body = document.getElementsByTagName("body")[0];
   body.style.backgroundColor = computedTheme.backgroundColor;
