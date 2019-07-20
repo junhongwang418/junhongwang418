@@ -5,7 +5,7 @@ import riskLogoImage from "../images/risk-logo.png";
 import teamLogoImage from "../images/team-logo.png";
 import {useTheme} from "../theme/ThemeContext";
 import IconButton from "@material-ui/core/IconButton";
-import SunnyIcon from "@material-ui/core/SvgIcon";
+import SunnyIcon from "@material-ui/icons/Brightness1";
 import {createStyles, makeStyles, Theme, WithStyles} from "@material-ui/core";
 import withStyles, {ClassNameMap} from "@material-ui/core/styles/withStyles";
 import MoonIcon from "@material-ui/icons/Brightness2";
