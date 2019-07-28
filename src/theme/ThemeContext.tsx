@@ -17,7 +17,7 @@ const defaultContextData = {
   toggle: () => {}
 };
 
-const ThemeContext = React.createContext(defaultContextData);
+export const ThemeContext = React.createContext(defaultContextData);
 const useTheme = () => React.useContext(ThemeContext);
 
 const useEffectDarkMode = () => {
@@ -48,9 +48,6 @@ const MyThemeProvider = ({ children }: any) => {
   const body = document.getElementsByTagName("body")[0];
   body.style.backgroundColor = computedTheme.backgroundColor;
   body.style.color = computedTheme.color;
-
-  const a = document.getElementsByTagName("a");
-  for (let i = 0; i < a.length; i++) a[i].style.color = computedTheme.primaryColor;
 
   return (
     <ThemeProvider theme={computedTheme}>
