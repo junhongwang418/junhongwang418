@@ -14,7 +14,7 @@ const styles = (theme: Theme) => createStyles({
   },
 
   moonIcon: {
-    color: theme.color
+    color: theme.color.default
   },
 
   iconButton: {

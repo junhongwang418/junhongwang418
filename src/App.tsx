@@ -1,7 +1,7 @@
 import React from "react";
 
 import Container from "@material-ui/core/Container";
-import NavigationBar from "./NavigationBar";
+import NavigationBar from "./navigation/NavigationBar";
 import RouteOptions from "./RouteOptions";
 
 import {Theme, WithStyles, createStyles} from "@material-ui/core";

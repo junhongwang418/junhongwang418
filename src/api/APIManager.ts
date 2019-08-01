@@ -13,6 +13,7 @@ export interface WorkJSON {
   employer: string;
   date: WorkDateJSON;
   color: string;
+  description: string;
 }
 
 export interface WorkDateJSON {

@@ -7,7 +7,7 @@
       "date": {
         "start": "2019-04"
       },
-      "color": "rgb(56, 133, 190)"
+      "description": "Web Development of HCLA in React"
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@
         "start": "2018-07",
         "end": "2018-09"
       },
-      "color": "rgb(237, 225, 56)"
+      "description": "Involve in app development for one of the largest electronics retailers in Japan"
     },
     {
       "id": 1,
@@ -27,7 +27,7 @@
         "start": "2016-06",
         "end": "2016-08"
       },
-      "color": "rgb(53, 43, 118)"
+      "description": "Creat user profile pages where users can review their favorite products"
     }
   ]
 }

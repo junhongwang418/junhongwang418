@@ -13,9 +13,9 @@ const styles = (theme: Theme) => createStyles({
     lineHeight: "5rem"
   },
   link: {
-    color: theme.backgroundColor,
+    color: theme.backgroundColor.default,
     textDecoration: "none",
-    textShadow: `-1px -1px 0 ${theme.color}, 1px -1px 0 ${theme.color}, -1px 1px 0 ${theme.color}, 1px 1px 0 ${theme.color}`,
+    textShadow: `-1px -1px 0 ${theme.color.default}, 1px -1px 0 ${theme.color.default}, -1px 1px 0 ${theme.color.default}, 1px 1px 0 ${theme.color.default}`,
     transition: "color 0.5s ease",
     "&:hover": {
       color: theme.primaryColor,

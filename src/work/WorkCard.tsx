@@ -4,72 +4,58 @@ import {Theme, WithStyles} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import {WorkJSON} from "../api/APIManager";
 import Typography from "@material-ui/core/Typography";
+import WorkIcon from "@material-ui/icons/WorkOutline";
+import Tooltip from "@material-ui/core/Tooltip";
+import OpenIcon from "@material-ui/icons/OpenInNew";
+import Link from "@material-ui/core/Link";
+import Button from "@material-ui/core/Button";
+
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    paddingTop: "68%",
-    backgroundColor: "lightgray",
-    position: "relative",
-    cursor: "pointer",
-    marginBottom: "1rem",
-    transition: "all 0.2s ease-in"
-  },
-
-  overlay: {
-    background: `rgba(${theme.colorR}, ${theme.colorG}, ${theme.colorB}, 0)`,
-    "&:hover": {
-      background: `rgba(${theme.colorR}, ${theme.colorG}, ${theme.colorB}, 0.72)`,
-      "& > *": {
-        opacity: 1
-      },
-    },
-    "& > *": {
-      opacity: 0
-    },
-    position: "absolute",
-
     width: "100%",
-    height: "100%",
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    transition: "all 0.2s ease-in-out"
+    paddingTop: "32%",
+    position: "relative"
   },
 
-  details: {
+  content: {
     position: "absolute",
-    width: "80%",
-    textAlign: "center",
-    top: "50%",
-    left: 0,
-    right: 0,
-    transform: "translateY(-50%)",
-    color: theme.backgroundColor,
-    marginLeft: "10%",
-    transition: "all 0.2s ease-in-out"
-  }
+    width: "90%",
+    height: "95%",
+    top: "5%",
+    left: "10%",
+  },
 
+  description: {
+    opacity: 0.68
+  }
 });
 
 interface Props extends WithStyles<typeof styles> {
   work: WorkJSON;
+  value: number;
+  index: number;
 }
 
 class WorkCard extends React.Component<Props> {
   render() {
-    const { classes, work } = this.props;
+    const { classes, work, value, index } = this.props;
 
     return (
-      <div className={classes.root} style={{ background: work.color }}>
-        <div className={classes.overlay}>
-          <div className={classes.details}>
-            <Typography variant="body1" align="left">{`${work.date.start} - ${work.date.end || "current"}`}</Typography>
-            <Typography variant="h3" align="left">{work.role.toUpperCase()}</Typography>
-            <Typography variant="body1" align="left">{work.employer}</Typography>
-          </div>
+      <div className={classes.root} hidden={value !== index}>
+        <div className={classes.content}>
+          <Typography variant="body1">
+            {work.role}
+            <Link href="" underline="none"> @ {work.employer}</Link>
+          </Typography>
+          <Typography variant="overline">{work.date.start} - {work.date.end || "Present"}</Typography>
+          <Typography className={classes.description} variant="body2">{work.description}</Typography>
+          {/*<div style={{ display: "flex", justifyContent: "flex-end", marginTop: "1rem" }}>*/}
+          {/*  <Button variant="outlined" color="primary">More</Button>*/}
+          {/*</div>*/}
         </div>
       </div>
+
     );
   }
 }

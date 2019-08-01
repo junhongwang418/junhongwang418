@@ -4,10 +4,10 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import AppBar from "@material-ui/core/AppBar";
 import {createStyles, makeStyles, Theme} from "@material-ui/core";
-import RouteOptions from "./RouteOptions";
-import { version } from "../package.json";
+import RouteOptions from "../RouteOptions";
+import { version } from "../../package.json";
 import {Link, RouteComponentProps, withRouter} from "react-router-dom";
-import ThemeToggle from "./theme/ThemeToggle";
+import ThemeToggle from "../theme/ThemeToggle";
 var classNames = require("classnames");
 
 const styles = (theme: Theme) => createStyles({
@@ -21,7 +21,7 @@ const styles = (theme: Theme) => createStyles({
   },
 
   button: {
-    color: theme.color,
+    color: theme.color.default,
     "&:hover": {
       backgroundColor: "transparent",
       opacity: 0.58
@@ -29,7 +29,7 @@ const styles = (theme: Theme) => createStyles({
   },
 
   version: {
-    color: theme.color,
+    color: theme.color.default,
     marginRight: "1em"
   },
 
@@ -72,15 +72,6 @@ const NavigationBar = (props: NavigationBarProps) => {
         <ThemeToggle />
         <div style={{ flexGrow: 1 }} />
         <Typography className={classes.version} variant="caption">v{version}</Typography>
-        <Link className={classes.link} to={RouteOptions.PROJECT}>
-          <Button
-            className={classes.button}
-            disableRipple
-            href=""
-          >
-            <Typography className={classNames({ [classes.selected]: currentRoute === RouteOptions.PROJECT })} variant="button">Project</Typography>
-          </Button>
-        </Link>
         <Link className={classes.link} to={RouteOptions.WORK}>
           <Button
             className={classes.button}
@@ -88,6 +79,15 @@ const NavigationBar = (props: NavigationBarProps) => {
             href=""
           >
             <Typography className={classNames({ [classes.selected]: currentRoute === RouteOptions.WORK })} variant="button">Work</Typography>
+          </Button>
+        </Link>
+        <Link className={classes.link} to={RouteOptions.PROJECT}>
+          <Button
+            className={classes.button}
+            disableRipple
+            href=""
+          >
+            <Typography className={classNames({ [classes.selected]: currentRoute === RouteOptions.PROJECT })} variant="button">Project</Typography>
           </Button>
         </Link>
         <Link className={classes.link} to={RouteOptions.CONTACT}>

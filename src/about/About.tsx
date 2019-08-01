@@ -22,7 +22,7 @@ const styles = (theme: Theme) => createStyles({
   titleContent: {
     borderBottom: "1px",
     borderBottomStyle: "solid",
-    borderBottomColor: theme.color,
+    borderBottomColor: theme.color.default,
     paddingBottom: "0.4rem"
   },
   subTitle: {
