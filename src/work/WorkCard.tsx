@@ -28,7 +28,14 @@ const styles = (theme: Theme) => createStyles({
 
   description: {
     opacity: 0.68
+  },
+
+  button: {
+    color: theme.color.default,
+    borderColor: theme.color.variant,
+    marginTop: "3rem"
   }
+
 });
 
 interface Props extends WithStyles<typeof styles> {
@@ -50,9 +57,7 @@ class WorkCard extends React.Component<Props> {
           </Typography>
           <Typography variant="overline">{work.date.start} - {work.date.end || "Present"}</Typography>
           <Typography className={classes.description} variant="body2">{work.description}</Typography>
-          {/*<div style={{ display: "flex", justifyContent: "flex-end", marginTop: "1rem" }}>*/}
-          {/*  <Button variant="outlined" color="primary">More</Button>*/}
-          {/*</div>*/}
+          <Button className={classes.button} variant="outlined" size="small">See More</Button>
         </div>
       </div>
 

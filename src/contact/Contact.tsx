@@ -2,7 +2,6 @@ import React from "react";
 import {createStyles, Theme, WithStyles} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
-var classNames = require("classnames");
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -35,11 +34,12 @@ class Contact extends React.Component<ContactProps> {
         <Typography className={classes.font} variant="h2">
           check out my <a className={classes.link} href="" target="_blank">resume</a>,
           <br />
-          <a className={classes.link} href="" target="_blank">CV</a>, and <a className={classes.link} href="https://github.com/ioneone" target="_blank">Github</a>
+          <a className={classes.link} href="" target="_blank">CV</a>,
+          and <a className={classes.link} href="https://github.com/ioneone" target="_blank">Github</a>
           <br /><br />
-          hit me up on <a className={classes.link} href="https://www.linkedin.com/in/junhong-wang/" target="_blank">LinkedIn</a>
+          hit me up on <a className={classes.link} href="https://www.linkedin.com/in/junhong-wang/" target="_blank">LinkedIn</a>,
           <br />
-          or <a className={classes.link} href="mailto:ionejunhong@gmail.com">email</a>
+          <a className={classes.link} href="https://www.instagram.com/toshihiro_wan/" target="_blank">Instagram</a> or <a className={classes.link} href="mailto:ionejunhong@gmail.com">email</a>
         </Typography>
       </div>
     );
