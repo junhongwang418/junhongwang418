@@ -46,8 +46,8 @@ const MyThemeProvider = ({ children }: any) => {
   const computedTheme = themeState.dark ? theme(ThemeMode.DARK) : theme(ThemeMode.LIGHT);
 
   const body = document.getElementsByTagName("body")[0];
-  body.style.backgroundColor = computedTheme.backgroundColor.default;
-  body.style.color = computedTheme.color.default;
+  body.style.backgroundColor = computedTheme.palette.background.default;
+  body.style.color = computedTheme.palette.text.primary;
 
   return (
     <ThemeProvider theme={computedTheme}>

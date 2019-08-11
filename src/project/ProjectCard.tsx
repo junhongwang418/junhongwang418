@@ -15,7 +15,7 @@ const styles = (theme: Theme) => createStyles({
     position: "relative",
     borderWidth: 1,
     borderStyle: "solid",
-    borderColor: theme.color.default,
+    borderColor: theme.palette.text.primary,
     "&:hover": {
       transform: "translateY(-1%)"
     },
@@ -37,7 +37,7 @@ const styles = (theme: Theme) => createStyles({
   },
 
   folder: {
-    color: theme.primaryColor,
+    color: theme.palette.primary.main,
     width: 48,
     height: 48
   },
@@ -45,7 +45,7 @@ const styles = (theme: Theme) => createStyles({
   open: {
     cursor: "pointer",
     "&:hover": {
-      color: theme.primaryColor,
+      color: theme.palette.primary.main,
       transition: "color 0.2s ease"
     },
     marginLeft: "1rem"
@@ -57,18 +57,17 @@ const styles = (theme: Theme) => createStyles({
     cursor: "pointer",
     "&:hover": {
       "& path": {
-        fill: theme.primaryColor,
+        fill: theme.palette.primary.main,
         transition: "fill 0.2s ease"
       },
     },
     "& path": {
-      fill: theme.color.default
+      fill: theme.palette.text.primary
     }
   },
 
   description: {
-    color: theme.color.default,
-    opacity: 0.6
+    color: theme.palette.text.secondary
   }
 });
 

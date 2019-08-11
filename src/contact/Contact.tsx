@@ -12,12 +12,12 @@ const styles = (theme: Theme) => createStyles({
     lineHeight: "5rem"
   },
   link: {
-    color: theme.backgroundColor.default,
+    color: theme.palette.background.default,
     textDecoration: "none",
-    textShadow: `-1px -1px 0 ${theme.color.default}, 1px -1px 0 ${theme.color.default}, -1px 1px 0 ${theme.color.default}, 1px 1px 0 ${theme.color.default}`,
+    textShadow: `-1px -1px 0 ${theme.palette.text.primary}, 1px -1px 0 ${theme.palette.text.primary}, -1px 1px 0 ${theme.palette.text.primary}, 1px 1px 0 ${theme.palette.text.primary}`,
     transition: "color 0.5s ease",
     "&:hover": {
-      color: theme.primaryColor,
+      color: theme.palette.primary.main,
       textShadow: "none",
       transition: "none",
     }

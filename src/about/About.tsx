@@ -19,12 +19,7 @@ const styles = (theme: Theme) => createStyles({
   title: {
     marginBottom: "2rem",
   },
-  titleContent: {
-    borderBottom: "1px",
-    borderBottomStyle: "solid",
-    borderBottomColor: theme.color.default,
-    paddingBottom: "0.4rem"
-  },
+
   subTitle: {
     marginBottom: "1rem",
     lineHeight: "3.4rem"
@@ -34,7 +29,7 @@ const styles = (theme: Theme) => createStyles({
     lineHeight: "2rem"
   },
   divider: {
-    background: theme.secondaryColor,
+    background: theme.palette.primary.main,
     height: "0.4rem",
     width: "4rem"
   },

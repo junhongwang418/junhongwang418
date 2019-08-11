@@ -31,8 +31,8 @@ const styles = (theme: Theme) => createStyles({
   },
 
   button: {
-    color: theme.color.default,
-    borderColor: theme.color.variant,
+    color: theme.palette.text.primary,
+    borderColor: theme.palette.text.primary,
     marginTop: "3rem"
   }
 

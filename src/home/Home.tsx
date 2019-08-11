@@ -16,7 +16,7 @@ const styles = (theme: Theme) => createStyles({
   },
 
   link: {
-    color: theme.primaryColor,
+    color: theme.palette.primary.main,
     textDecoration: "none",
     "&:hover": {
       opacity: 0.58
@@ -40,6 +40,7 @@ class Home extends React.Component<HomeProps> {
     const { classes } = this.props;
     return (
       <div className={classes.content}>
+        <p>Website under development. You can visit <a href="./legacy/index.html">legacy page</a> for now.</p>
         <Typography className={classes.font} variant="h5">
           <Link className={classes.link} to={RouteOptions.DEFAULT}>
             Junhong Wang

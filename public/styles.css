@@ -9,11 +9,3 @@ body {
   margin: 0;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
-
-.legacy {
-  position: absolute;
-  top: 0.5rem;
-  left: 50%;
-  z-index: 1200;
-  transform: translateX(-50%);
-}

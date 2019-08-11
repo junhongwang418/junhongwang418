@@ -20,7 +20,7 @@ const styles = (theme: Theme) => createStyles({
   },
 
   tab: {
-    borderRight: `1px solid ${theme.palette.divider}`
+    borderRight: `1px solid ${theme.palette.text.primary}`
   }
 
 });
