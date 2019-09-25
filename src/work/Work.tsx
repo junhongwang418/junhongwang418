@@ -9,18 +9,44 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import withTheme from "@material-ui/core/styles/withTheme";
+import {fade} from "@material-ui/core/styles";
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    position: "relative",
-    top: "50%",
-    transform: `translateY(-50%)`,
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    alignContent: "center"
+  },
+
+  content: {
+    width: "100%"
+  },
+
+  line: {
+
+    height: 1,
     flexGrow: 1,
-    display: "flex"
+    marginRight: "28%",
+    marginLeft: "1rem",
+    backgroundColor: fade(theme.palette.text.primary, 0.28)
+  },
+
+  title: {
+    display: "flex",
+    alignItems: "center",
+    marginBottom: "2rem"
   },
 
   tab: {
     borderRight: `1px solid ${theme.palette.text.primary}`
+  },
+
+  body: {
+    // position: "relative",
+    // top: "50%",
+    // transform: `translateY(-50%)`,
+    display: "flex",
   }
 
 });
@@ -43,7 +69,10 @@ class Work extends React.Component<Props, State> {
   }
 
   componentDidMount(): void {
-    this.setState({ works: APIManager.getAllWorks() });
+    APIManager.getAllWorks().then(response => {
+      response.data.works.sort((a: WorkJSON, b: WorkJSON) => b.date.start.localeCompare(a.date.start));
+      this.setState({ works: response.data.works });
+    });
   }
 
   private handleChange = (e: React.ChangeEvent<{}>, value: number) => {
@@ -53,18 +82,27 @@ class Work extends React.Component<Props, State> {
   render() {
     const { classes } = this.props;
     const { works, currentTab } = this.state;
+
     return (
       <div className={classes.root}>
-        <Tabs
-          orientation="vertical"
-          onChange={this.handleChange}
-          value={currentTab}
-          indicatorColor="primary"
-          textColor="primary"
-        >
-          {works.map(work => <Tab className={classes.tab} label={work.employer} href="" />)}
-        </Tabs>
-        {works.map((work, index) => <WorkCard work={work} value={currentTab} index={index} />)}
+        <div className={classes.content}>
+          <div className={classes.title}>
+            <Typography variant="h5">My Work Experience</Typography>
+            <div className={classes.line} />
+          </div>
+          <div className={classes.body}>
+            <Tabs
+              orientation="vertical"
+              onChange={this.handleChange}
+              value={currentTab}
+              indicatorColor="primary"
+              textColor="primary"
+            >
+              {works.map(work => <Tab className={classes.tab} label={work.employer} href="" />)}
+            </Tabs>
+            {works.map((work, index) => <WorkCard work={work} value={currentTab} index={index} />)}
+          </div>
+        </div>
       </div>
     );
   }

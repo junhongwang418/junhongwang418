@@ -15,21 +15,21 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Hidden from "@material-ui/core/Hidden";
+import Slide from "@material-ui/core/Slide";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import makeStyles from "@material-ui/core/styles/makeStyles";
+import Button from "@material-ui/core/Button";
 
 var classNames = require("classnames");
 
 const styles = (theme: Theme) => createStyles({
   appBar: {
     boxShadow: "none",
-    // borderBottomWidth: 1,
-    // borderBottomStyle: "solid",
-    // borderBottomColor: theme.transparentColor,
-    backgroundColor: "inherit",
-    transition: `background-color 0.5s ease`
+    backgroundColor: theme.palette.background.default
   },
 
   button: {
-
+    color: theme.palette.primary.main,
     "&:hover": {
       backgroundColor: "transparent",
       opacity: 0.58
@@ -37,123 +37,53 @@ const styles = (theme: Theme) => createStyles({
   },
 
   version: {
-    color: theme.palette.primary.main,
-    marginRight: "1em",
-    textDecoration: "none",
+    color: theme.palette.primary.main
   },
 
-  leftMargin: {
-    marginLeft: "1rem"
-  },
-
-  navLink: {
+  link: {
     textDecoration: "none",
-    color: theme.palette.text.primary
   },
 
   selected: {
     fontWeight: "bold"
-  },
-
-  icon: {
-    color: theme.palette.text.primary
   }
 
 });
 
-interface Props extends RouteComponentProps, WithStyles<typeof styles> {}
-
-interface State {
-  open: boolean;
+interface Props {
+  onClickAbout: () => void;
+  onClickWork: () => void;
+  onClickProject: () => void;
+  onClickContact: () => void;
 }
 
-class NavigationBar extends React.Component<Props, State> {
+const useStyles = makeStyles((theme: Theme) => createStyles(styles(theme)));
 
-  constructor(props: Props) {
-    super(props);
+const NavigationBar: React.FunctionComponent<Props> = (props) => {
 
-    this.state = {
-      open: false
-    }
-  }
+  const classes = useStyles();
+  const { onClickAbout, onClickWork, onClickProject, onClickContact } = props;
 
-  private toggleDrawer = () => {
-    this.setState(prevState => ({ open: !prevState.open }))
-  };
-
-  render() {
-    const { classes, location } = this.props;
-    const { open } = this.state;
-    const currentRoute = location.pathname;
-
-    const routes = [
-      ["Work", RouteOptions.WORK],
-      ["Project", RouteOptions.PROJECT],
-      ["Contact", RouteOptions.CONTACT],
-      ["About", RouteOptions.ABOUT]
-    ];
-
-    return (
+  return (
+    <Slide appear={false} direction="down" in={!useScrollTrigger()}>
       <AppBar
-        position="absolute"
         color="inherit"
         className={classes.appBar}
       >
         <Toolbar>
-          <Typography variant="button">
-            <NavLink activeClassName={classes.selected} className={classes.navLink} to={RouteOptions.DEFAULT} exact>Junhong Wang</NavLink>
-          </Typography>
-
+          <Typography variant="button">Junhong Wang</Typography>
           <ThemeToggle />
           <div style={{ flexGrow: 1 }} />
-          <Hidden smUp>
-            <IconButton onClick={this.toggleDrawer}>
-              <MenuIcon className={classes.icon} />
-            </IconButton>
-            <Drawer
-              anchor="top"
-              open={open}
-              onClose={this.toggleDrawer}
-            >
-              <div
-                onClick={this.toggleDrawer}
-                onKeyDown={this.toggleDrawer}
-              >
-                <List>
-                  {routes.map(([routeText, routeOption]) => (
-                    <NavLink className={classes.navLink} to={routeOption}>
-                      <ListItem button key={routeText} selected={currentRoute === routeOption}>
-                        <ListItemText primary={routeText}/>
-                      </ListItem>
-                    </NavLink>
-                  ))}
-                </List>
-              </div>
-            </Drawer>
-          </Hidden>
-          <Hidden xsDown>
-            <Typography variant="caption">
-              <a className={classes.version} href="https://github.com/ioneone/ioneone.github.io" target="_blank">
-                v{version}
-              </a>
-            </Typography>
-            <Typography className={classes.leftMargin} variant="button">
-              <NavLink activeClassName={classes.selected} className={classes.navLink} to={RouteOptions.WORK}>Work</NavLink>
-            </Typography>
-            <Typography className={classes.leftMargin} variant="button">
-              <NavLink activeClassName={classes.selected} className={classes.navLink} to={RouteOptions.PROJECT}>Project</NavLink>
-            </Typography>
-            <Typography className={classes.leftMargin} variant="button">
-              <NavLink activeClassName={classes.selected} className={classes.navLink} to={RouteOptions.CONTACT}>Contact</NavLink>
-            </Typography>
-            <Typography className={classes.leftMargin} variant="button">
-              <NavLink activeClassName={classes.selected} className={classes.navLink} to={RouteOptions.ABOUT}>About</NavLink>
-            </Typography>
-          </Hidden>
+          <Typography className={classes.version} variant="caption">v{version}</Typography>
+          <Button style={{ marginLeft: "1rem" }} onClick={onClickAbout}>About</Button>
+          <Button style={{ marginLeft: "1rem" }} onClick={onClickWork}>Work</Button>
+          <Button style={{ marginLeft: "1rem" }} onClick={onClickProject}>Project</Button>
+          <Button style={{ marginLeft: "1rem" }} onClick={onClickContact}>Contact</Button>
         </Toolbar>
       </AppBar>
-    );
-  }
-}
+    </Slide>
+  );
 
-export default withRouter(withStyles(styles)(NavigationBar));
+};
+
+export default NavigationBar;

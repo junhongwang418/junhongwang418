@@ -6,29 +6,26 @@ import teamLogoImage from "../images/team-logo.png";
 import {createStyles, Theme, WithStyles} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import RouteOptions from "../RouteOptions";
+import ThemeToggle from "../theme/ThemeToggle";
+import profileImage from "../images/profile.png";
+import WarningIcon from '@material-ui/icons/Warning';
 
 const styles = (theme: Theme) => createStyles({
+
+  root: {
+    height: "100vh"
+  },
 
   content: {
     position: "relative",
     top: "50%",
-    transform: `translateY(-50%)`
+    transform: "translateY(-50%)"
   },
 
-  link: {
-    color: theme.palette.primary.main,
-    textDecoration: "none",
-    "&:hover": {
-      opacity: 0.58
-    }
-  },
-
-  img: {
-    margin: "0 8px"
-  },
-
-  font: {
-    lineHeight: "2.4rem"
+  caption: {
+    display: "flex",
+    alignItems: "center",
+    marginBottom: "2rem"
   }
 
 });
@@ -39,37 +36,20 @@ class Home extends React.Component<HomeProps> {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.content}>
-        <p>Website under development. You can visit <a href="./legacy/index.html">legacy page</a> for now.</p>
-        <Typography className={classes.font} variant="h5">
-          <Link className={classes.link} to={RouteOptions.DEFAULT}>
-            Junhong Wang
-          </Link>{" "}
-          is currently a Student Researcher at{" "}
-          <a
-            className={classes.link}
-            href="https://www.risksciences.ucla.edu"
-          >
-            <img
-              className={classes.img}
-              width="32"
-              alt="Risk Science Logo"
-              src={riskLogoImage}
-            />
-            The B. John Garrick Institute for the Risk Sciences at UCLA
-          </a>
-          . Previously, an iOS App Developer Intern at{" "}
-          <a className={classes.link} href="https://www.teamlab.art">
-            <img
-              className={classes.img}
-              width="32"
-              alt="TeamLab Logo"
-              src={teamLogoImage}
-            />
-            Teamlab
-          </a>
-          .
-        </Typography>
+      <div className={classes.root}>
+        <div className={classes.content}>
+          <div className={classes.caption}>
+            <WarningIcon style={{ marginRight: "0.5rem" }} />
+            <span>Website under development. You can visit <a href="./legacy/index.html">legacy page</a> for now.</span>
+          </div>
+          <Typography variant="h6" color="primary" style={{ marginBottom: "1rem" }}>Hi, my name is</Typography>
+          <Typography variant="h2" style={{ marginBottom: "1rem" }}>Junhong Wang.</Typography>
+          <Typography variant="h2" color="textSecondary" style={{ marginBottom: "1rem" }}>I build websites and apps.</Typography>
+          <Typography color="textSecondary" style={{ width: "60%" }}>
+            I'm a senior undergraduate student at UCLA pursuing Computer Science degree.
+            I specialize in building scalable & high-quality website and mobile applications.
+          </Typography>
+        </div>
       </div>
     );
   }

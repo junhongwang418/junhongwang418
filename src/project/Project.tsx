@@ -5,11 +5,28 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import ProjectCard from "./ProjectCard";
 import APIManager, {ProjectJSON} from "../api/APIManager";
 import Typography from "@material-ui/core/Typography";
+import request from "request";
+import {fade} from "@material-ui/core/styles";
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    paddingTop: theme.spacing(16)
-  }
+    // paddingTop: theme.spacing(16)
+    minHeight: "100vh"
+  },
+
+  line: {
+    height: 1,
+    flexGrow: 1,
+    marginRight: "28%",
+    marginLeft: "1rem",
+    backgroundColor: fade(theme.palette.text.primary, 0.28)
+  },
+
+  title: {
+    display: "flex",
+    alignItems: "center",
+    marginBottom: "2rem"
+  },
 });
 
 interface Props extends WithStyles<typeof styles> {}
@@ -28,7 +45,9 @@ class Project extends React.Component<Props, State> {
   }
 
   componentDidMount(): void {
-    this.setState({ projects: APIManager.getAllProjects().sort((a, b) => b.year - a.year) });
+    APIManager.getAllProjects().then(response => {
+      this.setState({ projects: response.data.projects });
+    });
   }
 
   render() {
@@ -37,10 +56,14 @@ class Project extends React.Component<Props, State> {
 
     return (
       <div className={classes.root}>
+        <div className={classes.title}>
+          <Typography variant="h5">My Projects</Typography>
+          <div className={classes.line} />
+        </div>
         <Grid container spacing={2}>
           {
             projects.map(project =>
-              <Grid item xs={12} sm={6} md={6} lg={4} xl={4}>
+              <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
                 <ProjectCard project={project} />
               </Grid>
             )

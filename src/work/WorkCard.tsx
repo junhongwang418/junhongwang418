@@ -8,8 +8,9 @@ import WorkIcon from "@material-ui/icons/WorkOutline";
 import Tooltip from "@material-ui/core/Tooltip";
 import OpenIcon from "@material-ui/icons/OpenInNew";
 import Link from "@material-ui/core/Link";
-import Button from "@material-ui/core/Button";
+import {Link as RouteLink} from 'react-router-dom';
 
+import Button from "@material-ui/core/Button";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -31,8 +32,6 @@ const styles = (theme: Theme) => createStyles({
   },
 
   button: {
-    color: theme.palette.text.primary,
-    borderColor: theme.palette.text.primary,
     marginTop: "3rem"
   }
 
@@ -53,11 +52,20 @@ class WorkCard extends React.Component<Props> {
         <div className={classes.content}>
           <Typography variant="body1">
             {work.role}
-            <Link href="" underline="none"> @ {work.employer}</Link>
+            <Link href={work.link} underline="none" target="_blank"> @ {work.employer}</Link>
           </Typography>
           <Typography variant="overline">{work.date.start} - {work.date.end || "Present"}</Typography>
           <Typography className={classes.description} variant="body2">{work.description}</Typography>
-          <Button className={classes.button} variant="outlined" size="small">See More</Button>
+          <Button
+            variant="outlined"
+            component={RouteLink}
+            to={`/works/${work._id}`}
+            target="_blank"
+            style={{ marginTop: "1rem" }}
+          >
+            See More
+          </Button>
+
         </div>
       </div>
 
