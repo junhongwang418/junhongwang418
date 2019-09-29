@@ -1,14 +1,15 @@
 {
   "name": "my-app",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
-  "homepage": "https://ioneone.github.io",
+  "homepage": "https://ioneone.github.io/",
   "dependencies": {
     "@material-ui/core": "^4.3.0",
     "@material-ui/icons": "^4.2.1",
     "@types/react": "^16.8.24",
     "@types/react-dom": "^16.8.5",
     "@types/react-router-dom": "^4.3.4",
+    "@types/smoothscroll-polyfill": "^0.3.1",
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "gh-pages": "2.0.1",
@@ -17,7 +18,8 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {
     "start": "react-scripts start",

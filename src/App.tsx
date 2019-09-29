@@ -3,6 +3,7 @@ import React, {RefObject} from "react";
 import Container from "@material-ui/core/Container";
 import NavigationBar from "./navigation/NavigationBar";
 import RouteOptions from "./RouteOptions";
+import smoothscroll from 'smoothscroll-polyfill';
 
 import {Theme, WithStyles, createStyles} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -46,6 +47,8 @@ class App extends React.Component<AppProps> {
     this.workRef = React.createRef();
     this.projectRef = React.createRef();
     this.contactRef = React.createRef();
+
+    smoothscroll.polyfill();
   }
 
   render() {
@@ -88,6 +91,7 @@ class App extends React.Component<AppProps> {
             )}
           />
           <Route
+            exact
             path="/works/:id"
             render={(props) => (
               <Container className={classes.container} maxWidth="md">
@@ -96,7 +100,6 @@ class App extends React.Component<AppProps> {
             )}
           />
           <Route component={PageNotFound} />
-
         </Switch>
 
       </div>

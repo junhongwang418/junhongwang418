@@ -65,7 +65,6 @@ class WorkCard extends React.Component<Props> {
           >
             See More
           </Button>
-
         </div>
       </div>
 
