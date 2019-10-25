@@ -10,10 +10,11 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import withTheme from "@material-ui/core/styles/withTheme";
 import {fade} from "@material-ui/core/styles";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    minHeight: "100vh",
+    minHeight: "72vh",
     display: "flex",
     alignItems: "center",
     alignContent: "center"
@@ -91,6 +92,7 @@ class Work extends React.Component<Props, State> {
             <div className={classes.line} />
           </div>
           <div className={classes.body}>
+            {works.length === 0 && <CircularProgress />}
             <Tabs
               orientation="vertical"
               onChange={this.handleChange}

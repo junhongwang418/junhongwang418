@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export interface ProjectJSON {
+  _id: string;
   title: string;
   description: string;
   year: number;

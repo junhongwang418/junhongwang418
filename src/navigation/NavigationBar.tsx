@@ -19,6 +19,9 @@ import Slide from "@material-ui/core/Slide";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Button from "@material-ui/core/Button";
+import Link from "@material-ui/core/Link";
+// @ts-ignore
+import Resume from "../resume.pdf";
 
 var classNames = require("classnames");
 
@@ -54,7 +57,6 @@ interface Props {
   onClickAbout: () => void;
   onClickWork: () => void;
   onClickProject: () => void;
-  onClickContact: () => void;
 }
 
 const useStyles = makeStyles((theme: Theme) => createStyles(styles(theme)));
@@ -62,7 +64,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles(styles(theme)));
 const NavigationBar: React.FunctionComponent<Props> = (props) => {
 
   const classes = useStyles();
-  const { onClickAbout, onClickWork, onClickProject, onClickContact } = props;
+  const { onClickAbout, onClickWork, onClickProject } = props;
 
   return (
     <Slide appear={false} direction="down" in={!useScrollTrigger()}>
@@ -78,7 +80,17 @@ const NavigationBar: React.FunctionComponent<Props> = (props) => {
           <Button style={{ marginLeft: "1rem" }} onClick={onClickAbout}>About</Button>
           <Button style={{ marginLeft: "1rem" }} onClick={onClickWork}>Work</Button>
           <Button style={{ marginLeft: "1rem" }} onClick={onClickProject}>Project</Button>
-          <Button style={{ marginLeft: "1rem" }} onClick={onClickContact}>Contact</Button>
+          <Button style={{ marginLeft: "1rem" }}>
+            <Link
+              color="inherit"
+              rel="noopener"
+              underline="none"
+              href={Resume}
+              target="_blank"
+            >
+              Resume
+            </Link>
+          </Button>
         </Toolbar>
       </AppBar>
     </Slide>

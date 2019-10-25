@@ -55,7 +55,9 @@ class WorkCard extends React.Component<Props> {
             <Link href={work.link} underline="none" target="_blank"> @ {work.employer}</Link>
           </Typography>
           <Typography variant="overline">{work.date.start} - {work.date.end || "Present"}</Typography>
-          <Typography className={classes.description} variant="body2">{work.description}</Typography>
+          <Typography className={classes.description} variant="body2">
+            {work.description}
+          </Typography>
           <Button
             variant="outlined"
             component={RouteLink}

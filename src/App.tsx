@@ -16,6 +16,7 @@ import About from "./about/About";
 import PageNotFound from "./PageNotFound";
 import Grid from "@material-ui/core/Grid";
 import WorkDescription from "./work/WorkDescription";
+import ProjectDescription from "./project/ProjectDescription";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -66,7 +67,6 @@ class App extends React.Component<AppProps> {
                   onClickAbout={() => window.scrollTo({top: this.aboutRef.current.offsetTop, left: 0, behavior: 'smooth'})}
                   onClickWork={() => window.scrollTo({top: this.workRef.current.offsetTop, left: 0, behavior: 'smooth'})}
                   onClickProject={() => window.scrollTo({top: this.projectRef.current.offsetTop, left: 0, behavior: 'smooth'})}
-                  onClickContact={() => window.scrollTo({top: this.contactRef.current.offsetTop, left: 0, behavior: 'smooth'})}
                 />
                 <Container className={classes.container} maxWidth="md">
                   <Grid container spacing={8}>
@@ -96,6 +96,15 @@ class App extends React.Component<AppProps> {
             render={(props) => (
               <Container className={classes.container} maxWidth="md">
                 <WorkDescription {...props} />
+              </Container>
+            )}
+          />
+          <Route
+            exact
+            path="/projects/:id"
+            render={(props) => (
+              <Container className={classes.container} maxWidth="md">
+                <ProjectDescription {...props} />
               </Container>
             )}
           />

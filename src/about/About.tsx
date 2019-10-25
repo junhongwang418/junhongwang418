@@ -7,9 +7,10 @@ import Grid from '@material-ui/core/Grid';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 var classNames = require("classnames");
 
+
 const styles = (theme: Theme) => createStyles({
   root: {
-    minHeight: "100vh",
+    minHeight: "72vh",
     display: "flex",
     alignItems: "center",
     alignContent: "center"

@@ -7,11 +7,12 @@ import APIManager, {ProjectJSON} from "../api/APIManager";
 import Typography from "@material-ui/core/Typography";
 import request from "request";
 import {fade} from "@material-ui/core/styles";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const styles = (theme: Theme) => createStyles({
   root: {
     // paddingTop: theme.spacing(16)
-    minHeight: "100vh"
+    minHeight: "72vh"
   },
 
   line: {
@@ -60,7 +61,8 @@ class Project extends React.Component<Props, State> {
           <Typography variant="h5">My Projects</Typography>
           <div className={classes.line} />
         </div>
-        <Grid container spacing={2}>
+        {projects.length === 0 && <CircularProgress />}
+        <Grid container spacing={8}>
           {
             projects.map(project =>
               <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
