@@ -8,7 +8,7 @@ import OpenIcon from "@material-ui/icons/OpenInNew";
 import FolderIcon from "@material-ui/icons/FolderOpen";
 import Tooltip from "@material-ui/core/Tooltip";
 import HCLAImage from "../images/hcla1.png";
-import {Link} from "react-router-dom";
+import Link from '@material-ui/core/Link';
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -95,12 +95,21 @@ class ProjectCard extends React.Component<ProjectCardProps> {
     return (
       <div className={classes.root}>
         <div className={classes.content}>
-          <Link to={`/projects/${project._id}`}>
-            <img className={classes.image} src={project.image} /></Link>
+          <Link target="_blank" href={project.url}>
+            <img className={classes.image} src={project.image} />
+          </Link>
           <Typography variant="h6" align="left" gutterBottom>{project.title.toUpperCase()}</Typography>
           <Typography className={classes.description} variant="body2" align="left" gutterBottom>{project.description}</Typography>
           <Typography className={classes.description} variant="overline" align="left" gutterBottom>{project.year}</Typography>
-          <Typography align="left"><Link to={`/projects/${project._id}`} className={classes.link}>view case study ></Link></Typography>
+          <Typography align="left">
+            <Link
+              target="_blank"
+              href={project.url}
+              className={classes.link}
+            >
+              view case study >
+            </Link>
+          </Typography>
         </div>
       </div>
     );
