@@ -47,7 +47,7 @@ class Project extends React.Component<Props, State> {
 
   componentDidMount(): void {
     APIManager.getAllProjects().then(response => {
-      this.setState({ projects: response.data.projects });
+      this.setState({ projects: response.data });
     });
   }
 

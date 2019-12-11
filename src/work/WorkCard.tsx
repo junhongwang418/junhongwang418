@@ -60,8 +60,7 @@ class WorkCard extends React.Component<Props> {
           </Typography>
           <Button
             variant="outlined"
-            component={RouteLink}
-            to={`/works/${work._id}`}
+            href={work.url}
             target="_blank"
             style={{ marginTop: "1rem" }}
           >

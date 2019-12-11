@@ -1,13 +1,8 @@
 import React from "react";
-
 import {createStyles, Theme, WithStyles} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 import {ProjectJSON} from "../api/APIManager";
-import OpenIcon from "@material-ui/icons/OpenInNew";
-import FolderIcon from "@material-ui/icons/FolderOpen";
-import Tooltip from "@material-ui/core/Tooltip";
-import HCLAImage from "../images/hcla1.png";
 import Link from '@material-ui/core/Link';
 
 const styles = (theme: Theme) => createStyles({
@@ -89,8 +84,6 @@ class ProjectCard extends React.Component<ProjectCardProps> {
 
   render() {
     const { classes, project } = this.props;
-
-    console.log(project.image);
 
     return (
       <div className={classes.root}>

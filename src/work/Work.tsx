@@ -71,8 +71,8 @@ class Work extends React.Component<Props, State> {
 
   componentDidMount(): void {
     APIManager.getAllWorks().then(response => {
-      response.data.works.sort((a: WorkJSON, b: WorkJSON) => b.date.start.localeCompare(a.date.start));
-      this.setState({ works: response.data.works });
+      response.data.sort((a: WorkJSON, b: WorkJSON) => b.date.start.localeCompare(a.date.start));
+      this.setState({ works: response.data });
     });
   }
 

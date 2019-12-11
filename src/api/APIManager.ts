@@ -13,6 +13,7 @@ export interface WorkJSON {
   _id: string;
   role: string;
   link: string;
+  url: string;
 
   employer: string;
   date: {
