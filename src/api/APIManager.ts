@@ -5,6 +5,7 @@ export interface ProjectJSON {
   title: string;
   description: string;
   year: number;
+  image: string;
 }
 
 export interface WorkJSON {

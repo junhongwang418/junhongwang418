@@ -22,6 +22,8 @@ import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 // @ts-ignore
 import Resume from "../resume.pdf";
+// @ts-ignore
+import Portfolio from "../portfolio.pdf";
 
 var classNames = require("classnames");
 
@@ -54,6 +56,7 @@ const styles = (theme: Theme) => createStyles({
 });
 
 interface Props {
+  onClickHome: () => void;
   onClickAbout: () => void;
   onClickWork: () => void;
   onClickProject: () => void;
@@ -64,7 +67,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles(styles(theme)));
 const NavigationBar: React.FunctionComponent<Props> = (props) => {
 
   const classes = useStyles();
-  const { onClickAbout, onClickWork, onClickProject } = props;
+  const { onClickHome, onClickAbout, onClickWork, onClickProject } = props;
 
   return (
     <Slide appear={false} direction="down" in={!useScrollTrigger()}>
@@ -73,7 +76,7 @@ const NavigationBar: React.FunctionComponent<Props> = (props) => {
         className={classes.appBar}
       >
         <Toolbar>
-          <Typography variant="button">Junhong Wang</Typography>
+          <Button onClick={onClickHome}>Junhong Wang</Button>
           <ThemeToggle />
           <div style={{ flexGrow: 1 }} />
           <Typography className={classes.version} variant="caption">v{version}</Typography>
@@ -89,6 +92,17 @@ const NavigationBar: React.FunctionComponent<Props> = (props) => {
               target="_blank"
             >
               Resume
+            </Link>
+          </Button>
+          <Button style={{ marginLeft: "1rem" }}>
+            <Link
+              color="inherit"
+              rel="noopener"
+              underline="none"
+              href={Portfolio}
+              target="_blank"
+            >
+              Portfolio
             </Link>
           </Button>
         </Toolbar>

@@ -1,9 +1,8 @@
-import React, {RefObject} from "react";
+import React, {Ref, RefObject} from "react";
 
 import Container from "@material-ui/core/Container";
 import NavigationBar from "./navigation/NavigationBar";
 import RouteOptions from "./RouteOptions";
-import smoothscroll from 'smoothscroll-polyfill';
 
 import {Theme, WithStyles, createStyles} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -15,8 +14,7 @@ import Contact from "./contact/Contact";
 import About from "./about/About";
 import PageNotFound from "./PageNotFound";
 import Grid from "@material-ui/core/Grid";
-import WorkDescription from "./work/WorkDescription";
-import ProjectDescription from "./project/ProjectDescription";
+import AOS from "aos";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -36,6 +34,7 @@ interface AppProps extends WithStyles<typeof styles> {}
 
 class App extends React.Component<AppProps> {
 
+  private homeRef: RefObject<any>;
   private aboutRef: RefObject<any>;
   private workRef: RefObject<any>;
   private projectRef: RefObject<any>;
@@ -44,12 +43,22 @@ class App extends React.Component<AppProps> {
   constructor(props: AppProps) {
     super(props);
 
+    this.homeRef = React.createRef();
     this.aboutRef = React.createRef();
     this.workRef = React.createRef();
     this.projectRef = React.createRef();
     this.contactRef = React.createRef();
 
-    smoothscroll.polyfill();
+
+
+  }
+
+  componentDidMount(): void {
+    AOS.init({ duration: 800 });
+  }
+
+  componentWillReceiveProps(nextProps: Readonly<AppProps>, nextContext: any): void {
+    AOS.refresh();
   }
 
   render() {
@@ -64,6 +73,7 @@ class App extends React.Component<AppProps> {
             render={(props) => (
               <React.Fragment>
                 <NavigationBar
+                  onClickHome={() => window.scrollTo({top: this.homeRef.current.offsetTop, left: 0, behavior: 'smooth'})}
                   onClickAbout={() => window.scrollTo({top: this.aboutRef.current.offsetTop, left: 0, behavior: 'smooth'})}
                   onClickWork={() => window.scrollTo({top: this.workRef.current.offsetTop, left: 0, behavior: 'smooth'})}
                   onClickProject={() => window.scrollTo({top: this.projectRef.current.offsetTop, left: 0, behavior: 'smooth'})}
@@ -71,41 +81,23 @@ class App extends React.Component<AppProps> {
                 <Container className={classes.container} maxWidth="md">
                   <Grid container spacing={8}>
                     <Grid item xs={12}>
-                      <Home />
+                      <div data-aos="fade-up" ref={this.homeRef}><Home /></div>
                     </Grid>
                     <Grid item xs={12}>
-                      <div ref={this.aboutRef}><About /></div>
+                      <div data-aos="fade-up" ref={this.aboutRef}><About /></div>
                     </Grid>
                     <Grid item xs={12}>
-                      <div ref={this.workRef}><Work /></div>
+                      <div data-aos="fade-up" ref={this.workRef}><Work /></div>
                     </Grid>
                     <Grid item xs={12}>
-                      <div ref={this.projectRef}><Project /></div>
+                      <div data-aos="fade-up" ref={this.projectRef}><Project /></div>
                     </Grid>
                     <Grid item xs={12}>
-                      <div ref={this.contactRef}><Contact /></div>
+                      <div data-aos="fade-up" ref={this.contactRef}><Contact /></div>
                     </Grid>
                   </Grid>
                 </Container>
               </React.Fragment>
-            )}
-          />
-          <Route
-            exact
-            path="/works/:id"
-            render={(props) => (
-              <Container className={classes.container} maxWidth="md">
-                <WorkDescription {...props} />
-              </Container>
-            )}
-          />
-          <Route
-            exact
-            path="/projects/:id"
-            render={(props) => (
-              <Container className={classes.container} maxWidth="md">
-                <ProjectDescription {...props} />
-              </Container>
             )}
           />
           <Route component={PageNotFound} />

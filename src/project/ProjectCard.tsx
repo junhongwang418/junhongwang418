@@ -68,6 +68,12 @@ const styles = (theme: Theme) => createStyles({
   link: {
     textDecoration: 'none',
     color: theme.palette.primary.main
+  },
+
+  image: {
+    width: "100%",
+    height: "68%",
+    objectFit: "cover"
   }
 });
 
@@ -84,10 +90,13 @@ class ProjectCard extends React.Component<ProjectCardProps> {
   render() {
     const { classes, project } = this.props;
 
+    console.log(project.image);
+
     return (
       <div className={classes.root}>
         <div className={classes.content}>
-          <Link to={`/projects/${project._id}`}><img width="100%" src={HCLAImage} /></Link>
+          <Link to={`/projects/${project._id}`}>
+            <img className={classes.image} src={project.image} /></Link>
           <Typography variant="h6" align="left" gutterBottom>{project.title.toUpperCase()}</Typography>
           <Typography className={classes.description} variant="body2" align="left" gutterBottom>{project.description}</Typography>
           <Typography className={classes.description} variant="overline" align="left" gutterBottom>{project.year}</Typography>
