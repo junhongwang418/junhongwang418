@@ -48,6 +48,10 @@ const styles = (theme: Theme) => createStyles({
     // top: "50%",
     // transform: `translateY(-50%)`,
     display: "flex",
+  },
+
+  center: {
+    textAlign: "center"
   }
 
 });
@@ -91,19 +95,26 @@ class Work extends React.Component<Props, State> {
             <Typography variant="h5">My Work Experience</Typography>
             <div className={classes.line} />
           </div>
-          <div className={classes.body}>
-            {works.length === 0 && <CircularProgress />}
-            <Tabs
-              orientation="vertical"
-              onChange={this.handleChange}
-              value={currentTab}
-              indicatorColor="primary"
-              textColor="primary"
-            >
-              {works.map(work => <Tab className={classes.tab} label={work.employer} href="" />)}
-            </Tabs>
-            {works.map((work, index) => <WorkCard work={work} value={currentTab} index={index} />)}
-          </div>
+          {
+            works.length === 0 ?
+              <div className={classes.center}>
+                <Typography gutterBottom>Waking my server up, please wait...</Typography>
+                <CircularProgress />
+              </div>
+              :
+              <div className={classes.body}>
+                <Tabs
+                  orientation="vertical"
+                  onChange={this.handleChange}
+                  value={currentTab}
+                  indicatorColor="primary"
+                  textColor="primary"
+                >
+                  {works.map(work => <Tab className={classes.tab} label={work.employer} href="" />)}
+                </Tabs>
+                {works.map((work, index) => <WorkCard work={work} value={currentTab} index={index} />)}
+              </div>
+          }
         </div>
       </div>
     );
