@@ -79,7 +79,15 @@ const NavigationBar: React.FunctionComponent<Props> = (props) => {
           <Button onClick={onClickHome}>Junhong Wang</Button>
           <ThemeToggle />
           <div style={{ flexGrow: 1 }} />
-          <Typography className={classes.version} variant="caption">v{version}</Typography>
+          <Typography className={classes.version} variant="caption">
+            <Link
+              rel="noopener"
+              href="https://github.com/ioneone/ioneone.github.io"
+              target="_blank"
+            >
+              v{version}
+            </Link>
+          </Typography>
           <Button style={{ marginLeft: "1rem" }} onClick={onClickAbout}>About</Button>
           <Button style={{ marginLeft: "1rem" }} onClick={onClickWork}>Work</Button>
           <Button style={{ marginLeft: "1rem" }} onClick={onClickProject}>Project</Button>

@@ -1,0 +1,72 @@
+{
+  "works": [
+    {
+      "role": "iOS App Developer Intern",
+      "employer": "teamLab/チームラボ",
+      "date": {
+        "start": "2018-07",
+        "end": "2018-09"
+      },
+      "link": "https://www.teamlab.art/",
+      "description": "Develop an app for a Japanese electronics retailer (1.5 million users) in a team of 12",
+      "url": "https://medium.com/@ionejunhong/what-i-learned-interning-at-teamlab-9f2c616cc880"
+    },
+    {
+      "role": "Student Researcher",
+      "employer": "The B. John Garrick Institute for the Risk Sciences at UCLA",
+      "date": {
+        "start": "2019-04"
+      },
+      "description": "Develop a system reliability analysis web application for NASA's JPL with React",
+      "link": "https://www.risksciences.ucla.edu",
+      "url": "https://medium.com/@ionejunhong/what-i-learned-interning-at-girs-b5169360bb55"
+    },
+    {
+      "role": "iOS App Developer Intern",
+      "employer": "MaruMe",
+      "date": {
+        "start": "2016-06",
+        "end": "2016-08"
+      },
+      "link": "https://apps.apple.com/us/app/maru-me/id1076491249",
+      "description": "Develop a product review app in a team of 2",
+      "url": "https://medium.com/@ionejunhong/what-i-learned-interning-at-marume-78d174f00638"
+    }
+  ],
+  "projects": [
+    {
+      "title": "LinksIn",
+      "description": "Social Networking App for Gamers",
+      "year": 2019,
+      "image": "https://github.com/scalableinternetservices/linksin/raw/master/team/logo.svg?sanitize=true",
+      "url": "https://github.com/scalableinternetservices/linksin",
+      "tools": [
+        "Ruby",
+        "Ruby on Rails",
+        "AWS",
+        "Tsung"
+      ]
+    },
+    {
+      "title": "Museum 3D",
+      "description": "Virtual Museum Tour in WebGL",
+      "year": 2019,
+      "image": "https://github.com/ioneone/Museum-3D/raw/master/images/lightbulb.jpg",
+      "url": "https://github.com/ioneone/Museum-3D",
+      "tools": [
+        "JavaScript",
+        "WebGL"
+      ]
+    },
+    {
+      "title": "GlanceRMP",
+      "description": "Javascript extension that helps students at Peralta Community Colleges choose classes ",
+      "year": 2017,
+      "image": "https://user-images.githubusercontent.com/21322866/27567562-88bb0aa0-5b27-11e7-8b64-d666ceadea86.png",
+      "url": "https://github.com/Kazutaka333/glanceRMP",
+      "tools": [
+        "JavaScript"
+      ]
+    }
+  ]
+}

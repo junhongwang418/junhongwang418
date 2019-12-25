@@ -4,6 +4,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from "@material-ui/core/Typography";
 import {ProjectJSON} from "../api/APIManager";
 import Link from '@material-ui/core/Link';
+import Chip from "@material-ui/core/Chip";
+import SvgIcon from "@material-ui/core/SvgIcon";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -57,7 +59,7 @@ const styles = (theme: Theme) => createStyles({
   },
 
   description: {
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
   },
 
   link: {
@@ -68,8 +70,13 @@ const styles = (theme: Theme) => createStyles({
   image: {
     width: "100%",
     height: "68%",
-    objectFit: "cover"
+    objectFit: "contain"
+  },
+
+  marginBottom: {
+    marginBottom: "1rem"
   }
+
 });
 
 interface ProjectCardProps extends WithStyles<typeof styles> {
@@ -93,7 +100,18 @@ class ProjectCard extends React.Component<ProjectCardProps> {
           </Link>
           <Typography variant="h6" align="left" gutterBottom>{project.title.toUpperCase()}</Typography>
           <Typography className={classes.description} variant="body2" align="left" gutterBottom>{project.description}</Typography>
-          <Typography className={classes.description} variant="overline" align="left" gutterBottom>{project.year}</Typography>
+          <div className={classes.marginBottom}>
+            {
+              project.tools.map(tool =>
+                <Chip
+                  variant="outlined"
+                  size="small"
+                  label={tool}
+                  color="secondary"
+                />
+              )
+            }
+          </div>
           <Typography align="left">
             <Link
               target="_blank"

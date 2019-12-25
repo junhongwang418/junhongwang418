@@ -1,16 +1,15 @@
-import axios from "axios";
+import data from "./data.json";
 
 export interface ProjectJSON {
-  _id: string;
   title: string;
   description: string;
   year: number;
   image: string;
   url: string;
+  tools: string[];
 }
 
 export interface WorkJSON {
-  _id: string;
   role: string;
   link: string;
   url: string;
@@ -24,12 +23,12 @@ export interface WorkJSON {
 }
 
 class APIManager {
-  static getAllProjects() {
-    return axios.get('https://protected-woodland-58141.herokuapp.com/projects');
+  static getAllProjects(): ProjectJSON[] {
+    return data.projects;
   }
 
-  static getAllWorks() {
-    return axios.get('https://protected-woodland-58141.herokuapp.com/works');
+  static getAllWorks(): WorkJSON[] {
+    return data.works;
   }
 }
 

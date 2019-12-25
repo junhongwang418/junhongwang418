@@ -51,9 +51,7 @@ class Project extends React.Component<Props, State> {
   }
 
   componentDidMount(): void {
-    APIManager.getAllProjects().then(response => {
-      this.setState({ projects: response.data });
-    });
+    this.setState({ projects: APIManager.getAllProjects() });
   }
 
   render() {
@@ -66,23 +64,15 @@ class Project extends React.Component<Props, State> {
           <Typography variant="h5">My Projects</Typography>
           <div className={classes.line} />
         </div>
-        {
-          projects.length === 0 ?
-            <div className={classes.center}>
-              <Typography gutterBottom>Waking my server up, please wait...</Typography>
-              <CircularProgress />
-            </div>
-            :
-            <Grid container spacing={8}>
-              {
-                projects.map(project =>
-                  <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
-                    <ProjectCard project={project} />
-                  </Grid>
-                )
-              }
-            </Grid>
-        }
+        <Grid container spacing={8}>
+          {
+            projects.map(project =>
+              <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+                <ProjectCard project={project} />
+              </Grid>
+            )
+          }
+        </Grid>
       </div>
     );
   }
