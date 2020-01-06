@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography"
-import { Link } from "react-router-dom";
+import Link from "@material-ui/core/Link";
 import riskLogoImage from "../images/risk-logo.png";
 import teamLogoImage from "../images/team-logo.png";
 import {createStyles, Theme, WithStyles} from "@material-ui/core";
@@ -9,6 +9,11 @@ import RouteOptions from "../RouteOptions";
 import ThemeToggle from "../theme/ThemeToggle";
 import profileImage from "../images/profile.png";
 import WarningIcon from '@material-ui/icons/Warning';
+// @ts-ignore
+import Resume from "../resume.pdf";
+import Button from "@material-ui/core/Button";
+// @ts-ignore
+import Portfolio from "../portfolio.pdf";
 
 const styles = (theme: Theme) => createStyles({
 
@@ -45,10 +50,32 @@ class Home extends React.Component<HomeProps> {
           <Typography variant="h6" color="primary" style={{ marginBottom: "1rem" }}>Hi, my name is</Typography>
           <Typography variant="h2" style={{ marginBottom: "1rem" }}>Junhong Wang.</Typography>
           <Typography variant="h2" color="textSecondary" style={{ marginBottom: "1rem" }}>I build websites and apps.</Typography>
-          <Typography color="textSecondary" style={{ width: "60%" }}>
+          <Typography color="textSecondary" style={{ width: "60%", marginBottom: "1rem" }}>
             I'm a senior undergraduate student at UCLA pursuing Computer Science degree.
             I specialize in building scalable & high-quality website and mobile applications.
           </Typography>
+          <Button variant="outlined" color="primary">
+            <Link
+              color="inherit"
+              rel="noopener"
+              underline="none"
+              href={Resume}
+              target="_blank"
+            >
+              Resume
+            </Link>
+          </Button>
+          <Button style={{ marginLeft: "1rem" }} variant="outlined" color="primary">
+            <Link
+              color="inherit"
+              rel="noopener"
+              underline="none"
+              href={Portfolio}
+              target="_blank"
+            >
+              Portfolio
+            </Link>
+          </Button>
         </div>
       </div>
     );

@@ -49,8 +49,6 @@ class App extends React.Component<AppProps> {
     this.projectRef = React.createRef();
     this.contactRef = React.createRef();
 
-
-
   }
 
   componentDidMount(): void {

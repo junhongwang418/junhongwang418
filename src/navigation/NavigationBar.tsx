@@ -91,28 +91,6 @@ const NavigationBar: React.FunctionComponent<Props> = (props) => {
           <Button style={{ marginLeft: "1rem" }} onClick={onClickAbout}>About</Button>
           <Button style={{ marginLeft: "1rem" }} onClick={onClickWork}>Work</Button>
           <Button style={{ marginLeft: "1rem" }} onClick={onClickProject}>Project</Button>
-          <Button style={{ marginLeft: "1rem" }}>
-            <Link
-              color="inherit"
-              rel="noopener"
-              underline="none"
-              href={Resume}
-              target="_blank"
-            >
-              Resume
-            </Link>
-          </Button>
-          <Button style={{ marginLeft: "1rem" }}>
-            <Link
-              color="inherit"
-              rel="noopener"
-              underline="none"
-              href={Portfolio}
-              target="_blank"
-            >
-              Portfolio
-            </Link>
-          </Button>
         </Toolbar>
       </AppBar>
     </Slide>
