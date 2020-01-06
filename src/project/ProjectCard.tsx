@@ -6,11 +6,12 @@ import {ProjectJSON} from "../api/APIManager";
 import Link from '@material-ui/core/Link';
 import Chip from "@material-ui/core/Chip";
 import SvgIcon from "@material-ui/core/SvgIcon";
+import Grid from "@material-ui/core/Grid";
 
 const styles = (theme: Theme) => createStyles({
   root: {
     width: "100%",
-    paddingTop: "128%",
+    paddingTop: "172%",
     position: "relative",
   },
 
@@ -67,14 +68,22 @@ const styles = (theme: Theme) => createStyles({
     color: theme.palette.primary.main
   },
 
-  image: {
+  imageContainer: {
     width: "100%",
-    height: "68%",
+    paddingTop: "72%",
+    position: "relative",
+  },
+
+  image: {
+    position: "absolute",
+    top: 0,
+    width: "100%",
+    height: "100%",
     objectFit: "contain"
   },
 
-  marginBottom: {
-    marginBottom: "1rem"
+  chips: {
+    marginBottom: "0.2rem"
   }
 
 });
@@ -93,35 +102,35 @@ class ProjectCard extends React.Component<ProjectCardProps> {
     const { classes, project } = this.props;
 
     return (
-      <div className={classes.root}>
-        <div className={classes.content}>
+      <div>
+        <div className={classes.imageContainer}>
           <Link target="_blank" href={project.url}>
             <img className={classes.image} src={project.image} />
           </Link>
-          <Typography variant="h6" align="left" gutterBottom>{project.title.toUpperCase()}</Typography>
-          <Typography className={classes.description} variant="body2" align="left" gutterBottom>{project.description}</Typography>
-          <div className={classes.marginBottom}>
-            {
-              project.tools.map(tool =>
-                <Chip
-                  variant="outlined"
-                  size="small"
-                  label={tool}
-                  color="secondary"
-                />
-              )
-            }
-          </div>
-          <Typography align="left">
-            <Link
-              target="_blank"
-              href={project.url}
-              className={classes.link}
-            >
-              view case study >
-            </Link>
-          </Typography>
         </div>
+        <Typography variant="h6" gutterBottom>{project.title.toUpperCase()}</Typography>
+        <Typography color="textSecondary" variant="body2" gutterBottom>{project.description}</Typography>
+        <div className={classes.chips}>
+          {
+            project.tools.map(tool =>
+              <Chip
+                variant="outlined"
+                size="small"
+                label={tool}
+                color="secondary"
+              />
+            )
+          }
+        </div>
+        <Typography>
+          <Link
+            target="_blank"
+            href={project.url}
+            className={classes.link}
+          >
+            view case study >
+          </Link>
+        </Typography>
       </div>
     );
   }

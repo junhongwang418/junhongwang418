@@ -23,8 +23,8 @@ const useTheme = () => React.useContext(ThemeContext);
 const useEffectDarkMode = () => {
   const [themeState, setThemeState] = React.useState(initialState);
   React.useEffect(() => {
-    const isDark = localStorage.getItem(ThemeMode.DARK) === JSON.stringify(true);
-    setThemeState({ ...themeState, dark: isDark, hasThemeMounted: true });
+    const isLight = localStorage.getItem(ThemeMode.LIGHT) === JSON.stringify(true);
+    setThemeState({ ...themeState, dark: !isLight, hasThemeMounted: true });
   }, [themeState]);
 
   return [themeState, setThemeState];

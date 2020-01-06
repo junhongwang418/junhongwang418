@@ -35,6 +35,19 @@
   ],
   "projects": [
     {
+      "title": "Jflix",
+      "description": "Jflix allows you to check out what TV series or movies Junhong like",
+      "year": 2020,
+      "image": "https://github.com/ioneone/Jflix/blob/master/jflix.png?raw=true",
+      "url": "https://jflix.herokuapp.com/",
+      "tools": [
+        "GraphQL",
+        "React",
+        "Express",
+        "TypeScript"
+      ]
+    },
+    {
       "title": "LinksIn",
       "description": "Social Networking App for Gamers",
       "year": 2019,
