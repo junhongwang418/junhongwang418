@@ -112,12 +112,13 @@ class ProjectCard extends React.Component<ProjectCardProps> {
         <Typography color="textSecondary" variant="body2" gutterBottom>{project.description}</Typography>
         <div className={classes.chips}>
           {
-            project.tools.map(tool =>
+            project.tools.map((tool, index) =>
               <Chip
                 variant="outlined"
                 size="small"
                 label={tool}
                 color="secondary"
+                key={index}
               />
             )
           }

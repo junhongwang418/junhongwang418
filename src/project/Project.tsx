@@ -66,8 +66,8 @@ class Project extends React.Component<Props, State> {
         </div>
         <Grid container spacing={8}>
           {
-            projects.map(project =>
-              <Grid item xs={12} sm={6} md={4} lg={4} xl={4}>
+            projects.map((project, index) =>
+              <Grid item xs={12} sm={6} md={4} lg={4} xl={4} key={index}>
                 <ProjectCard project={project} />
               </Grid>
             )

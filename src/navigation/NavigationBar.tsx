@@ -60,6 +60,7 @@ interface Props {
   onClickAbout: () => void;
   onClickWork: () => void;
   onClickProject: () => void;
+  onClickPublication: () => void;
 }
 
 const useStyles = makeStyles((theme: Theme) => createStyles(styles(theme)));
@@ -67,7 +68,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles(styles(theme)));
 const NavigationBar: React.FunctionComponent<Props> = (props) => {
 
   const classes = useStyles();
-  const { onClickHome, onClickAbout, onClickWork, onClickProject } = props;
+  const { onClickHome, onClickAbout, onClickWork, onClickProject, onClickPublication } = props;
 
   return (
     <Slide appear={false} direction="down" in={!useScrollTrigger()}>
@@ -91,6 +92,7 @@ const NavigationBar: React.FunctionComponent<Props> = (props) => {
           <Button style={{ marginLeft: "1rem" }} onClick={onClickAbout}>About</Button>
           <Button style={{ marginLeft: "1rem" }} onClick={onClickWork}>Work</Button>
           <Button style={{ marginLeft: "1rem" }} onClick={onClickProject}>Project</Button>
+          <Button style={{ marginLeft: "1rem" }} onClick={onClickPublication}>Publication</Button>
         </Toolbar>
       </AppBar>
     </Slide>

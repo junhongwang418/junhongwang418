@@ -100,9 +100,9 @@ class Work extends React.Component<Props, State> {
               indicatorColor="primary"
               textColor="primary"
             >
-              {works.map(work => <Tab className={classes.tab} label={work.employer} href="" />)}
+              {works.map((work, index) => <Tab className={classes.tab} label={work.employer} href="" key={index} />)}
             </Tabs>
-            {works.map((work, index) => <WorkCard work={work} value={currentTab} index={index} />)}
+            {works.map((work, index) => <WorkCard work={work} value={currentTab} index={index} key={index} />)}
           </div>
         </div>
       </div>

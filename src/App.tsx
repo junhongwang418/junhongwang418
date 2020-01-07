@@ -15,6 +15,7 @@ import About from "./about/About";
 import PageNotFound from "./PageNotFound";
 import Grid from "@material-ui/core/Grid";
 import AOS from "aos";
+import Publication from "./publication/Publication";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -39,6 +40,7 @@ class App extends React.Component<AppProps> {
   private workRef: RefObject<any>;
   private projectRef: RefObject<any>;
   private contactRef: RefObject<any>;
+  private publicationRef: RefObject<any>;
 
   constructor(props: AppProps) {
     super(props);
@@ -48,6 +50,7 @@ class App extends React.Component<AppProps> {
     this.workRef = React.createRef();
     this.projectRef = React.createRef();
     this.contactRef = React.createRef();
+    this.publicationRef = React.createRef();
 
   }
 
@@ -71,10 +74,11 @@ class App extends React.Component<AppProps> {
             render={(props) => (
               <React.Fragment>
                 <NavigationBar
-                  onClickHome={() => window.scrollTo({top: this.homeRef.current.offsetTop, left: 0, behavior: 'smooth'})}
-                  onClickAbout={() => window.scrollTo({top: this.aboutRef.current.offsetTop, left: 0, behavior: 'smooth'})}
-                  onClickWork={() => window.scrollTo({top: this.workRef.current.offsetTop, left: 0, behavior: 'smooth'})}
-                  onClickProject={() => window.scrollTo({top: this.projectRef.current.offsetTop, left: 0, behavior: 'smooth'})}
+                  onClickHome={() => window.scrollTo({top: this.homeRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
+                  onClickAbout={() => window.scrollTo({top: this.aboutRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
+                  onClickWork={() => window.scrollTo({top: this.workRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
+                  onClickProject={() => window.scrollTo({top: this.projectRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
+                  onClickPublication={() => window.scrollTo({top: this.publicationRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
                 />
                 <Container className={classes.container} maxWidth="md">
                   <Grid container spacing={8}>
@@ -89,6 +93,9 @@ class App extends React.Component<AppProps> {
                     </Grid>
                     <Grid item xs={12}>
                       <div data-aos="fade-up" ref={this.projectRef}><Project /></div>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <div data-aos="fade-up" ref={this.publicationRef}><Publication /></div>
                     </Grid>
                     <Grid item xs={12}>
                       <div data-aos="fade-up" ref={this.contactRef}><Contact /></div>
