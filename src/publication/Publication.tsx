@@ -56,26 +56,26 @@ class Publication extends React.Component<Props, State> {
           <List
             subheader={<ListSubheader>Getting Started with GraphQL</ListSubheader>}
           >
-            <ListItem button>
-              <Link href="https://medium.com/@ionejunhong/getting-started-with-graphql-a1cc7951ef39?source=friends_link&sk=4785daf7f0bc80f7d25150f3a903932d" underline="none" target="_blank">
+            <Link href="https://medium.com/@ionejunhong/getting-started-with-graphql-a1cc7951ef39?source=friends_link&sk=4785daf7f0bc80f7d25150f3a903932d" underline="none" target="_blank">
+              <ListItem button>
                 <ListItemText primary="Part 1: Introduction" />
-              </Link>
-            </ListItem>
-            <ListItem button>
-              <Link href="https://medium.com/better-programming/getting-started-with-graphql-5cd8e7c66909?source=friends_link&sk=1ca5c58e69b339b4736f258bb9ba850f" underline="none" target="_blank">
-                <ListItemText primary="Part 2: Front end" />
-              </Link>
-            </ListItem>
-            <ListItem button>
-              <Link href="https://medium.com/@ionejunhong/getting-started-with-graphql-54bfa51a848f?source=friends_link&sk=f48adbca4d28f422a73060fef671dc55" underline="none" target="_blank">
-                <ListItemText primary="Part 3: Back end" />
-              </Link>
-            </ListItem>
-            <ListItem button>
-              <Link href="https://medium.com/@ionejunhong/getting-started-with-graphql-a281b14a560d?source=friends_link&sk=065e2e6473674e6203a4bdb35fedd77e" underline="none" target="_blank">
+              </ListItem>
+            </Link>
+            <Link href="https://medium.com/better-programming/getting-started-with-graphql-5cd8e7c66909?source=friends_link&sk=1ca5c58e69b339b4736f258bb9ba850f" underline="none" target="_blank">
+              <ListItem button>
+                <ListItemText primary="Part 2: Back end" />
+              </ListItem>
+            </Link>
+            <Link href="https://medium.com/@ionejunhong/getting-started-with-graphql-54bfa51a848f?source=friends_link&sk=f48adbca4d28f422a73060fef671dc55" underline="none" target="_blank">
+              <ListItem button>
+                <ListItemText primary="Part 3: Front end" />
+              </ListItem>
+            </Link>
+            <Link href="https://medium.com/@ionejunhong/getting-started-with-graphql-a281b14a560d?source=friends_link&sk=065e2e6473674e6203a4bdb35fedd77e" underline="none" target="_blank">
+              <ListItem button>
                 <ListItemText primary="Part 4: Basic Features" />
-              </Link>
-            </ListItem>
+              </ListItem>
+            </Link>
           </List>
         </div>
       </div>
