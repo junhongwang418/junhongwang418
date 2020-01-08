@@ -1,17 +1,6 @@
 {
   "works": [
     {
-      "role": "iOS App Developer Intern",
-      "employer": "teamLab/チームラボ",
-      "date": {
-        "start": "2018-07",
-        "end": "2018-09"
-      },
-      "link": "https://www.teamlab.art/",
-      "description": "Develop an app for a Japanese electronics retailer (1.5 million users) in a team of 12",
-      "url": "https://medium.com/@ionejunhong/what-i-learned-interning-at-teamlab-9f2c616cc880"
-    },
-    {
       "role": "Student Researcher",
       "employer": "The B. John Garrick Institute for the Risk Sciences at UCLA",
       "date": {
@@ -20,6 +9,17 @@
       "description": "Develop a system reliability analysis web application for NASA's JPL with React",
       "link": "https://www.risksciences.ucla.edu",
       "url": "https://medium.com/@ionejunhong/what-i-learned-interning-at-girs-b5169360bb55"
+    },
+    {
+      "role": "iOS App Developer Intern",
+      "employer": "teamLab/チームラボ",
+      "date": {
+        "start": "2018-07",
+        "end": "2018-09"
+      },
+      "link": "https://www.teamlab.art/",
+      "description": "Develop an app for a Japanese electronics retailer (1.5 million users) in a team of 12",
+      "url": "https://medium.com/@ionejunhong/what-i-learned-interning-at-teamlab-9cb1b85aee99"
     },
     {
       "role": "iOS App Developer Intern",
