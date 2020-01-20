@@ -3,7 +3,6 @@ import {createStyles, Theme, WithStyles} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
 import {fade} from "@material-ui/core/styles";
-import Icon from "@material-ui/core/Icon";
 import SvgIcon from '@material-ui/core/SvgIcon';
 import Link from '@material-ui/core/Link';
 

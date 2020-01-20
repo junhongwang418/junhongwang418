@@ -5,8 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import {ProjectJSON} from "../api/APIManager";
 import Link from '@material-ui/core/Link';
 import Chip from "@material-ui/core/Chip";
-import SvgIcon from "@material-ui/core/SvgIcon";
-import Grid from "@material-ui/core/Grid";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -94,10 +92,6 @@ interface ProjectCardProps extends WithStyles<typeof styles> {
 
 class ProjectCard extends React.Component<ProjectCardProps> {
 
-  constructor(props: ProjectCardProps) {
-    super(props);
-  }
-
   render() {
     const { classes, project } = this.props;
 
@@ -105,7 +99,7 @@ class ProjectCard extends React.Component<ProjectCardProps> {
       <div>
         <div className={classes.imageContainer}>
           <Link target="_blank" href={project.url}>
-            <img className={classes.image} src={project.image} />
+            <img className={classes.image} src={project.image} alt={project.title} />
           </Link>
         </div>
         <Typography variant="h6" gutterBottom>{project.title.toUpperCase()}</Typography>

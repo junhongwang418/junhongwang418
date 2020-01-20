@@ -1,16 +1,12 @@
 import React from "react";
-import {createStyles, Theme, WithStyles, WithTheme} from "@material-ui/core";
+import {createStyles, Theme, WithStyles} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
 import APIManager, {WorkJSON} from "../api/APIManager";
 import WorkCard from "./WorkCard";
-import List from "@material-ui/core/List";
-import ListItemText from "@material-ui/core/ListItemText";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import withTheme from "@material-ui/core/styles/withTheme";
 import {fade} from "@material-ui/core/styles";
-import CircularProgress from "@material-ui/core/CircularProgress";
 
 const styles = (theme: Theme) => createStyles({
   root: {

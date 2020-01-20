@@ -1,8 +1,7 @@
-import React, {Ref, RefObject} from "react";
+import React, {RefObject} from "react";
 
 import Container from "@material-ui/core/Container";
 import NavigationBar from "./navigation/NavigationBar";
-import RouteOptions from "./RouteOptions";
 
 import {Theme, WithStyles, createStyles} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";

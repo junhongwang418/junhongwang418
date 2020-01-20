@@ -1,14 +1,8 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography"
 import Link from "@material-ui/core/Link";
-import riskLogoImage from "../images/risk-logo.png";
-import teamLogoImage from "../images/team-logo.png";
 import {createStyles, Theme, WithStyles} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
-import RouteOptions from "../RouteOptions";
-import ThemeToggle from "../theme/ThemeToggle";
-import profileImage from "../images/profile.png";
-import WarningIcon from '@material-ui/icons/Warning';
 // @ts-ignore
 import Resume from "../resume.pdf";
 import Button from "@material-ui/core/Button";
@@ -44,8 +38,9 @@ class Home extends React.Component<HomeProps> {
       <div className={classes.root}>
         <div className={classes.content}>
           <div className={classes.caption}>
-            <WarningIcon style={{ marginRight: "0.5rem" }} />
-            <span>Website under development. You can visit <a href="./legacy/index.html">legacy page</a> for now.</span>
+            <Typography variant="caption">
+              Visit legacy page <Link href="./legacy/index.html">here</Link>
+            </Typography>
           </div>
           <Typography variant="h6" color="primary" style={{ marginBottom: "1rem" }}>Hi, my name is</Typography>
           <Typography variant="h2" style={{ marginBottom: "1rem" }}>Junhong Wang.</Typography>

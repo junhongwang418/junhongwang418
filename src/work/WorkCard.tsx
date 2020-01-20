@@ -4,11 +4,7 @@ import {Theme, WithStyles} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import {WorkJSON} from "../api/APIManager";
 import Typography from "@material-ui/core/Typography";
-import WorkIcon from "@material-ui/icons/WorkOutline";
-import Tooltip from "@material-ui/core/Tooltip";
-import OpenIcon from "@material-ui/icons/OpenInNew";
 import Link from "@material-ui/core/Link";
-import {Link as RouteLink} from 'react-router-dom';
 
 import Button from "@material-ui/core/Button";
 

@@ -2,14 +2,6 @@ import React from "react";
 import {ThemeProvider} from "@material-ui/styles";
 import {theme, ThemeMode} from "./theme";
 
-// interface State {
-//   dark: boolean;
-// }
-//
-// const initialState: State = {
-//   dark: true
-// };
-//
 const defaultContextData = {
   dark: true,
   toggle: () => {}
@@ -17,17 +9,6 @@ const defaultContextData = {
 
 export const ThemeContext = React.createContext(defaultContextData);
 const useTheme = () => React.useContext(ThemeContext);
-
-// const useEffectDarkMode = () => {
-//   const [themeState, setThemeState] = React.useState(initialState);
-//   React.useEffect(() => {
-//     const isLight = localStorage.getItem(ThemeMode.LIGHT) === JSON.stringify(true);
-//
-//     setThemeState({ ...themeState, dark: !isLight, hasThemeMounted: true });
-//   }, [themeState]);
-//
-//   return [themeState, setThemeState];
-// };
 
 interface Props {}
 

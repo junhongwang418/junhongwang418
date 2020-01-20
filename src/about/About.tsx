@@ -5,8 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import profileImage from "../images/profile.png";
 import Grid from '@material-ui/core/Grid';
 import { fade } from '@material-ui/core/styles/colorManipulator';
-var classNames = require("classnames");
-
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -17,7 +15,8 @@ const styles = (theme: Theme) => createStyles({
   },
 
   profile: {
-    maxWidth: "80%"
+    maxWidth: "80%",
+    borderRadius: "50%"
   },
 
   center: {

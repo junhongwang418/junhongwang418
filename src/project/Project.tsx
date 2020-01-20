@@ -5,13 +5,10 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import ProjectCard from "./ProjectCard";
 import APIManager, {ProjectJSON} from "../api/APIManager";
 import Typography from "@material-ui/core/Typography";
-import request from "request";
 import {fade} from "@material-ui/core/styles";
-import CircularProgress from "@material-ui/core/CircularProgress";
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    // paddingTop: theme.spacing(16)
     minHeight: "72vh"
   },
 
