@@ -8,7 +8,7 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    minHeight: "72vh",
+    marginTop: theme.spacing(8),
     display: "flex",
     alignItems: "center",
     alignContent: "center"
@@ -54,21 +54,27 @@ class About extends React.Component<AboutProps> {
             <Typography variant="h5">About Me</Typography>
             <div className={classes.line} />
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
             <div className={classes.center}>
               <img className={classes.profile} src={profileImage} alt="profile" />
             </div>
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
             <Typography className={classes.description} variant="body1">
-              Hi there! I'm Junhong, a rising senior at UCLA studying computer science.
-              I have strong background in front-end development.
-              During my years in college, I joined MaruMe and TeamLab as an iOS app developer intern
-              where I learned technical tools for building iOS apps
-              as well as software development processes in general (using github, slack, etc).
-              Currently, I'm hired as a software engineer at UCLA's risk sciences lab
-              where we are building HCLA, a web application for NASA to analyze the risk
-              of their projects / models.
+              Hi there! I'm Junhong, a senior year undergraduate student
+              at UCLA studying computer science.
+              My dream is to become an awesome Software Engineer!
+              In the summer of my first year at UCLA,
+              I interned as a iOS app developer at teamLab in Japan
+              to give myself a feel of what it’s like to be a software engineer.
+              I believed it’s important to know beforehand what kind of skills
+              I need to become a successful software engineer.
+              In my second year at UCLA,
+              I started a part-time job as a Software Developer at
+              Risk Sciences Lab at UCLA to learn a different stack of technology.
+              In particular, I primary focused on learning web front-end development.
+              This summer, I will be interning as a Software Engineer at AppFolio
+              to enhance their a property management software.
             </Typography>
           </Grid>
         </Grid>

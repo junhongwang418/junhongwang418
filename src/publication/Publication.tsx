@@ -1,16 +1,21 @@
-import React from "react"
-import {createStyles, Theme, Typography, WithStyles} from "@material-ui/core";
-import withStyles from "@material-ui/core/styles/withStyles";
+import React, {useEffect, useState} from "react"
+import {createStyles, Theme, Typography} from "@material-ui/core";
 import {fade} from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListSubheader from "@material-ui/core/ListSubheader";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
+import makeStyles from "@material-ui/core/styles/makeStyles";
+import APIManager, {PublicationJSON} from "../api/APIManager";
+import TableContainer from "@material-ui/core/TableContainer";
+import Table from "@material-ui/core/Table";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import TableCell from "@material-ui/core/TableCell";
+import TableBody from "@material-ui/core/TableBody";
+import Paper from "@material-ui/core/Paper";
+import LinkIcon from '@material-ui/icons/Link';
 import Link from "@material-ui/core/Link";
 
-const styles = (theme: Theme) => createStyles({
+const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
-    minHeight: "72vh",
+    marginTop: theme.spacing(8),
     display: "flex",
     alignItems: "center",
     alignContent: "center"
@@ -30,58 +35,72 @@ const styles = (theme: Theme) => createStyles({
     marginLeft: "1rem",
     backgroundColor: fade(theme.palette.text.primary, 0.28)
   },
-});
+  tableContainer: {
+    maxHeight: 256,
+  },
 
-interface Props extends WithStyles<typeof styles>{
-
-}
-
-interface State {
-
-}
-
-class Publication extends React.Component<Props, State> {
-
-  render() {
-
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.root}>
-        <div className={classes.content}>
-          <div className={classes.title}>
-            <Typography variant="h5">Publication</Typography>
-            <div className={classes.line} />
-          </div>
-          <List
-            subheader={<ListSubheader>Getting Started with GraphQL</ListSubheader>}
-          >
-            <Link href="https://medium.com/@ionejunhong/getting-started-with-graphql-a1cc7951ef39?source=friends_link&sk=4785daf7f0bc80f7d25150f3a903932d" underline="none" target="_blank">
-              <ListItem button>
-                <ListItemText primary="Part 1: Introduction" />
-              </ListItem>
-            </Link>
-            <Link href="https://medium.com/better-programming/getting-started-with-graphql-5cd8e7c66909?source=friends_link&sk=1ca5c58e69b339b4736f258bb9ba850f" underline="none" target="_blank">
-              <ListItem button>
-                <ListItemText primary="Part 2: Back end" />
-              </ListItem>
-            </Link>
-            <Link href="https://medium.com/@ionejunhong/getting-started-with-graphql-54bfa51a848f?source=friends_link&sk=f48adbca4d28f422a73060fef671dc55" underline="none" target="_blank">
-              <ListItem button>
-                <ListItemText primary="Part 3: Front end" />
-              </ListItem>
-            </Link>
-            <Link href="https://medium.com/@ionejunhong/getting-started-with-graphql-a281b14a560d?source=friends_link&sk=065e2e6473674e6203a4bdb35fedd77e" underline="none" target="_blank">
-              <ListItem button>
-                <ListItemText primary="Part 4: Basic Features" />
-              </ListItem>
-            </Link>
-          </List>
-        </div>
-      </div>
-    );
+  linkCell: {
+    width: "1rem"
   }
+}));
 
-}
+const Publication = () => {
 
-export default withStyles(styles)(Publication);
+  const classes = useStyles();
+
+  const [publications, setPublications] = useState<PublicationJSON[]>([]);
+
+  useEffect(() => {
+    setPublications(APIManager.getAllPublications());
+  }, []);
+
+  return (
+    <div className={classes.root}>
+      <div className={classes.content}>
+        <div className={classes.title}>
+          <Typography variant="h5">Publication</Typography>
+          <div className={classes.line} />
+        </div>
+        {
+          publications.map(publication => (
+            <Paper>
+              <TableContainer className={classes.tableContainer}>
+                <Table stickyHeader>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>
+                        {publication.title} ({publication.episodes.length} episodes)
+                      </TableCell>
+                      <TableCell className={classes.linkCell}>
+                        Link
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {
+                      publication.episodes.map(episode => (
+                        <TableRow>
+                          <TableCell key={episode.title}>
+                            {episode.title}
+                          </TableCell>
+                          <TableCell className={classes.linkCell}>
+                            <Link href={episode.link} target="_blank">
+                              <LinkIcon />
+                            </Link>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    }
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Paper>
+          ))
+        }
+      </div>
+    </div>
+  );
+
+};
+
+export default Publication;

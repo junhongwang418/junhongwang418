@@ -3,14 +3,13 @@ import {createStyles, Theme, WithStyles} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
 import APIManager, {WorkJSON} from "../api/APIManager";
-import WorkCard from "./WorkCard";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
 import {fade} from "@material-ui/core/styles";
+import List from "@material-ui/core/List";
+import WorkListItem from "./WorkListItem";
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    minHeight: "72vh",
+    marginTop: theme.spacing(12),
     display: "flex",
     alignItems: "center",
     alignContent: "center"
@@ -21,7 +20,6 @@ const styles = (theme: Theme) => createStyles({
   },
 
   line: {
-
     height: 1,
     flexGrow: 1,
     marginRight: "28%",
@@ -40,9 +38,6 @@ const styles = (theme: Theme) => createStyles({
   },
 
   body: {
-    // position: "relative",
-    // top: "50%",
-    // transform: `translateY(-50%)`,
     display: "flex",
   },
 
@@ -56,7 +51,6 @@ interface Props extends WithStyles<typeof styles>{}
 
 interface State {
   works: WorkJSON[];
-  currentTab: number;
 }
 
 class Work extends React.Component<Props, State> {
@@ -64,8 +58,7 @@ class Work extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      works: [],
-      currentTab: 0
+      works: []
     };
   }
 
@@ -73,32 +66,23 @@ class Work extends React.Component<Props, State> {
     this.setState({ works: APIManager.getAllWorks() });
   }
 
-  private handleChange = (e: React.ChangeEvent<{}>, value: number) => {
-    this.setState({ currentTab: value });
-  };
-
   render() {
     const { classes } = this.props;
-    const { works, currentTab } = this.state;
+    const { works } = this.state;
 
     return (
       <div className={classes.root}>
         <div className={classes.content}>
           <div className={classes.title}>
-            <Typography variant="h5">My Work Experience</Typography>
+            <Typography variant="h5">Experience</Typography>
             <div className={classes.line} />
           </div>
           <div className={classes.body}>
-            <Tabs
-              orientation="vertical"
-              onChange={this.handleChange}
-              value={currentTab}
-              indicatorColor="primary"
-              textColor="primary"
-            >
-              {works.map((work, index) => <Tab className={classes.tab} label={work.employer} href="" key={index} />)}
-            </Tabs>
-            {works.map((work, index) => <WorkCard work={work} value={currentTab} index={index} key={index} />)}
+            <List>
+              {
+                works.map(work => <WorkListItem work={work} />)
+              }
+            </List>
           </div>
         </div>
       </div>

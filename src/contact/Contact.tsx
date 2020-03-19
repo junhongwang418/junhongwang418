@@ -8,7 +8,8 @@ import Link from '@material-ui/core/Link';
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    height: "28vh",
+    marginTop: theme.spacing(8),
+    height: theme.spacing(12),
     display: "flex",
     alignItems: "center",
     alignContent: "center"

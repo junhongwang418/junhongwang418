@@ -9,7 +9,7 @@ import {fade} from "@material-ui/core/styles";
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    minHeight: "72vh"
+    marginTop: theme.spacing(8)
   },
 
   line: {

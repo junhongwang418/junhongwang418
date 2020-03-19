@@ -5,6 +5,7 @@ import {ClassNameMap} from "@material-ui/core/styles/withStyles";
 import MoonIcon from "@material-ui/icons/Brightness2";
 import {useTheme} from "./ThemeContext";
 import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
 var classNames = require("classnames");
 
 const styles = (theme: Theme) => createStyles({
@@ -50,24 +51,33 @@ const ThemeIconButton = (props: ThemeIconButtonProps) => {
   const { isFirstButton } = props;
   const themeState = useTheme();
   const classes = useStyles();
+
+  const hint = "← Turn " + (themeState.dark ? "on" : "off") + " the light";
+
   return (
-    <IconButton
-      className={classNames({
-        [classes.iconButton]: true,
-        [classes.absolutePosition]: isFirstButton,
-        [classes.show]: isFirstButton ? !themeState.dark : themeState.dark,
-        [classes.hide]: isFirstButton ? themeState.dark : !themeState.dark
-      })}
-      onClick={() => themeState.toggle()}
-      href=""
-      disableRipple
-    >
-      {isFirstButton ? (
-        <SunnyIcon className={classes.sunnyIcon} />
-      ) : (
-        <MoonIcon className={classes.moonIcon} />
-      )}
-    </IconButton>
+    <React.Fragment>
+      <IconButton
+        className={classNames({
+          [classes.iconButton]: true,
+          [classes.absolutePosition]: isFirstButton,
+          [classes.show]: isFirstButton ? !themeState.dark : themeState.dark,
+          [classes.hide]: isFirstButton ? themeState.dark : !themeState.dark
+        })}
+        onClick={() => themeState.toggle()}
+        href=""
+        disableRipple
+      >
+        {isFirstButton ? (
+          <SunnyIcon className={classes.sunnyIcon} />
+        ) : (
+          <MoonIcon className={classes.moonIcon} />
+        )}
+      </IconButton>
+      {
+        !isFirstButton &&
+        <Typography variant="caption">{hint}</Typography>
+      }
+    </React.Fragment>
   );
 };
 

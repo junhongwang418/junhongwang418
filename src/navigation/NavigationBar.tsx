@@ -14,7 +14,6 @@ import {createStyles, Theme} from "@material-ui/core";
 const styles = (theme: Theme) => createStyles({
   appBar: {
     boxShadow: "none",
-    backgroundColor: theme.palette.background.default
   },
 
   button: {
@@ -57,7 +56,7 @@ const NavigationBar: React.FunctionComponent<Props> = (props) => {
   return (
     <Slide appear={false} direction="down" in={!useScrollTrigger()}>
       <AppBar
-        color="inherit"
+        color="transparent"
         className={classes.appBar}
       >
         <Toolbar>

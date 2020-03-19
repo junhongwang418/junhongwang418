@@ -3,7 +3,7 @@ import React, {RefObject} from "react";
 import Container from "@material-ui/core/Container";
 import NavigationBar from "./navigation/NavigationBar";
 
-import {Theme, WithStyles, createStyles} from "@material-ui/core";
+import {Theme, WithStyles, createStyles, WithTheme} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Route, Switch } from "react-router-dom";
 import Home from "./home/Home";
@@ -15,6 +15,8 @@ import PageNotFound from "./PageNotFound";
 import Grid from "@material-ui/core/Grid";
 import AOS from "aos";
 import Publication from "./publication/Publication";
+import withTheme from "@material-ui/core/styles/withTheme";
+import VantaEffect from "./VantaEffect";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -30,7 +32,7 @@ const styles = (theme: Theme) => createStyles({
 
 });
 
-interface AppProps extends WithStyles<typeof styles> {}
+interface AppProps extends WithStyles<typeof styles>, WithTheme {}
 
 class App extends React.Component<AppProps> {
 
@@ -79,11 +81,13 @@ class App extends React.Component<AppProps> {
                   onClickProject={() => window.scrollTo({top: this.projectRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
                   onClickPublication={() => window.scrollTo({top: this.publicationRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
                 />
+                <VantaEffect>
+                  <Container className={classes.container} maxWidth="md">
+                    <div data-aos="fade-up" ref={this.homeRef}><Home /></div>
+                  </Container>
+                </VantaEffect>
                 <Container className={classes.container} maxWidth="md">
                   <Grid container spacing={8}>
-                    <Grid item xs={12}>
-                      <div data-aos="fade-up" ref={this.homeRef}><Home /></div>
-                    </Grid>
                     <Grid item xs={12}>
                       <div data-aos="fade-up" ref={this.aboutRef}><About /></div>
                     </Grid>
@@ -112,4 +116,4 @@ class App extends React.Component<AppProps> {
   }
 }
 
-export default withStyles(styles)(App);
+export default withTheme(withStyles(styles)(App));

@@ -12,7 +12,7 @@ export interface ProjectJSON {
 export interface WorkJSON {
   role: string;
   link: string;
-  url: string;
+  url?: string;
 
   employer: string;
   date: {
@@ -20,6 +20,16 @@ export interface WorkJSON {
     end?: string;
   };
   description: string;
+  image: string;
+  tools: string[];
+}
+
+export interface PublicationJSON {
+  title: string;
+  episodes: Array<{
+    title: string,
+    link: string
+  }>;
 }
 
 class APIManager {
@@ -29,6 +39,10 @@ class APIManager {
 
   static getAllWorks(): WorkJSON[] {
     return data.works;
+  }
+
+  static getAllPublications(): PublicationJSON[] {
+    return data.publications;
   }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "private": true,
   "homepage": "https://ioneone.github.io/",
   "dependencies": {
@@ -19,7 +19,9 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "three": "^0.114.0",
+    "vanta": "^0.5.10"
   },
   "scripts": {
     "start": "react-scripts start",
