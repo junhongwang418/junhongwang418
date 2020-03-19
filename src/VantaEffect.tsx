@@ -18,8 +18,8 @@ const VantaEffect: FunctionComponent = (props) => {
       THREE: THREE,
       mouseControls: false,
       touchControls: false,
-      backgroundColor: themeState.dark ? 0x303030 : 0xfafafa,
-      color: themeState.dark ? 0x7ebaeb : 0xd193e3
+      backgroundColor: theme.palette.background.default,
+      color: theme.palette.secondary.main
     }));
 
     return () => {
@@ -29,13 +29,17 @@ const VantaEffect: FunctionComponent = (props) => {
   }, [effect]);
 
   useEffect(() => {
-    if (effect) {
-      // @ts-ignore
-      effect.setOptions({
-        backgroundColor: themeState.dark ? 0x303030 : 0xfafafa,
-        color: themeState.dark ? 0x7ebaeb : 0xd193e3
-      });
-    }
+    // @ts-ignore
+    if (effect) effect.destroy();
+
+    setEffect(GLOBE({
+      el: ref.current,
+      THREE: THREE,
+      mouseControls: false,
+      touchControls: false,
+      backgroundColor: theme.palette.background.default,
+      color: theme.palette.secondary.main
+    }));
   }, [themeState.dark]);
 
   return (
