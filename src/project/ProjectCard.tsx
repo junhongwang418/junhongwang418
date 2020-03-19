@@ -22,67 +22,10 @@ const styles = (theme: Theme) => createStyles({
     flexGrow: 1
   },
 
-  header: {
-    display: "flex",
-    justifyContent: "space-between",
-    marginBottom: "1.2rem"
-  },
-
-  folder: {
-    color: theme.palette.primary.main,
-    width: 48,
-    height: 48
-  },
-
-  open: {
-    cursor: "pointer",
-    "&:hover": {
-      color: theme.palette.primary.main,
-      transition: "color 0.2s ease"
-    },
-    marginLeft: "1rem"
-  },
-
-  github: {
-    width: 24,
-    height: 24,
-    cursor: "pointer",
-    "&:hover": {
-      "& path": {
-        fill: theme.palette.primary.main,
-        transition: "fill 0.2s ease"
-      },
-    },
-    "& path": {
-      fill: theme.palette.text.primary
-    }
-  },
-
-  description: {
-    color: theme.palette.text.secondary,
-  },
-
   link: {
-    textDecoration: 'none',
-    color: theme.palette.primary.main
-  },
-
-  imageContainer: {
-    width: "100%",
-    paddingTop: "72%",
-    position: "relative",
-  },
-
-  image: {
-    position: "absolute",
-    top: 0,
-    width: "100%",
-    height: "100%",
-    objectFit: "contain"
-  },
-
-  chips: {
-    marginBottom: "0.2rem"
+    "&:hover": {
+      textDecoration: 'none'
+    }
   },
 
   cardMedia: {
@@ -108,7 +51,7 @@ interface ProjectCardProps extends WithStyles<typeof styles> {
 class ProjectCard extends React.Component<ProjectCardProps> {
 
   render() {
-    const { classes, project } = this.props;
+    const {classes, project} = this.props;
 
     return (
       <Card className={classes.root} variant="outlined">
@@ -139,47 +82,20 @@ class ProjectCard extends React.Component<ProjectCardProps> {
           </div>
         </CardContent>
         <CardActions>
-          <Button size="small" color="primary">
-            view case study >
-          </Button>
-        </CardActions>
-      </Card>
-    );
-
-    return (
-      <div>
-        <div className={classes.imageContainer}>
-          <Link target="_blank" href={project.url}>
-            <img className={classes.image} src={project.image} alt={project.title} />
-          </Link>
-        </div>
-        <Typography variant="h6" gutterBottom>{project.title.toUpperCase()}</Typography>
-        <Typography color="textSecondary" variant="body2" gutterBottom>{project.description}</Typography>
-        <div className={classes.chips}>
-          {
-            project.tools.map((tool, index) =>
-              <Chip
-                variant="outlined"
-                size="small"
-                label={tool}
-                color="secondary"
-                key={index}
-              />
-            )
-          }
-        </div>
-        <Typography>
           <Link
             target="_blank"
             href={project.url}
             className={classes.link}
           >
-            view case study >
+            <Button size="small" color="primary">
+              view case study >
+            </Button>
           </Link>
-        </Typography>
-      </div>
+        </CardActions>
+      </Card>
     );
   }
+
 }
 
 export default withStyles(styles)(ProjectCard);
