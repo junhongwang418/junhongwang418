@@ -5,23 +5,21 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import ListItem from "@material-ui/core/ListItem";
 import {WorkJSON} from "../api/APIManager";
-import {Link} from "@material-ui/core";
+import {Link, Theme} from "@material-ui/core";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Chip from "@material-ui/core/Chip";
 
-const useStyles = makeStyles({
-  link: {
-    "&:hover": {
-      textDecoration: "none"
-    }
+const useStyles = makeStyles((theme: Theme) => ({
+
+  chipContainer: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1)
   },
-  linkBlock: {
-    display: "block",
-    "&:hover": {
-      textDecoration: "none"
-    }
+
+  chip: {
+    marginRight: theme.spacing(1)
   }
-});
+}));
 
 type WorkListItemProps = {
   work: WorkJSON
@@ -41,7 +39,7 @@ const WorkListItem = (props: WorkListItemProps) => {
         primary={
           <React.Fragment>
             {work.role}
-            <Link className={classes.link} href={work.link} target="_blank">
+            <Link href={work.link} target="_blank">
               {" "}@{" "}{work.employer}
             </Link>
             <Typography
@@ -55,19 +53,16 @@ const WorkListItem = (props: WorkListItemProps) => {
         secondary={
           <React.Fragment>
             {work.description}
-            {
-              work.tools.length &&
-              <div>
-                {
-                  work.tools.map(tool => (
-                    <Chip size="small" label={tool} variant="outlined" />
-                  ))
-                }
-              </div>
-            }
+            <div className={classes.chipContainer}>
+              {
+                work.tools.map(tool => (
+                  <Chip className={classes.chip} size="small" label={tool} variant="outlined" />
+                ))
+              }
+            </div>
             {
               work.url &&
-              <Link className={classes.linkBlock} href={work.url} target="_blank">
+              <Link href={work.url} target="_blank">
                 view case study >
               </Link>
             }

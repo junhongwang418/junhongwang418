@@ -74,7 +74,6 @@
       "tools": [
         "GraphQL",
         "React",
-        "Express",
         "TypeScript"
       ]
     },
@@ -85,7 +84,6 @@
       "image": "https://github.com/scalableinternetservices/linksin/raw/master/team/logo.svg?sanitize=true",
       "url": "https://github.com/scalableinternetservices/linksin",
       "tools": [
-        "Ruby",
         "Ruby on Rails",
         "AWS",
         "Tsung"

@@ -60,7 +60,7 @@ class Project extends React.Component<Props, State> {
           <Typography variant="h5">My Projects</Typography>
           <div className={classes.line} />
         </div>
-        <Grid container spacing={8}>
+        <Grid container spacing={4}>
           {
             projects.map((project, index) =>
               <Grid item xs={12} sm={6} md={4} lg={4} xl={4} key={index}>
