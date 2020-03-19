@@ -81,13 +81,15 @@ class App extends React.Component<AppProps> {
                   onClickProject={() => window.scrollTo({top: this.projectRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
                   onClickPublication={() => window.scrollTo({top: this.publicationRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
                 />
-                <VantaEffect>
-                  <Container className={classes.container} maxWidth="md">
-                    <div data-aos="fade-up" ref={this.homeRef}><Home /></div>
-                  </Container>
-                </VantaEffect>
                 <Container className={classes.container} maxWidth="md">
                   <Grid container spacing={8}>
+                    <Grid item xs={12}>
+                      <div data-aos="fade-up" ref={this.homeRef}>
+                        <VantaEffect>
+                          <Home />
+                        </VantaEffect>
+                      </div>
+                    </Grid>
                     <Grid item xs={12}>
                       <div data-aos="fade-up" ref={this.aboutRef}><About /></div>
                     </Grid>

@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 const styles = (theme: Theme) => createStyles({
 
   root: {
-    marginTop: theme.spacing(16)
+    marginTop: theme.spacing(12)
   },
 
   caption: {

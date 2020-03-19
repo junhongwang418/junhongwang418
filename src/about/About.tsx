@@ -8,7 +8,6 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    marginTop: theme.spacing(8),
     display: "flex",
     alignItems: "center",
     alignContent: "center"

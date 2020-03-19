@@ -15,7 +15,6 @@ import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
-    marginTop: theme.spacing(8),
     display: "flex",
     alignItems: "center",
     alignContent: "center"

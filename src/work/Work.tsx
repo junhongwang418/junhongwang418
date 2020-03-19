@@ -9,7 +9,6 @@ import WorkListItem from "./WorkListItem";
 
 const styles = (theme: Theme) => createStyles({
   root: {
-    marginTop: theme.spacing(12),
     display: "flex",
     alignItems: "center",
     alignContent: "center"

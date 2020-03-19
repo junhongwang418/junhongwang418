@@ -19,7 +19,7 @@ const VantaEffect: FunctionComponent = (props) => {
       mouseControls: false,
       touchControls: false,
       backgroundColor: themeState.dark ? 0x303030 : 0xfafafa,
-      color: theme.palette.secondary.light
+      color: themeState.dark ? 0x7ebaeb : 0xd193e3
     }));
 
     return () => {
@@ -33,7 +33,7 @@ const VantaEffect: FunctionComponent = (props) => {
       // @ts-ignore
       effect.setOptions({
         backgroundColor: themeState.dark ? 0x303030 : 0xfafafa,
-        color: theme.palette.secondary.light
+        color: themeState.dark ? 0x7ebaeb : 0xd193e3
       });
     }
   }, [themeState.dark]);
