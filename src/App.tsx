@@ -16,7 +16,7 @@ import Grid from "@material-ui/core/Grid";
 import AOS from "aos";
 import Publication from "./publication/Publication";
 import withTheme from "@material-ui/core/styles/withTheme";
-import MarkDown from "./MarkDown";
+import Markdown from "./Markdown";
 import VantaEffect from "./VantaEffect";
 
 const styles = (theme: Theme) => createStyles({
@@ -111,7 +111,7 @@ class App extends React.Component<AppProps> {
               </React.Fragment>
             )}
           />
-          <Route path="/md/:id" component={MarkDown} />
+          <Route path="/md/:id" component={Markdown} />
           <Route component={PageNotFound} />
         </Switch>
 
