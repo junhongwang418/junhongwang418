@@ -1,5 +1,7 @@
 # Getting Started with GraphQL
 
+![graphql](https://github.com/ioneone/ioneone.github.io/blob/develop/src/markdowns/getting-started-with-graphql/jflix.png?raw=true)
+
 I took a class at UCLA in which the professor invited a guest 
 from industry to introduce GraphQL. I thought it's such an 
 interesting technology to learn because it changes the way we 
