@@ -1,7 +1,7 @@
 import React, {FunctionComponent, useEffect, useRef, useState} from "react";
 import * as THREE from 'three';
 // @ts-ignore
-import GLOBE from 'vanta/dist/vanta.net.min';
+import NET from 'vanta/dist/vanta.net.min';
 import {useTheme as useThemeState} from "./theme/ThemeContext";
 import useTheme from "@material-ui/core/styles/useTheme";
 
@@ -13,9 +13,12 @@ const VantaEffect: FunctionComponent = (props) => {
   const theme = useTheme();
 
   useEffect(() => {
-    if (!effect) setEffect(GLOBE({
+    if (!effect) setEffect(NET({
       el: ref.current,
       THREE: THREE,
+      points: 3,
+      spacing: 30,
+      maxDistance: 30,
       mouseControls: false,
       touchControls: false,
       backgroundColor: theme.palette.background.default,
@@ -26,20 +29,25 @@ const VantaEffect: FunctionComponent = (props) => {
       // @ts-ignore
       if (effect) effect.destroy();
     }
-  }, [effect]);
+  }, []);
 
   useEffect(() => {
+
     // @ts-ignore
     if (effect) effect.destroy();
 
-    setEffect(GLOBE({
+    setEffect(NET({
       el: ref.current,
       THREE: THREE,
+      points: 3,
+      spacing: 50,
+      maxDistance: 50,
       mouseControls: false,
       touchControls: false,
       backgroundColor: theme.palette.background.default,
       color: theme.palette.secondary.main
     }));
+
   }, [themeState.dark]);
 
   return (

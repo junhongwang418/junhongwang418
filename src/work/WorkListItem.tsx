@@ -38,9 +38,9 @@ const WorkListItem = (props: WorkListItemProps) => {
       <ListItemText
         primary={
           <React.Fragment>
-            {work.role}
+            {work.role}{" "}
             <Link href={work.link} target="_blank">
-              {" "}@{" "}{work.employer}
+              @{" "}{work.employer}
             </Link>
             <Typography
               display="block"

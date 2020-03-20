@@ -25,7 +25,9 @@ export interface WorkJSON {
 }
 
 export interface PublicationJSON {
+  id: string;
   title: string;
+  description: string;
   episodes: Array<{
     title: string,
     link: string

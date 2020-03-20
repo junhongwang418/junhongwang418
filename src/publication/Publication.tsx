@@ -1,17 +1,14 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect, useRef, useState} from "react"
 import {createStyles, Theme, Typography} from "@material-ui/core";
 import {fade} from "@material-ui/core/styles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import APIManager, {PublicationJSON} from "../api/APIManager";
-import TableContainer from "@material-ui/core/TableContainer";
-import Table from "@material-ui/core/Table";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import TableCell from "@material-ui/core/TableCell";
-import TableBody from "@material-ui/core/TableBody";
-import Paper from "@material-ui/core/Paper";
-import LinkIcon from '@material-ui/icons/Link';
-import Link from "@material-ui/core/Link";
+import List from "@material-ui/core/List";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListItem from "@material-ui/core/ListItem";
+import {Link} from "react-router-dom";
+import {useHistory, useLocation} from "react-router";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
@@ -34,24 +31,35 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     marginLeft: "1rem",
     backgroundColor: fade(theme.palette.text.primary, 0.28)
   },
-  tableContainer: {
-    maxHeight: 256,
+
+  link: {
+    textDecoration: "none",
+    color: theme.palette.primary.main
   },
 
-  linkCell: {
-    width: "1rem"
+  linkButton: {
+    transform: "translateX(-5px)"
   }
+
 }));
 
 const Publication = () => {
 
   const classes = useStyles();
+  const history = useHistory();
+  const location = useLocation();
 
   const [publications, setPublications] = useState<PublicationJSON[]>([]);
 
   useEffect(() => {
     setPublications(APIManager.getAllPublications());
   }, []);
+
+  useEffect(() => {
+    // @ts-ignore
+    if (location.state) window.scrollTo({ top: location.state });
+
+  }, [publications]);
 
   return (
     <div className={classes.root}>
@@ -60,42 +68,32 @@ const Publication = () => {
           <Typography variant="h5">Publication</Typography>
           <div className={classes.line} />
         </div>
-        {
-          publications.map(publication => (
-            <Paper>
-              <TableContainer className={classes.tableContainer}>
-                <Table stickyHeader>
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>
-                        {publication.title} ({publication.episodes.length} episodes)
-                      </TableCell>
-                      <TableCell className={classes.linkCell}>
-                        Link
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {
-                      publication.episodes.map(episode => (
-                        <TableRow>
-                          <TableCell key={episode.title}>
-                            {episode.title}
-                          </TableCell>
-                          <TableCell className={classes.linkCell}>
-                            <Link href={episode.link} target="_blank">
-                              <LinkIcon />
-                            </Link>
-                          </TableCell>
-                        </TableRow>
-                      ))
-                    }
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </Paper>
-          ))
-        }
+        <List>
+          {
+            publications.map(publication => (
+              <ListItem key={publication.id}>
+                <ListItemText
+                  primary={publication.title}
+                  secondary={
+                    <React.Fragment>
+                      {publication.description}
+                      <Typography variant="overline" display="block">
+                        <Button
+                          className={classes.linkButton}
+                          onClick={() => history.push({ pathname: `/md/${publication.id}`, state: window.scrollY })}
+                          size="small"
+                          color="primary"
+                        >
+                          view case study >
+                        </Button>
+                      </Typography>
+                    </React.Fragment>
+                  }
+                />
+              </ListItem>
+            ))
+          }
+        </List>
       </div>
     </div>
   );
