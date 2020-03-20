@@ -1,12 +1,24 @@
 import React, {useEffect, useState} from "react";
 import {useHistory, useLocation, useParams} from "react-router";
 import {Button, Theme} from "@material-ui/core";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown/with-html";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import Contact from "./contact/Contact";
+import Toolbar from "@material-ui/core/Toolbar";
+import AppBar from "@material-ui/core/AppBar/AppBar";
+import ThemeToggle from "./theme/ThemeToggle";
 
 const useStyles = makeStyles((theme: Theme) => ({
+  appBar: {
+    boxShadow: "none"
+  },
+
+  container: {
+    paddingTop: theme.spacing(4)
+  },
+
   md: {
     "& img": {
       width: "100%"
@@ -34,17 +46,25 @@ const Markdown = () => {
 
   }, []);
 
-
   return (
     <div>
-      <Button onClick={() => history.push({ pathname: "/", state: location.state })}>
-        back
-      </Button>
-      <Container maxWidth="md">
+      <AppBar
+        color="transparent"
+        className={classes.appBar}
+      >
+        <Toolbar>
+          <Button onClick={() => history.push({ pathname: "/", state: location.state })}>
+            {"← back"}
+          </Button>
+          <ThemeToggle />
+        </Toolbar>
+      </AppBar>
+      <Container className={classes.container} maxWidth="md">
         <Typography>
-          <ReactMarkdown className={classes.md} source={markdown} />
+          <ReactMarkdown className={classes.md} source={markdown} escapeHtml={false} />
         </Typography>
       </Container>
+      <Contact />
     </div>
   );
 };

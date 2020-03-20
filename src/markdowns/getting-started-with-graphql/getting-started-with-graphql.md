@@ -24,4 +24,4 @@ Getting Started with GraphQL consists of 5 parts as follows:
 
 At the end of this series, I built a web application called Jflix, 
 where you can view my favorites movies and TV shows. You can check
-out the demo <a href="https://jflix.herokuapp.com/" target="_blank">here</a>[here]. It's live!
+out the demo <a href="https://jflix.herokuapp.com/" target="_blank">. It's live!

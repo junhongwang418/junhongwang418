@@ -82,7 +82,7 @@ const NavigationBar: React.FunctionComponent<Props> = (props) => {
       >
         <Toolbar>
           <Button onClick={onClickHome}>Junhong Wang</Button>
-          <ThemeToggle />
+          <ThemeToggle withTooltip />
           <div style={{ flexGrow: 1 }} />
           <Hidden smDown implementation="css">
             <Typography className={classes.version} variant="caption">

@@ -44,11 +44,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles(styles(theme)));
 
 interface ThemeIconButtonProps {
   isFirstButton?: boolean;
+  withTooltip?: boolean;
   classes?: Partial<ClassNameMap<keyof typeof styles>>;
 }
 
 const ThemeIconButton = (props: ThemeIconButtonProps) => {
-  const { isFirstButton } = props;
+  const { isFirstButton, withTooltip } = props;
   const themeState = useTheme();
   const classes = useStyles();
 
@@ -74,18 +75,27 @@ const ThemeIconButton = (props: ThemeIconButtonProps) => {
         )}
       </IconButton>
       {
-        !isFirstButton &&
+        !isFirstButton && withTooltip &&
         <Typography variant="caption">{hint}</Typography>
       }
     </React.Fragment>
   );
 };
 
-const ThemeToggle = () => (
-  <div>
-    <ThemeIconButton isFirstButton />
-    <ThemeIconButton />
-  </div>
-);
+type ThemeToggleProps = {
+  withTooltip?: boolean
+}
+
+const ThemeToggle = (props: ThemeToggleProps) => {
+
+  const { withTooltip } = props;
+
+  return (
+    <div>
+      <ThemeIconButton isFirstButton withTooltip={withTooltip} />
+      <ThemeIconButton withTooltip={withTooltip} />
+    </div>
+  );
+}
 
 export default ThemeToggle;
