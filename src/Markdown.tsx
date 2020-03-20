@@ -1,15 +1,29 @@
 import React, {useEffect, useState} from "react";
 import {useHistory, useLocation, useParams} from "react-router";
-import {Button} from "@material-ui/core";
+import {Button, Theme} from "@material-ui/core";
 import ReactMarkdown from "react-markdown";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
+import makeStyles from "@material-ui/core/styles/makeStyles";
+
+const useStyles = makeStyles((theme: Theme) => ({
+  md: {
+    "& img": {
+      width: "100%"
+    },
+    "& a": {
+      color: theme.palette.primary.main
+    }
+  }
+}));
 
 const Markdown = () => {
   const params = useParams<{ id: string }>();
   const location = useLocation();
   const history = useHistory();
   const [markdown, setMarkdown] = useState<string>("");
+
+  const classes = useStyles();
 
   useEffect(() => {
 
@@ -28,7 +42,7 @@ const Markdown = () => {
       </Button>
       <Container maxWidth="md">
         <Typography>
-          <ReactMarkdown source={markdown} />
+          <ReactMarkdown className={classes.md} source={markdown} />
         </Typography>
       </Container>
     </div>
