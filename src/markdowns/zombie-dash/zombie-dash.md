@@ -8,6 +8,4 @@ and your job is to rescue frightened citizens
 before they are eaten and transformed into zombies.
 
 Here's a short clip of me playing the completed game.
-<video autoplay loop muted control>
-<source src="https://github.com/ioneone/ioneone.github.io/blob/develop/src/markdowns/zombie-dash/zombie-dash.mp4?raw=true" type="video/mp4">
-</video>
+<video autoplay loop muted control><source src="https://github.com/ioneone/ioneone.github.io/blob/develop/src/markdowns/zombie-dash/zombie-dash.mp4?raw=true" type="video/mp4"></video>
