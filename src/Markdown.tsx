@@ -21,10 +21,17 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   md: {
     "& img": {
-      width: "100%"
+      display: "block",
+      margin: "0 auto",
+      width: "72%"
     },
     "& a": {
       color: theme.palette.primary.main
+    },
+    "& video": {
+      display: "block",
+      margin: "0 auto",
+      width: "72%"
     }
   }
 }));
