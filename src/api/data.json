@@ -66,6 +66,7 @@
   ],
   "projects": [
     {
+      "id": "jflix",
       "title": "Jflix",
       "description": "Jflix allows you to check out what TV series or movies Junhong like",
       "year": 2020,
@@ -78,6 +79,7 @@
       ]
     },
     {
+      "id": "linksin",
       "title": "LinksIn",
       "description": "Social Networking App for Gamers",
       "year": 2019,
@@ -90,6 +92,7 @@
       ]
     },
     {
+      "id": "museum-3d",
       "title": "Museum 3D",
       "description": "Virtual Museum Tour in WebGL",
       "year": 2019,
@@ -101,6 +104,7 @@
       ]
     },
     {
+      "id": "glancermp",
       "title": "GlanceRMP",
       "description": "Javascript extension that helps students at Peralta Community Colleges choose classes ",
       "year": 2017,
@@ -111,6 +115,7 @@
       ]
     },
     {
+      "id": "digit-recognizer",
       "title": "Digit Recognizer",
       "description": "MNIST digit recognizer with various learning algorithms",
       "year": 2019,
@@ -121,6 +126,7 @@
       ]
     },
     {
+      "id": "flappy-nexy3",
       "title": "Flappy Nexy3",
       "description": "Flappy bird immitation with Verilog",
       "year": 2019,
@@ -131,6 +137,7 @@
       ]
     },
     {
+      "id": "zombie-dash",
       "title": "Zombie Dash",
       "description": "Kill the zombies and save the citizens in C++",
       "year": 2019,

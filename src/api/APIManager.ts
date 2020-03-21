@@ -1,6 +1,7 @@
 import data from "./data.json";
 
 export interface ProjectJSON {
+  id: string;
   title: string;
   description: string;
   year: number;
