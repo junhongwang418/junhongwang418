@@ -8,6 +8,8 @@ import {WorkJSON} from "../api/APIManager";
 import {Link, Theme} from "@material-ui/core";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import Chip from "@material-ui/core/Chip";
+import Button from "@material-ui/core/Button";
+import {useHistory} from "react-router";
 
 const useStyles = makeStyles((theme: Theme) => ({
 
@@ -29,6 +31,7 @@ const WorkListItem = (props: WorkListItemProps) => {
 
   const { work } = props;
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <ListItem alignItems="flex-start">
@@ -61,10 +64,14 @@ const WorkListItem = (props: WorkListItemProps) => {
               }
             </div>
             {
-              work.url &&
-              <Link href={work.url} target="_blank">
+              work.id &&
+              <Button
+                onClick={() => history.push({ pathname: `/md/${work.id}`, state: window.scrollY })}
+                size="small"
+                color="primary"
+              >
                 view case study >
-              </Link>
+              </Button>
             }
           </React.Fragment>
         }

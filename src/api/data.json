@@ -13,6 +13,7 @@
       "tools": []
     },
     {
+      "id": "risk-sciences",
       "role": "Software Developer Intern",
       "employer": "The B. John Garrick Institute for the Risk Sciences at UCLA",
       "date": {
@@ -30,6 +31,7 @@
       ]
     },
     {
+      "id": "teamlab",
       "role": "iOS App Developer Intern",
       "employer": "teamLab/チームラボ",
       "date": {
@@ -47,6 +49,7 @@
       ]
     },
     {
+      "id": "marume",
       "role": "iOS App Developer Intern",
       "employer": "MaruMe",
       "date": {

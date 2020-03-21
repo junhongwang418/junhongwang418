@@ -11,6 +11,7 @@ export interface ProjectJSON {
 }
 
 export interface WorkJSON {
+  id?: string;
   role: string;
   link: string;
   url?: string;
