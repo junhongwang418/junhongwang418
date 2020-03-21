@@ -12,21 +12,21 @@ diary such that it's as easy to understand as possible for
 everyone. Also, it serves as a reference for me to look 
 back later.
 
-You can find the list of videos of Coursera <a href="https://www.youtube.com/watch?v=UzxYlbK2c7E&list=PLA89DCFA6ADACE599">here</a>.
+You can find the list of videos of Coursera <a href="https://www.youtube.com/watch?v=UzxYlbK2c7E&list=PLA89DCFA6ADACE599" target="_blank">here</a>.
 Technically it is a course offered at Stanford university 
 but the content is almost the same except Stanford's version
 is more mathematically more rigorous than Coursera version.
 
 Github page to my homework solution of this course is available
-<a href="https://github.com/ioneone/Coursera-Machine-Learning">here</a>.
+<a href="https://github.com/ioneone/Coursera-Machine-Learning" target="_blank">here</a>.
 
 At the end of this diary, I built a toy project called
 Digit Recognizer. I will create a post about this very
 soon.
 
 I continued learning machine learning for 119 days (almost) in a row.
-I stopped it because it got to a point, where it is too
-difficult to understand with undergraduate level math.
+I stopped it because I got to a point, where it is too
+difficult to understand with undergraduate level math (machine learning is very math heavy!).
 But I thought I already knew enough about the basic
 ideas of machine learning, so I called it off. Better 
 spend time on different area of computer science.
