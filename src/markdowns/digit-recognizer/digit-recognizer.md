@@ -7,15 +7,17 @@ learning diary series. It's just a toy project to show you the
 performance differences among different machine learning algorithms
 on MNIST dataset. MNIST is a dataset of images of labeled digits.
 For simplicity, I only implemented decision tree, knn, perceptron, 
-and logistic regression. Here's the demo of this project.
+and logistic regression. 
 
-<div>
-<canvas id="canvas" width=140 height=140></canvas>
-<p>True Label: <span id="true_label"></span></p>
-<p>Decision Tree Prediction (accuracy 87.21%): <span id="decision_tree_pred"></span></p>
-<p>K Nearest Neighbors Prediction: Takes too long to predict</p>
-<p>Perceptron (accuracy 89.23%): <span id="perceptron_pred"></span></p>
-<p>Logistic Regression (accuracy 92%): <span id="logistic_pred"></span></p>
-</div>
+Check out the demo <a href="https://ioneone.github.io/DigitRecognizer/" target="_blank">here</a>!
+ 
+Check out the source code <a href="https://github.com/ioneone/DigitRecognizer" target="_blank">here</a>!
 
-<script src="https://raw.githubusercontent.com/ioneone/DigitRecognizer/master/dr.js" type="text/javascript"></script>
+I also documented my development process of this project.
+<ul>
+<li><a href="https://medium.com/@ionejunhong/my-machine-learning-diary-day-100-a469bf770da4" target="_blank">Day 100</a>: Decision Tree</li>
+<li><a href="https://medium.com/@ionejunhong/my-machine-learning-diary-day-101-56f91f4bc57a" target="_blank">Day 101</a>: Display Project on a Brower</li>
+<li><a href="https://medium.com/@ionejunhong/my-machine-learning-diary-day-102-a38b3fa6ed17" target="_blank">Day 102</a>: KNN, Percepron</li>
+<li><a href="https://medium.com/@ionejunhong/my-machine-learning-diary-day-117-4c0c6f23743c" target="_blank">Day 117</a>: Logistic Regression</li>
+</ul>
+
