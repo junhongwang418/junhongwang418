@@ -22,12 +22,14 @@ classes from BCC, CoA, Laney depending on who
 is teaching the classes.  
 
 Say you want to enroll Math 3A.
+
 <ol>
 <li>Check Math 3A offered by BCC, Laney, CoA.</li>
 <li>You see the listings of professors teaching the course.</li>
 <li>Go to <a href="https://www.ratemyprofessors.com/" target="_blank">ratemyprofessors.com</a> to check who is the best professor.</li>
 <li>Schedule your classes such that there is no conflict.</li>
 </ol>
+
 This is very time consuming! Especially, step 3 takes a long time when 
 there are many professors available. The goal of 
 this project is to help students with step 3 and 
