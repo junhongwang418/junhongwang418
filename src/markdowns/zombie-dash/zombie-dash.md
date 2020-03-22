@@ -11,8 +11,8 @@ Here's a short clip of me playing the completed game.
 
 <video autoplay loop muted control><source src="https://github.com/ioneone/ioneone.github.io/blob/develop/src/markdowns/zombie-dash/zombie-dash.mp4?raw=true" type="video/mp4"></video>
 
-You can check out the source code <a href="https://github.com/ioneone/UCLA-CS-32/tree/master/ZombieDash">here</a>.
-The <a href="https://github.com/ioneone/UCLA-CS-32/blob/master/ZombieDash/spec.pdf">specification</a> of this project was crazy long (about 60 pages)!
+You can check out the source code <a href="https://github.com/ioneone/UCLA-CS-32/tree/master/ZombieDash" target="_blank">here</a>.
+The <a href="https://github.com/ioneone/UCLA-CS-32/blob/master/ZombieDash/spec.pdf" target="_blank">specification</a> of this project was crazy long (about 60 pages)!
 
 ## How the Game Works
 A player can pick up a tank of gasoline and spits fire 
