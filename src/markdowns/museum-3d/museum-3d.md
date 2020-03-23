@@ -143,7 +143,11 @@ translate it back to after the transformation.
 
 ![mouse-picking](https://github.com/ioneone/Museum-3D/blob/master/images/mouse-picking.gif?raw=true)
 
+Mouse picking can be implemented by reversing the process of generating view matrix. In particular, we transform the mouse position on the screen coordinate into a vector in the 3d coordinate. Then, to check whether the ray with this vector intersects with an object, there is a formula for it.
 
+![intersection](https://github.com/ioneone/Museum-3D/blob/master/images/intersection.png?raw=true)
+
+We approximate the light bulbs as spheres during intersection detection. 
 
 ### Torch
 
