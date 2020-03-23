@@ -27,6 +27,8 @@ Here's the list of graphics features we implemented.
 <li>Day/Night Mode</li>
 </ul>
 
+<a id="skybox">skybox anchor</a>
+
 ### Skybox 
 
 ![skybox](https://github.com/ioneone/Museum-3D/blob/master/images/skybox.gif?raw=true)
