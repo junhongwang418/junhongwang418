@@ -36,6 +36,22 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
+/**
+ * https://github.com/rexxars/react-markdown/issues/69
+ */
+function flatten(text, child) {
+  return typeof child === 'string'
+    ? text + child
+    : React.Children.toArray(child.props.children).reduce(flatten, text);
+}
+
+function HeadingRenderer(props) {
+  var children = React.Children.toArray(props.children);
+  var text = children.reduce(flatten, '');
+  var slug = text.toLowerCase().replace(/\W/g, '-');
+  return React.createElement('h' + props.level, {id: slug}, props.children);
+}
+
 const Markdown = () => {
   const params = useParams<{ id: string }>();
   const location = useLocation();
@@ -68,7 +84,12 @@ const Markdown = () => {
       </AppBar>
       <Container className={classes.container} maxWidth="md">
         <Typography>
-          <ReactMarkdown className={classes.md} source={markdown} escapeHtml={false} />
+          <ReactMarkdown
+            className={classes.md}
+            source={markdown}
+            escapeHtml={false}
+            renderers={{ heading: HeadingRenderer }}
+          />
         </Typography>
       </Container>
       <Contact />
