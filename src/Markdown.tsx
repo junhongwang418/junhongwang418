@@ -9,6 +9,8 @@ import Contact from "./contact/Contact";
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar/AppBar";
 import ThemeToggle from "./theme/ThemeToggle";
+import {HashLink} from 'react-router-hash-link';
+import LinkIcon from '@material-ui/icons/Link';
 
 const useStyles = makeStyles((theme: Theme) => ({
   appBar: {
@@ -17,6 +19,16 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   container: {
     paddingTop: theme.spacing(4)
+  },
+
+  anchorContainer: {
+    display: "flex"
+  },
+
+  anchorLink: {
+    display: "flex",
+    alignItems: "center",
+    marginRight: theme.spacing(1)
   },
 
   md: {
@@ -32,6 +44,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       display: "block",
       margin: "0 auto",
       width: "72%"
+    },
+    "& ul": {
+      listStyleType: "none"
     }
   }
 }));
@@ -47,23 +62,38 @@ function flatten(text: any, child: any) {
 }
 
 function HeadingRenderer(props: any) {
-  console.log(props);
   var children = React.Children.toArray(props.children);
   var text = children.reduce(flatten, '');
   var slug = text.toLowerCase().replace(/\W/g, '-');
   return React.createElement('h' + props.level, {id: slug}, props.children);
 }
 
-function LinkRenderer(props: any) {
-  console.log(props);
-  return React.createElement('h', props, props.children);
-}
+const LinkRenderer = (props: any) => {
+  const { href, children } = props;
+
+  const classes = useStyles();
+
+  if (href.startsWith("#")) {
+
+    return (
+      <div className={classes.anchorContainer}>
+        <HashLink className={classes.anchorLink} to={href}>
+          <LinkIcon fontSize="small" />
+        </HashLink>
+        {children}
+      </div>
+    )
+  }
+
+  return React.createElement('a', props, props.children);
+};
 
 const Markdown = () => {
   const params = useParams<{ id: string }>();
   const location = useLocation();
   const history = useHistory();
   const [markdown, setMarkdown] = useState<string>("");
+  const [backLocation, setBackLocation] = useState(null);
 
   const classes = useStyles();
 
@@ -74,6 +104,9 @@ const Markdown = () => {
       .then(res => res.text())
       .then(text => setMarkdown(text));
 
+    // @ts-ignore
+    if (location.state) setBackLocation(location.state);
+
   }, []);
 
   return (
@@ -83,7 +116,7 @@ const Markdown = () => {
         className={classes.appBar}
       >
         <Toolbar>
-          <Button onClick={() => history.push({ pathname: "/", state: location.state })}>
+          <Button onClick={() => history.push({ pathname: "/", state: backLocation })}>
             {"← back"}
           </Button>
           <ThemeToggle />
@@ -95,7 +128,7 @@ const Markdown = () => {
             className={classes.md}
             source={markdown}
             escapeHtml={false}
-            renderers={{ heading: HeadingRenderer, link: (props) => <p>hello</p> }}
+            renderers={{ heading: HeadingRenderer, link: LinkRenderer }}
           />
         </Typography>
       </Container>
