@@ -159,7 +159,7 @@ Torch is implemented with Particle System. Particles are rendered as a square in
 
 Every particle has a life period. When it is initially constructed, it renders with the top left image. As the time passes, it will render different image as shown above. The initial velocity of the particles are randomly generated with some bias on y-axis (to make sure it fires *up*).
 
-### Firework
+### Fireworks
 
 ![fireworks](https://github.com/ioneone/Museum-3D/blob/master/images/fireworks.gif?raw=true)
 
