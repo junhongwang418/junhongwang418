@@ -16,14 +16,14 @@ Here's the demo of the project.
 
 The goal of this project is to learn how to scale the web application such that it can thousands and thousands of user requests at the same time. Here's what we did to make it scalable:
 
-* [Vertical Scaling](vertical-scaling)
-* [Horizontal Scaling](horizontal-scaling)
-* [Pagination](pagination)
-* [Multiprocess/Multithreading](multiprocess-multithreading)
-* [SQL Optimization](sql-optimization)
-* [Client-side Caching](client-side-caching)
-* [Server-side Caching](server-side-caching)
-* [Read-Slaves](read-slaves)
+* [Vertical Scaling](#vertical-scaling)
+* [Horizontal Scaling](#horizontal-scaling)
+* [Pagination](#pagination)
+* [Multiprocess/Multithreading](#multiprocess-multithreading)
+* [SQL Optimization](#sql-optimization)
+* [Client-side Caching](#client-side-caching)
+* [Server-side Caching](#server-side-caching)
+* [Read-Slaves](#read-slaves)
 
 ## Vertical Scaling
 
