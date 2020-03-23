@@ -33,17 +33,13 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   md: {
     "& img": {
-      display: "block",
-      margin: "0 auto",
-      width: "72%"
+      width: "100%"
     },
     "& a": {
       color: theme.palette.primary.main
     },
     "& video": {
-      display: "block",
-      margin: "0 auto",
-      width: "72%"
+      width: "100%"
     },
     "& ul": {
       listStyleType: "none"
@@ -122,7 +118,7 @@ const Markdown = () => {
           <ThemeToggle />
         </Toolbar>
       </AppBar>
-      <Container className={classes.container} maxWidth="md">
+      <Container className={classes.container} maxWidth="sm">
         <Typography>
           <ReactMarkdown
             className={classes.md}

@@ -101,9 +101,10 @@ Before: image-coord(x1, y1) -> water_coord(x2, y2)
 After: image-coord(x1 + random_x, y1_random_y) -> water_coord(x2, y2)
 ```
 
+
 ![water4](https://github.com/ioneone/Museum-3D/blob/master/images/water4.png?raw=true)
 
-It would be weird when there are waves but no movement. We can move the waves by changing ```random_x``` and ```random_y``` every frame. 
+It would be weird when there are waves but no movement. We can move the waves by changing ```random_x``` and ```random_y``` every frame.  Then we have this perfect water 🌊
 
 ![water](https://github.com/ioneone/Museum-3D/blob/master/images/water.gif?raw=true)
 
@@ -111,11 +112,38 @@ It would be weird when there are waves but no movement. We can move the waves by
 
 ![person](https://github.com/ioneone/Museum-3D/blob/master/images/person.gif?raw=true)
 
+The player is made of 6 cuboids -- head, body, left/right arms, and left/right legs. To make them shake, we apply rotation matrix to these cuboids. Note for arms and legs, we need to translate them first before rotating them because the centers of rotation of them are not in the center of the objects.
 
+```
+Suppose you want to rotate this 
+object below with respect to R. 
+
+|---R---|
+|       |
+|       |
+|       |
+|-------|
+
+To rotate this object with respect to R,
+we need to translate it such that R is 
+the center of the object.
+
+|-------|
+|       |
+|   R   |
+|       |
+|-------|
+
+Now we apply the rotation matrix to all
+the points of this obejct. Remember to 
+translate it back to after the transformation.
+```
 
 ### Mouse Picking
 
 ![mouse-picking](https://github.com/ioneone/Museum-3D/blob/master/images/mouse-picking.gif?raw=true)
+
+
 
 ### Torch
 
