@@ -153,35 +153,96 @@ We approximate the light bulbs as spheres during intersection detection.
 
 ![torch](https://github.com/ioneone/Museum-3D/blob/master/images/torch.gif?raw=true)
 
+Torch is implemented with Particle System. Particles are rendered as a square in the 3d scene. We can make the background transparent and render a series of fire image on it. 
+
+![fire](https://github.com/ioneone/Museum-3D/blob/master/images/fire.png?raw=true)
+
+Every particle has a life period. When it is initially constructed, it renders with the top left image. As the time passes, it will render different image as shown above. The initial velocity of the particles are randomly generated with some bias on y-axis (to make sure it fires *up*).
+
 ### Firework
 
 ![fireworks](https://github.com/ioneone/Museum-3D/blob/master/images/fireworks.gif?raw=true)
+
+Fireworks are also implemented with Particle System just like the torch except the initial velocity has no bias (the particle can shoot into any direction 360 degree). 
 
 ### Terrain
 
 ![terrain](https://github.com/ioneone/Museum-3D/blob/master/images/terrain.gif?raw=true)
 
+Terrain is just a collection of squares rendered together. A flat terrain is boring, so we can set random height for each point of the terrain with the help of height map.
+
+![height-map](https://github.com/ioneone/Museum-3D/raw/master/assets/images/heightmap.png)
+
+We can map the height of the terrain with this image such that RGB(0, 0, 0) corresponds to small height and RGB(255, 255, 255) corresponds to large height. 
+
 ### Mirror
 
 ![mirror](https://github.com/ioneone/Museum-3D/blob/master/images/mirror.gif?raw=true)
+
+Mirror is implemented just like how water was implemented except there is no refraction and we set the reflection 100%. 
 
 ### Light Bulb
 
 ![lightbulb](https://github.com/ioneone/Museum-3D/blob/master/images/lightbulb.gif?raw=true)
 
+To create a light bulb shape, we just defined some points as shown below. 
+
+![lightbulb-shape](https://github.com/ioneone/Museum-3D/raw/master/images/grap.PNG)
+
+Then we can generate the shape by rotating these points around y-axis.
+
 ### Day/Night Mode
 
 ![day-night](https://github.com/ioneone/Museum-3D/blob/master/images/day-night.gif?raw=true)
 
+This is actually pretty simple. Skybox was implemented with some images like this:
+
+![skybox-day-front](https://github.com/ioneone/Museum-3D/blob/master/assets/images/skybox/day/front.png?raw=true)
+
+We prepared some dark sky images like this:
+
+![skybox-night-front](https://github.com/ioneone/Museum-3D/blob/master/assets/images/skybox/night/front.png?raw=true)
+
+To make a day/night transition, we mixed these two images and rendered it on the skybox. 
+
+```
+transition from day to night
+
+image = day_image * (1 - alpha) + night_image * alpha
+
+alpha changes from 0 to 1
+```
+
 ### Lamp
 ![lamp](https://github.com/ioneone/Museum-3D/blob/master/images/lamp.gif?raw=true)
 
+We create an illusion that the lamp is emitting lights, but coloring the terrain. Notice the further away from the light source, the weaker the light becomes. This is called light attenuation. Another thing about light is that it looks brighter when the light reflects to an object and gets into your eyes (or in this case, the camera). We can simulate this with dot product. Consider the reflection below.
 
+```         
+|        source
+|      ↙︎
+|   ↙︎ 
+|↙︎
+S----------> surface normal
+|↘︎
+|   ↘︎               🎥 position 2
+|      ↘︎            
+|       reflection_vector
+|              
+|                
+|                 🎥 postiion 1
+|
+
+to_camera_vector would be from point S
+to camera position.
+```
+
+We should observe stronger light at position 1 than at position 2. If we compute ```(reflection_vector)·(to_camera_vector)```, then the closer this value is to 1, the stronger the light we observe. 
 
 ## Reference
 A lot of features of this project were inspired by 
 <a href="https://www.youtube.com/user/ThinMatrix/about" target="_blank">ThinMatrix</a>, 
-an indie developer and Youtuber (FYI, I love his British accent). 
+an indie developer and Youtuber (FYI, I love his British accent).  
 
 We followed his <a href="https://www.youtube.com/watch?v=VS8wlS9hF8E&list=PLRIWtICgwaX0u7Rf9zkZhLoLuZVfUksDP" target="_blank">OpenGL 3D Game Tutorials</a> 
 and <a href="https://www.youtube.com/watch?v=HusvGeEDU_U&list=PLRIWtICgwaX23jiqVByUs0bqhnalNTNZh" target="_blank">OpenGL Water Tutorials</a>.
