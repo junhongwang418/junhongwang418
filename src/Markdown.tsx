@@ -47,10 +47,16 @@ function flatten(text: any, child: any) {
 }
 
 function HeadingRenderer(props: any) {
+  console.log(props);
   var children = React.Children.toArray(props.children);
   var text = children.reduce(flatten, '');
   var slug = text.toLowerCase().replace(/\W/g, '-');
   return React.createElement('h' + props.level, {id: slug}, props.children);
+}
+
+function LinkRenderer(props: any) {
+  console.log(props);
+  return React.createElement('h', props, props.children);
 }
 
 const Markdown = () => {
@@ -89,7 +95,7 @@ const Markdown = () => {
             className={classes.md}
             source={markdown}
             escapeHtml={false}
-            renderers={{ heading: HeadingRenderer }}
+            renderers={{ heading: HeadingRenderer, link: (props) => <p>hello</p> }}
           />
         </Typography>
       </Container>

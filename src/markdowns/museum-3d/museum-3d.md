@@ -13,27 +13,23 @@ You can check out the source code <a href="https://github.com/ioneone/Museum-3D"
 ## Graphics Features
 Here's the list of graphics features we implemented.
 
-<ul>
-<li><a href="#skybox">Skybox</a></li>
-<li>1st/3rd Person View Camera</li>
-<li>Water</li>
-<li>Minecraft Person</li>
-<li>Mouse Picking</li>
-<li>Particle Effects</li>
-<li>Terrain</li>
-<li>Mirror</li>
-<li>Light Bulb</li>
-<li>Particle Effects (Torch/Fireworks)</li>
-<li>Day/Night Mode</li>
-</ul>
-
-<a id="skybox">skybox anchor</a>
+* [Skybox](#skybox)
+* [Camera](#camera)
+* [Water](#water)
+* [Minecraft Person](#minecraft-person)
+* [Mouse Picking](#mouse-picking)
+* [Fireworks](#fireworks)
+* [Terrain](#terrain)
+* [Mirror](#mirror)
+* [Light Bulb](#lightbulb)
+* [Torch](#torch)
+* [Day/Night Mode](#day/night-mode)
 
 ### Skybox 
 
 ![skybox](https://github.com/ioneone/Museum-3D/blob/master/images/skybox.gif?raw=true)
 
-### 1st/3rd Person View Camera
+### Camera
 
 ![camera](https://github.com/ioneone/Museum-3D/blob/master/images/camera.gif?raw=true)
 
@@ -49,11 +45,11 @@ Here's the list of graphics features we implemented.
 
 ![mouse-picking](https://github.com/ioneone/Museum-3D/blob/master/images/mouse-picking.gif?raw=true)
 
-### Particle Effects (Torch)
+### Torch
 
 ![torch](https://github.com/ioneone/Museum-3D/blob/master/images/torch.gif?raw=true)
 
-### Particle Effects (Fireworks)
+### Fireworks
 
 ![fireworks](https://github.com/ioneone/Museum-3D/blob/master/images/fireworks.gif?raw=true)
 

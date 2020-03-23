@@ -19,6 +19,7 @@
     "react-markdown": "^4.3.1",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
+    "react-router-hash-link": "^1.2.2",
     "react-scripts": "3.0.1",
     "request": "^2.88.0",
     "three": "^0.114.0",
