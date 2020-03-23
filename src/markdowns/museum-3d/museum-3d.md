@@ -15,7 +15,7 @@ Here's the list of graphics features we implemented.
 
 <ul>
 <li><a href="#skybox">Skybox</a></li>
-<li>1st/3ed Person View Camera</li>
+<li>1st/3rd Person View Camera</li>
 <li>Water</li>
 <li>Minecraft Person</li>
 <li>Mouse Picking</li>
@@ -24,11 +24,54 @@ Here's the list of graphics features we implemented.
 <li>Mirror</li>
 <li>Light Bulb</li>
 <li>Particle Effects (Torch/Fireworks)</li>
+<li>Day/Night Mode</li>
 </ul>
 
-### Skybox
+### Skybox 
 
-## How it Works
+![skybox](https://github.com/ioneone/Museum-3D/blob/master/images/skybox.gif?raw=true)
+
+### 1st/3rd Person View Camera
+
+![camera](https://github.com/ioneone/Museum-3D/blob/master/images/camera.gif?raw=true)
+
+### Water
+
+![water](https://github.com/ioneone/Museum-3D/blob/master/images/water.gif?raw=true)
+
+### Minecraft Person
+
+![person](https://github.com/ioneone/Museum-3D/blob/master/images/person.gif?raw=true)
+
+### Mouse Picking
+
+![mouse-picking](https://github.com/ioneone/Museum-3D/blob/master/images/mouse-picking.gif?raw=true)
+
+### Particle Effects (Torch)
+
+![torch](https://github.com/ioneone/Museum-3D/blob/master/images/torch.gif?raw=true)
+
+### Particle Effects (Fireworks)
+
+![fireworks](https://github.com/ioneone/Museum-3D/blob/master/images/fireworks.gif?raw=true)
+
+### Terrain
+
+![terrain](https://github.com/ioneone/Museum-3D/blob/master/images/terrain.gif?raw=true)
+
+### Mirror
+
+![mirror](https://github.com/ioneone/Museum-3D/blob/master/images/mirror.gif?raw=true)
+
+### Light Bulb
+
+![lightbulb](https://github.com/ioneone/Museum-3D/blob/master/images/lightbulb.gif?raw=true)
+
+### Day/Night Mode
+
+![day-night](https://github.com/ioneone/Museum-3D/blob/master/images/day-night.gif?raw=true)
+
+
 
 ## Reference
 A lot of features of this project were inspired by 

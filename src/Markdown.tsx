@@ -39,13 +39,14 @@ const useStyles = makeStyles((theme: Theme) => ({
 /**
  * https://github.com/rexxars/react-markdown/issues/69
  */
-function flatten(text, child) {
+// @ts-ignore
+function flatten(text: any, child: any) {
   return typeof child === 'string'
     ? text + child
     : React.Children.toArray(child.props.children).reduce(flatten, text);
 }
 
-function HeadingRenderer(props) {
+function HeadingRenderer(props: any) {
   var children = React.Children.toArray(props.children);
   var text = children.reduce(flatten, '');
   var slug = text.toLowerCase().replace(/\W/g, '-');
