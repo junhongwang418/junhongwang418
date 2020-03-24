@@ -26,9 +26,11 @@ and engineered systems and processes.
 
 ## Period
 
+2018 April - 2018 June (part-time)
+
 2018 July - 2018 September (intern)
 
-2018 September - PRESENT (part-time)
+2018 October - PRESENT (part-time)
 
 ## Role
 
