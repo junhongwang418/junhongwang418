@@ -4,9 +4,9 @@
 
 Jflix is the personal project I built at the end of my publication: Getting Started with GraphQL. This project uses GraphQL and expressJS for the back-end.
 
-The source code is available <a href="[https://github.com/ioneone/Jflix](https://github.com/ioneone/Jflix)" target="_blank">here</a>.
+The source code is available <a href="https://github.com/ioneone/Jflix" target="_blank">here</a>.
 
-The demo of the project is available <a href="[https://jflix.herokuapp.com/](https://jflix.herokuapp.com/)" target="_blank">here</a> (it's live!).
+The demo of the project is available <a href="https://jflix.herokuapp.com/" target="_blank">here</a> (it's live!).
 
 ## Motivation
 
