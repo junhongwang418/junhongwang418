@@ -28,6 +28,7 @@ and down, via a switch (T9). Finally, the game
 can be reset through a button (D9).
 
 ## Collision Detection
+
 We implemented collision detection to check whether the 
 bird hits a pipe or not. We basically treated the bird and 
 pipes as rectangles, then check whether two rectangles
@@ -35,6 +36,7 @@ intersect. There are many cases to check to the intersections.
 But we can instead think about when it does not intersect. 
 Then we can take the complement of it. Two rectangles don't 
 intersect when they don't intersect in x-axis and y-axis.
+
 ```
 not intersecting in x-axis
 -------
@@ -58,11 +60,13 @@ otherwise they must be intersecting
 ```
 
 ## Wrapping the Pipes
+
 To make the efficient use of the pipes, we only create 
 three pipe objects and loop through them. Pipes going 
 off the screen to the left will come out from the right. 
 This also reduce the performance overhead of collision 
 detection.
+
 ```
                           <==
           <==           |------| 
