@@ -3,6 +3,7 @@
 ![marume](https://github.com/ioneone/ioneone.github.io/blob/develop/src/markdowns/marume/marume.jpeg?raw=true)
 
 ## Overview
+
 Interned at a startup company as an iOS app 
 developer to build a product review app
 (kind of like Yelp for products). This 
@@ -11,6 +12,10 @@ a lot about software development cycle
 as well as Swift programming language. 
 Built a user profile page with 
 follower/followee functionality.
+
+## Period
+
+2016 June - 2016 August
 
 ## About
 
