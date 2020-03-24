@@ -54,6 +54,8 @@ just like many other SNS.
 
 ## Contribution
 
-* Develop a product review app in a team of 2 using Swift
-* Update designs of buttons and layouts
-* Build user profile page from scratch
+<ul>
+<li>Develop a product review app in a team of 2 using Swift</li>
+<li>Update designs of buttons and layouts</li>
+<li>Build user profile page from scratch</li>
+</ul>
