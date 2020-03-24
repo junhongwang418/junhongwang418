@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 const styles = (theme: Theme) => createStyles({
 
   root: {
-    marginTop: theme.spacing(12)
+    marginTop: theme.spacing(14)
   },
 
   caption: {
@@ -28,11 +28,6 @@ class Home extends React.Component<HomeProps> {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <div className={classes.caption}>
-          <Typography variant="caption">
-            Visit legacy page <Link href="./legacy/index.html">here</Link>
-          </Typography>
-        </div>
         <Typography variant="h6" color="primary" style={{ marginBottom: "1rem" }}>Hi, my name is</Typography>
         <Typography variant="h2" style={{ marginBottom: "1rem" }}>Junhong Wang.</Typography>
         <Typography variant="h2" color="textSecondary" style={{ marginBottom: "1rem" }}>I build websites and apps.</Typography>
