@@ -41,8 +41,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     "& video": {
       width: "100%"
     },
-    "& ul": {
-      listStyleType: "none"
+    "& iframe": {
+      width: "100%"
     }
   }
 }));
