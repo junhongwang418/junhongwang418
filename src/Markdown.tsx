@@ -68,6 +68,7 @@ const LinkRenderer = (props: any) => {
   const { href, children } = props;
 
   const classes = useStyles();
+  const history = useHistory();
 
   if (href.startsWith("#")) {
 
