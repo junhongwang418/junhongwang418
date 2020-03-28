@@ -65,7 +65,7 @@ const Publication = () => {
     <div className={classes.root}>
       <div className={classes.content}>
         <div className={classes.title}>
-          <Typography variant="h5">Publication</Typography>
+          <Typography variant="h5">📖 Publication</Typography>
           <div className={classes.line} />
         </div>
         <List>

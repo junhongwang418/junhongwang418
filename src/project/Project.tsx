@@ -57,7 +57,7 @@ class Project extends React.Component<Props, State> {
     return (
       <div className={classes.root}>
         <div className={classes.title}>
-          <Typography variant="h5">My Projects</Typography>
+          <Typography variant="h5">⚒ My Projects</Typography>
           <div className={classes.line} />
         </div>
         <Grid container spacing={4}>

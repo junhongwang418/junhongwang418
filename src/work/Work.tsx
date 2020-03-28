@@ -73,7 +73,7 @@ class Work extends React.Component<Props, State> {
       <div className={classes.root}>
         <div className={classes.content}>
           <div className={classes.title}>
-            <Typography variant="h5">Experience</Typography>
+            <Typography variant="h5">💪 Experience</Typography>
             <div className={classes.line} />
           </div>
           <div className={classes.body}>
