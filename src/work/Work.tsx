@@ -6,6 +6,7 @@ import APIManager, {WorkJSON} from "../api/APIManager";
 import {fade} from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import WorkListItem from "./WorkListItem";
+import Emoji from "../Emoji";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -73,7 +74,9 @@ class Work extends React.Component<Props, State> {
       <div className={classes.root}>
         <div className={classes.content}>
           <div className={classes.title}>
-            <Typography variant="h5">💪 Experience</Typography>
+            <Typography variant="h5">
+              <Emoji emoji="💪" /> Experience
+            </Typography>
             <div className={classes.line} />
           </div>
           <div className={classes.body}>

@@ -9,6 +9,7 @@ import ListItem from "@material-ui/core/ListItem";
 import {Link} from "react-router-dom";
 import {useHistory, useLocation} from "react-router";
 import Button from "@material-ui/core/Button";
+import Emoji from "../Emoji";
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
@@ -65,7 +66,8 @@ const Publication = () => {
     <div className={classes.root}>
       <div className={classes.content}>
         <div className={classes.title}>
-          <Typography variant="h5">📖 Publication</Typography>
+          <Typography variant="h5">
+            <Emoji emoji="📖" /> Publication</Typography>
           <div className={classes.line} />
         </div>
         <List>

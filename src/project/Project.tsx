@@ -6,6 +6,7 @@ import ProjectCard from "./ProjectCard";
 import APIManager, {ProjectJSON} from "../api/APIManager";
 import Typography from "@material-ui/core/Typography";
 import {fade} from "@material-ui/core/styles";
+import Emoji from "../Emoji";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -57,7 +58,9 @@ class Project extends React.Component<Props, State> {
     return (
       <div className={classes.root}>
         <div className={classes.title}>
-          <Typography variant="h5">⚒ My Projects</Typography>
+          <Typography variant="h5">
+            <Emoji emoji="⚒" /> My Projects
+          </Typography>
           <div className={classes.line} />
         </div>
         <Grid container spacing={4}>

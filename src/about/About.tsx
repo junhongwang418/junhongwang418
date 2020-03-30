@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import profileImage from "../images/profile.png";
 import Grid from '@material-ui/core/Grid';
 import { fade } from '@material-ui/core/styles/colorManipulator';
+import Emoji from "../Emoji";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -50,7 +51,9 @@ class About extends React.Component<AboutProps> {
       <div className={classes.root}>
         <Grid container alignItems="center" spacing={8}>
           <Grid item xs={12} className={classes.title}>
-            <Typography variant="h5">🤓 About Me</Typography>
+            <Typography variant="h5">
+              <Emoji emoji="🤓" /> About Me
+            </Typography>
             <div className={classes.line} />
           </Grid>
           <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
