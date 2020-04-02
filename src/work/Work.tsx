@@ -6,7 +6,7 @@ import APIManager, {WorkJSON} from "../api/APIManager";
 import {fade} from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import WorkListItem from "./WorkListItem";
-import Emoji from "../Emoji";
+import WorkOutlineOutlinedIcon from '@material-ui/icons/WorkOutlineOutlined';
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -43,6 +43,10 @@ const styles = (theme: Theme) => createStyles({
 
   center: {
     textAlign: "center"
+  },
+
+  icon: {
+    marginRight: theme.spacing(1)
   }
 
 });
@@ -74,8 +78,9 @@ class Work extends React.Component<Props, State> {
       <div className={classes.root}>
         <div className={classes.content}>
           <div className={classes.title}>
+            <WorkOutlineOutlinedIcon className={classes.icon} />
             <Typography variant="h5">
-              <Emoji emoji="💪" /> Experience
+              Experience
             </Typography>
             <div className={classes.line} />
           </div>

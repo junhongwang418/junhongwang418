@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 import APIManager, {ProjectJSON} from "../api/APIManager";
 import Typography from "@material-ui/core/Typography";
 import {fade} from "@material-ui/core/styles";
-import Emoji from "../Emoji";
+import SportsEsportsOutlinedIcon from '@material-ui/icons/SportsEsportsOutlined';
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -28,6 +28,10 @@ const styles = (theme: Theme) => createStyles({
 
   center: {
     textAlign: "center"
+  },
+
+  icon: {
+    marginRight: theme.spacing(1)
   }
 
 });
@@ -58,8 +62,9 @@ class Project extends React.Component<Props, State> {
     return (
       <div className={classes.root}>
         <div className={classes.title}>
+          <SportsEsportsOutlinedIcon className={classes.icon} />
           <Typography variant="h5">
-            <Emoji emoji="⚒" /> My Projects
+            My Projects
           </Typography>
           <div className={classes.line} />
         </div>

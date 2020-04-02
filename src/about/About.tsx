@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import profileImage from "../images/profile.png";
 import Grid from '@material-ui/core/Grid';
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import Emoji from "../Emoji";
+import EmojiEmotionsOutlinedIcon from '@material-ui/icons/EmojiEmotionsOutlined';
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -40,6 +40,10 @@ const styles = (theme: Theme) => createStyles({
     lineHeight: "2rem"
   },
 
+  icon: {
+    marginRight: theme.spacing(1)
+  }
+
 });
 
 interface AboutProps extends WithStyles<typeof styles> {}
@@ -51,8 +55,9 @@ class About extends React.Component<AboutProps> {
       <div className={classes.root}>
         <Grid container alignItems="center" spacing={8}>
           <Grid item xs={12} className={classes.title}>
+            <EmojiEmotionsOutlinedIcon className={classes.icon} />
             <Typography variant="h5">
-              <Emoji emoji="🤓" /> About Me
+              About Me
             </Typography>
             <div className={classes.line} />
           </Grid>

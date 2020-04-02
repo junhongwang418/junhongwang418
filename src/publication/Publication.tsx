@@ -9,7 +9,7 @@ import ListItem from "@material-ui/core/ListItem";
 import {Link} from "react-router-dom";
 import {useHistory, useLocation} from "react-router";
 import Button from "@material-ui/core/Button";
-import Emoji from "../Emoji";
+import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutlined';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
   root: {
@@ -40,6 +40,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
   linkButton: {
     transform: "translateX(-5px)"
+  },
+
+  icon: {
+    marginRight: theme.spacing(1)
   }
 
 }));
@@ -66,8 +70,9 @@ const Publication = () => {
     <div className={classes.root}>
       <div className={classes.content}>
         <div className={classes.title}>
+          <BookmarkBorderOutlinedIcon className={classes.icon} />
           <Typography variant="h5">
-            <Emoji emoji="📖" /> Publication</Typography>
+            Publication</Typography>
           <div className={classes.line} />
         </div>
         <List>
