@@ -17,7 +17,7 @@ import AOS from "aos";
 import Publication from "./publication/Publication";
 import withTheme from "@material-ui/core/styles/withTheme";
 import Markdown from "./Markdown";
-import VantaEffect from "./VantaEffect";
+import Particles from 'react-particles-js';
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -29,6 +29,12 @@ const styles = (theme: Theme) => createStyles({
     width: "100%",
     height: "100%",
     margin: "0 auto"
+  },
+
+  particles: {
+    width: "100%",
+    height: "100%",
+    position: "fixed"
   }
 
 });
@@ -75,6 +81,16 @@ class App extends React.Component<AppProps> {
             path="/"
             render={(props) => (
               <React.Fragment>
+                <Particles 
+                  className={classes.particles} 
+                  params={{
+                    particles: {
+                      line_linked: {
+                        color: "#9e9e9e"
+                      }
+                    }
+                  }}
+                />
                 <NavigationBar
                   onClickHome={() => window.scrollTo({top: this.homeRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
                   onClickAbout={() => window.scrollTo({top: this.aboutRef.current.offsetTop - 64, left: 0, behavior: 'smooth'})}
@@ -86,9 +102,7 @@ class App extends React.Component<AppProps> {
                   <Grid container spacing={8}>
                     <Grid item xs={12}>
                       <div data-aos="fade-up" ref={this.homeRef}>
-                        <VantaEffect>
-                          <Home />
-                        </VantaEffect>
+                        <Home />
                       </div>
                     </Grid>
                     <Grid item xs={12}>
