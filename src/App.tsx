@@ -18,6 +18,7 @@ import Publication from "./publication/Publication";
 import withTheme from "@material-ui/core/styles/withTheme";
 import Markdown from "./Markdown";
 import Particles from 'react-particles-js';
+import Music from "./music/Music";
 
 const styles = (theme: Theme) => createStyles({
   root: {
@@ -126,6 +127,7 @@ class App extends React.Component<AppProps> {
             )}
           />
           <Route path="/md/:id" component={Markdown} />
+          <Route path="/music" component={Music} />
           <Route component={PageNotFound} />
         </Switch>
 
