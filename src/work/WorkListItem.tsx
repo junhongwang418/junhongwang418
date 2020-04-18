@@ -59,7 +59,7 @@ const WorkListItem = (props: WorkListItemProps) => {
             <div className={classes.chipContainer}>
               {
                 work.tools.map(tool => (
-                  <Chip className={classes.chip} size="small" label={tool} variant="outlined" />
+                  <Chip className={classes.chip} key={tool} size="small" label={tool} variant="outlined" />
                 ))
               }
             </div>

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react"
+import React, {useEffect, useState} from "react"
 import {createStyles, Theme, Typography} from "@material-ui/core";
 import {fade} from "@material-ui/core/styles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
@@ -6,7 +6,6 @@ import APIManager, {PublicationJSON} from "../api/APIManager";
 import List from "@material-ui/core/List";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItem from "@material-ui/core/ListItem";
-import {Link} from "react-router-dom";
 import {useHistory, useLocation} from "react-router";
 import Button from "@material-ui/core/Button";
 import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutlined';
@@ -64,7 +63,7 @@ const Publication = () => {
     // @ts-ignore
     if (location.state) window.scrollTo({ top: location.state });
 
-  }, [publications]);
+  }, [publications, location.state]);
 
   return (
     <div className={classes.root}>

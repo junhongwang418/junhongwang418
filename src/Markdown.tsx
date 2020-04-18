@@ -68,7 +68,6 @@ const LinkRenderer = (props: any) => {
   const { href, children } = props;
 
   const classes = useStyles();
-  const history = useHistory();
 
   if (href.startsWith("#")) {
 
@@ -104,7 +103,7 @@ const Markdown = () => {
     // @ts-ignore
     if (location.state) setBackLocation(location.state);
 
-  }, []);
+  }, [location.state, params.id]);
 
   return (
     <div>

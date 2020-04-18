@@ -96,7 +96,7 @@ const NavigationBar: React.FunctionComponent<Props> = (props) => {
             </Typography>
             {
               navigations.map(({ title, onClick }) => (
-                <Button style={{ marginLeft: "1rem" }} onClick={onClick}>{title}</Button>
+                <Button key={title} style={{ marginLeft: "1rem" }} onClick={onClick}>{title}</Button>
               ))
             }
           </Hidden>

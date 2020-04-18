@@ -87,7 +87,7 @@ class Work extends React.Component<Props, State> {
           <div className={classes.body}>
             <List>
               {
-                works.map(work => <WorkListItem work={work} />)
+                works.map(work => <WorkListItem work={work} key={work.employer} />)
               }
             </List>
           </div>
