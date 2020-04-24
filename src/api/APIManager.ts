@@ -6,7 +6,7 @@ export interface ProjectJSON {
   description: string;
   year: number;
   image: string;
-  url: string;
+  url?: string;
   tools: string[];
 }
 
@@ -39,6 +39,7 @@ export interface PublicationJSON {
 export interface MusicJSON {
   id: string;
   lyrics: string[];
+  times: number[];
 }
 
 class APIManager {

@@ -1,5 +1,5 @@
 import React from "react";
-import {createStyles, Theme} from "@material-ui/core";
+import {createStyles, Theme, Link} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import {ProjectJSON} from "../api/APIManager";
 import Chip from "@material-ui/core/Chip";
@@ -40,6 +40,17 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
   chip: {
     marginRight: theme.spacing(1)
+  },
+
+  demo: {
+    display: "block",
+    "&:hover": {
+      textDecoration: "none"
+    } 
+  },
+
+  caseStudy: {
+    display: "block"
   }
 
 }));
@@ -85,12 +96,24 @@ const ProjectCard = (props: ProjectCardProps) => {
       </CardContent>
       <CardActions>
         <Button
+          className={classes.caseStudy}
           size="small"
           color="primary"
           onClick={() => history.push({ pathname: `/md/${project.id}`, state: window.scrollY })}
         >
           view case study >
         </Button>
+        {
+          project.url &&
+          <Link className={classes.demo} href={project.url} target="_blank">
+            <Button 
+              size="small"
+              color="secondary"
+            >
+              Demo >
+            </Button>
+          </Link>
+        }
       </CardActions>
     </Card>
   );

@@ -1,16 +1,74 @@
-import React, { useState, useEffect } from "react";
-import { Typography, Container, Grid } from "@material-ui/core";
+import React, { useState, useEffect, useRef } from "react";
+import { Typography, Container, Grid, makeStyles, Theme, Button } from "@material-ui/core";
 import APIManager from "../api/APIManager";
 import YoutubeVideo from "./YouTubeVideo";
+import BinarySearch from "./BinarySearch";
+
+const useStyles = makeStyles((theme: Theme) => ({
+
+  active: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1)
+  },
+
+  inactive: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+    color: "#9e9e9e"
+  }
+}));
+
+function copyToClipboard(text) {
+  var dummy = document.createElement("textarea");
+  // to avoid breaking orgain page when copying more words
+  // cant copy when adding below this code
+  // dummy.style.display = 'none'
+  document.body.appendChild(dummy);
+  //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+  dummy.value = text;
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+}
 
 const Music = () => {
 
-  const [music, setMusic] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const classes = useStyles();
+  const [music, setMusic] = useState(APIManager.getAllMusic());
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [currentVideoTimeIndex, setCurrentVideoTimeIndex] = useState(0);
+  const [currentVideoTime, setCurrentVideoTime] = useState(0);
+
+  const [times, setTimes] = useState([]);
+
+  const ref = useRef(null);
 
   useEffect(() => {
     setMusic(APIManager.getAllMusic());
   }, []);
+ 
+  useEffect(() => {
+
+    if (!music) return;
+
+    const index = BinarySearch.findFloorIndex(music[currentVideoIndex].times, currentVideoTime)
+    
+    if (index !== currentVideoTimeIndex) {
+      setCurrentVideoTimeIndex(index);
+    }
+
+  }, [currentVideoTime, music, currentVideoIndex, currentVideoTimeIndex]);
+
+  useEffect(() => {
+
+    if (!music) return;
+
+    if (ref && ref.current) ref.current.scrollIntoView({
+      behavior: "smooth", 
+      block: "center"
+    });
+
+  }, [currentVideoTimeIndex, music]);
 
   return (
     <Container maxWidth="lg">
@@ -32,19 +90,55 @@ const Music = () => {
               }}
               onStateChange={(event) => {
                 const player = event.target;
-                setCurrentIndex(player.getPlaylistIndex());
+                setCurrentVideoIndex(player.getPlaylistIndex());
+              }}
+              onCurrentTimeChange={(player) => {
+                setCurrentVideoTime(player.getCurrentTime());
               }}
             />
           }
         </Grid>
-        <Grid item xs={5} style={{ height: 420, overflowY: "scroll" }}>
+        <Grid item xs={5} style={{ height: 420, overflow: "auto", paddingTop: 210, paddingBottom: 210 }}>
           {
-            music && music[currentIndex].lyrics.map(line => 
-              <Typography variant="body1">{line}</Typography>
+            music && music[currentVideoIndex].lyrics.map((line, index) => 
+              <Typography 
+                ref={index === currentVideoTimeIndex ? ref : undefined}
+                className={index === currentVideoTimeIndex ? classes.active : classes.inactive } 
+                align="center" 
+                variant="body1"
+              >
+                {line}
+              </Typography>
             )
           }
         </Grid>
       </Grid>
+      {
+        currentVideoTime
+      }
+      <br/>
+      {
+        music && music[currentVideoIndex].times[currentVideoTimeIndex]
+      }
+      <br/>
+      <Button 
+        onClick={() => {
+          setTimes([...times, currentVideoTime]);
+        }}
+      >
+        Push
+      </Button>
+      <br />
+      {
+        times.slice(Math.max(times.length - 5, 0)).map(time => <Typography>{time}</Typography>)
+      }
+      <Button
+        onClick={() => {
+          copyToClipboard(JSON.stringify(times));
+        }}
+      >
+        Copy to Clipboard
+      </Button>
     </Container>
   );
 }
