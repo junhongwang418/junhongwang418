@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
     color: "#9e9e9e"
+  },
+
+  logo: {
+    width: 48
   }
 }));
 
@@ -72,7 +76,10 @@ const Music = () => {
 
   return (
     <Container maxWidth="lg">
-      <Typography variant="h6">JMusic</Typography>
+      <img className={classes.logo} alt="Jmusic" src="https://github.com/ioneone/Jmusic/blob/master/logo.png?raw=true" />
+      <Typography display="inline" variant="h6">
+        JMusic
+      </Typography>
       <Typography variant="subtitle2">Music Loop Player</Typography>
       <Typography variant="body2">Motivation comes from here: https://support.google.com/youtube/thread/12880369?hl=en</Typography>
       <Typography variant="body2">https://listenonrepeat.com/ was nice but the ads were killing my CPU</Typography>

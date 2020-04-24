@@ -73,7 +73,7 @@
       "title": "Jmusic",
       "description": "(Work In Progress) Jmusic is a web application to repeat the songs I like with the lyrics on the side for singing along",
       "year": 2020,
-      "image": "",
+      "image": "https://github.com/ioneone/Jmusic/blob/master/logo.png?raw=true",
       "url": "https://ioneone.github.io/#/music",
       "tools": [
         "React",
@@ -111,6 +111,7 @@
       "description": "Virtual Museum Tour in WebGL",
       "year": 2019,
       "image": "https://github.com/ioneone/Museum-3D/raw/master/images/lightbulb.jpg",
+      "url": "https://intro-graphics-master.github.io/term-project-8/",
       "tools": [
         "JavaScript",
         "WebGL"
@@ -152,7 +153,6 @@
       "description": "Kill the zombies and save the citizens in C++",
       "year": 2019,
       "image": "https://github.com/ioneone/UCLA-CS-32/blob/master/ZombieDash/player.png?raw=true",
-      "url": "https://github.com/ioneone/UCLA-CS-32/tree/master/ZombieDash",
       "tools": [
         "C++"
       ]
