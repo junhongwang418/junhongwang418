@@ -36,12 +36,6 @@ export interface PublicationJSON {
   }>;
 }
 
-export interface MusicJSON {
-  id: string;
-  lyrics: string[];
-  times: number[];
-}
-
 class APIManager {
   static getAllProjects(): ProjectJSON[] {
     return data.projects;
@@ -55,9 +49,6 @@ class APIManager {
     return data.publications;
   }
 
-  static getAllMusic(): MusicJSON[] {
-    return data.music;
-  }
 }
 
 export default APIManager;
