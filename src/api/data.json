@@ -69,6 +69,18 @@
   ],
   "projects": [
     {
+      "id": "jfarm",
+      "title": "Jfarm",
+      "description": "(Work In Progress) Jfarm is a farming game",
+      "year": 2020,
+      "image": "https://github.com/ioneone/jfarm/blob/master/logo-with-text.png?raw=true",
+      "url": "https://ioneone.github.io/jfarm",
+      "tools": [
+        "TypeScript",
+        "Phaser"
+      ]
+    },
+    {
       "id": "jmusic",
       "title": "Jmusic",
       "description": "(Work In Progress) Jmusic is a web application to repeat the songs I like with the lyrics on the side for singing along",
