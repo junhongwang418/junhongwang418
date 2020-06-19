@@ -69,12 +69,12 @@
   ],
   "projects": [
     {
-      "id": "shining-soul-j",
-      "title": "Shining Soul J",
-      "description": "(Work In Progress) Shining Soul J is a RPG game",
+      "id": "platformer",
+      "title": "Platformer",
+      "description": "(Work In Progress) Platformer is a RPG game",
       "year": 2020,
-      "image": "https://github.com/ioneone/shining-soul-j/blob/develop/public/assets/logo.png?raw=true",
-      "url": "https://ioneone.github.io/shining-soul-j",
+      "image": "https://github.com/ioneone/platformer/blob/develop/public/assets/logo.png?raw=true",
+      "url": "https://ioneone.github.io/platformer",
       "tools": [
         "TypeScript",
         "Phaser"
