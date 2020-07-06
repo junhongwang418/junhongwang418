@@ -30,10 +30,10 @@ class Home extends React.Component<HomeProps> {
       <div className={classes.root}>
         <Typography variant="h6" color="primary" style={{ marginBottom: "1rem" }}>Hi, my name is</Typography>
         <Typography variant="h2" style={{ marginBottom: "1rem" }}>Junhong Wang.</Typography>
-        <Typography variant="h2" color="textSecondary" style={{ marginBottom: "1rem" }}>I build websites and apps.</Typography>
+        <Typography variant="h2" color="textSecondary" style={{ marginBottom: "1rem" }}>I build websites and games.</Typography>
         <Typography color="textSecondary" style={{ width: "60%", marginBottom: "1rem" }}>
           I'm a senior undergraduate student at UCLA pursuing Computer Science degree.
-          I specialize in building scalable & high-quality website and mobile applications.
+          I specialize in building scalable & high-quality web applications and writing readable code.
         </Typography>
         <Link
           color="inherit"

@@ -70,7 +70,7 @@ const WorkListItem = (props: WorkListItemProps) => {
                 size="small"
                 color="primary"
               >
-                view case study >
+                {"view case study >"}
               </Button>
             }
           </React.Fragment>

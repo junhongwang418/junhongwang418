@@ -101,7 +101,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           color="primary"
           onClick={() => history.push({ pathname: `/md/${project.id}`, state: window.scrollY })}
         >
-          view case study >
+          {"view case study >"}
         </Button>
         {
           project.url &&
@@ -110,7 +110,7 @@ const ProjectCard = (props: ProjectCardProps) => {
               size="small"
               color="secondary"
             >
-              Demo >
+              {"Demo >"}
             </Button>
           </Link>
         }

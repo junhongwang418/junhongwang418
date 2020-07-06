@@ -70,8 +70,7 @@ const Publication = () => {
       <div className={classes.content}>
         <div className={classes.title}>
           <BookmarkBorderOutlinedIcon className={classes.icon} />
-          <Typography variant="h5">
-            Publication</Typography>
+          <Typography variant="h5">Publication</Typography>
           <div className={classes.line} />
         </div>
         <List>
@@ -90,7 +89,7 @@ const Publication = () => {
                           size="small"
                           color="primary"
                         >
-                          view case study >
+                          {"view case study >"}
                         </Button>
                       </Typography>
                     </React.Fragment>

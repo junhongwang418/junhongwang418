@@ -1,5 +1,5 @@
 import React from "react";
-import {createStyles, Theme, WithStyles} from "@material-ui/core";
+import {createStyles, Theme, WithStyles, Link} from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import Typography from '@material-ui/core/Typography';
 import profileImage from "../images/profile.png";
@@ -42,6 +42,12 @@ const styles = (theme: Theme) => createStyles({
 
   icon: {
     marginRight: theme.spacing(1)
+  },
+
+  inlineLink: {
+    marginLeft: theme.spacing(0.6),
+    marginRight: theme.spacing(0.6),
+    verticalAlign: "middle"
   }
 
 });
@@ -68,20 +74,40 @@ class About extends React.Component<AboutProps> {
           </Grid>
           <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
             <Typography className={classes.description} variant="body1">
-              Hi there! I'm Junhong, a senior year undergraduate student
-              at UCLA studying computer science.
-              My dream is to become an awesome Software Engineer!
-              In the summer of my first year at UCLA,
-              I interned as a iOS app developer at teamLab in Japan
-              to give myself a feel of what it’s like to be a software engineer.
-              I believed it’s important to know beforehand what kind of skills
-              I need to become a successful software engineer.
-              In my second year at UCLA,
-              I started a part-time job as a Software Developer at
-              Risk Sciences Lab at UCLA to learn a different stack of technology.
-              In particular, I primary focused on learning web front-end development.
-              This summer, I will be interning as a Software Engineer at AppFolio
-              to enhance their a property management software.
+              Hey! I'm Junhong, a senior year undergraduate student at UCLA 
+              studying computer science. 
+              <br />
+              <br />
+              I enjoy building web-based applications. Currently I'm developing
+              <Link
+                className={classes.inlineLink}
+                rel="noopener"
+                href="https://ioneone.github.io/platformer"
+                target="_blank"
+              >
+                Platformer
+              </Link> 
+              (2D action side scrolling game) and 
+              <Link
+                className={classes.inlineLink}
+                rel="noopener"
+                href="https://ioneone.github.io/jmusic"
+                target="_blank"
+              >
+                Jmusic
+              </Link> 
+              (youtube repeater). 
+              <br />
+              <br />
+              On the weekends, I'm a game developer and writer. I write 
+              <Link
+                className={classes.inlineLink}
+                rel="noopener"
+                href="https://medium.com/better-programming/getting-started-with-graphql-5cd8e7c66909?source=friends_link&sk=1ca5c58e69b339b4736f258bb9ba850f"
+                target="_blank"
+              >
+                tutorials
+              </Link> for various Computer Science topics.
             </Typography>
           </Grid>
         </Grid>
