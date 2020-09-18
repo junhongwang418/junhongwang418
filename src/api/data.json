@@ -1,16 +1,23 @@
 {
   "works": [
     {
+      "id": "appfolio",
       "role": "Software Engineer Intern",
       "employer": "AppFolio",
       "date": {
         "start": "2020-06",
         "end": "2020-09"
       },
-      "description": "I will be interning at AppFolio's Dynasty team. I am excited!",
+      "description": "Optimized GraphQL/MySQL queries and reduced the server CPU utilization by 20%. Integrated GraphQL Subscription with AWS API Gateway WebSocket and reduced the server load significantly.",
       "link": "https://www.appfolio.com/",
       "image": "https://www.appfolio.com/images/html/apm-fb-logo.png",
-      "tools": []
+      "tools": [
+        "Java",
+        "Jetty",
+        "TypeScript",
+        "React",
+        "AWS"
+      ]
     },
     {
       "id": "risk-sciences",
