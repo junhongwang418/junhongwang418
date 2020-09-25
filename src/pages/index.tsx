@@ -11,10 +11,14 @@ import theme from "../gatsby-plugin-theme-ui/index"
 import Header from "../components/Header"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
+import { Helmet } from "react-helmet"
 
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
+      <Helmet>
+        <title>Junhong Wang</title>
+      </Helmet>
       <Container>
         <Header />
         <Spacing height={128} />

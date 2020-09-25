@@ -10,6 +10,8 @@ module.exports = {
     "gatsby-plugin-theme-ui",
     "gatsby-plugin-emotion",
     "gatsby-plugin-typescript",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
@@ -31,7 +33,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {

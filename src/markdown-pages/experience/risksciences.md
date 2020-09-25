@@ -1,8 +1,7 @@
 ---
 slug: "/experience/risksciences"
+title: "Software Developer Intern, GIRS @UCLA, Jun 2019 - Sep 2019"
 ---
-
-# Software Developer Intern, GIRS @UCLA, Jun 2019 - Sep 2019
 
 ## 👀 Overview
 

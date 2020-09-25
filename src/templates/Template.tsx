@@ -7,6 +7,7 @@ import Container from "../components/Container"
 import Spacing from "../components/Spacing"
 import Footer from "../components/Footer"
 import styled from "../styled/index"
+import { Helmet } from "react-helmet"
 
 const Markdown = styled.div`
   a {
@@ -27,13 +28,17 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { html } = markdownRemark
+  const { html, frontmatter } = markdownRemark
   return (
     <ThemeProvider theme={theme}>
+      <Helmet>
+        <title>{frontmatter.title}</title>
+      </Helmet>
       <Container>
         <Header />
         <Spacing height={64} />
         <div>
+          <h1>{frontmatter.title}</h1>
           <Markdown dangerouslySetInnerHTML={{ __html: html }} />
         </div>
         <Spacing height={128} />
@@ -49,6 +54,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         slug
+        title
       }
     }
   }

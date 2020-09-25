@@ -1,8 +1,7 @@
 ---
 slug: "/experience/marume"
+title: "iOS App Developer Intern, MaruMe, Jun 2016 - Aug 2016"
 ---
-
-# iOS App Developer Intern, MaruMe, Jun 2016 - Aug 2016
 
 ## Overview
 

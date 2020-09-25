@@ -1,8 +1,7 @@
 ---
 slug: "/experience/teamlab"
+title: "iOS App Developer Intern, TeamLab, Jul 2018 - Sep 2018"
 ---
-
-# iOS App Developer Intern, TeamLab, Jul 2018 - Sep 2018
 
 ## 👀 Overview
 

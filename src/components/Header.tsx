@@ -1,6 +1,8 @@
 import React from "react"
 import Spacing from "./Spacing"
 import styled from "../styled/index"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 
 const Root = styled.div`
   display: flex;
@@ -11,10 +13,6 @@ const LogoRoot = styled.h1`
   font-family: "Bungee Shade";
   color: ${props => props.theme.colors.primary};
   cursor: pointer;
-`
-
-const LogoLink = styled.a`
-  color: inherit;
 `
 
 const NavigationItemRoot = styled.a`
@@ -32,7 +30,9 @@ export default function Header() {
   return (
     <Root>
       <LogoRoot>
-        <LogoLink href="/">JW</LogoLink>
+        <a href="/">
+          <img src="/icon.svg" />
+        </a>
       </LogoRoot>
       <Spacing flex={32} />
       <NavigationItemRoot href="/resume.pdf">📜 Resume</NavigationItemRoot>

@@ -1,8 +1,7 @@
 ---
 slug: "/experience/appfolio"
+title: "Software Engineer Intern, AppFolio, Jun 2020 - Sep 2020"
 ---
-
-# Software Engineer Intern, AppFolio, Jun 2020 - Sep 2020
 
 ## 👀 Overview
 
