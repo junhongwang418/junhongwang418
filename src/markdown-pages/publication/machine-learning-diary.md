@@ -12,7 +12,20 @@ Github page to my homework solution of this course is available <a href="https:/
 
 I continued learning machine learning for 119 days (almost) in a row. I stopped it because I got to a point, where it is too difficult to understand with undergraduate level math (machine learning is very math heavy!). But I thought I already knew enough about the basic ideas of machine learning, so I called it off. Better spend time on different area of computer science.
 
-Here's the list of the diary:
+## ✨ Featured Posts
+
+- [Day 12](https://medium.com/@ionejunhong/my-machine-learning-daiary-day-12-cf604d2a18): Normal Equation Proof
+- [Day 32](https://medium.com/@ionejunhong/my-machine-learning-daiary-day-32-cfff8d3ad916): Back Propagation Proof
+- [Day 51](https://medium.com/@ionejunhong/my-machine-learning-diary-day-51-835fff858bd8): PCA Proof
+- [Day 54](https://medium.com/@ionejunhong/my-machine-learning-diary-day-54-15a18bf45b58): Recommender System
+- [Day 59](https://medium.com/@ionejunhong/my-machine-learning-diary-day-59-254e338f5625): Proof of Logistic Regression Cost Function
+- [Day 65](https://medium.com/@ionejunhong/my-machine-learning-diary-day-65-4b4fabe38ccd): Intuition of EWMA, Momentum, RMSprop
+- [Day 66](https://medium.com/@ionejunhong/my-machine-learning-diary-day-66-41bd486f783e): Batch Normalization
+- [Day 71](https://medium.com/@ionejunhong/my-machine-learning-diary-day-71-24f542f05008): YOLO
+- [Day 99](https://medium.com/@ionejunhong/my-machine-learning-diary-day-99-8ffcaab16e74): Perceptron Convergence Theorem Proof
+- [Review of Andrew Ng's Coursera ML and DL](https://medium.com/@ionejunhong/review-of-andrew-ngs-machine-learning-and-deep-learning-specialization-courses-on-coursera-4f9dc92437e4)
+
+## 🔖 Index
 
 - [Day 1](https://medium.com/@ionejunhong/my-machine-learning-daiary-day-1-cb922e86ea42): Supervised Learning, Unsupervised Learning Overview
 - [Day 2](https://medium.com/@ionejunhong/my-machine-learning-daiary-day-2-c972c3960e9f): Cost Function
@@ -133,16 +146,3 @@ Here's the list of the diary:
 - [Day 117](https://medium.com/@ionejunhong/my-machine-learning-diary-day-117-4c0c6f23743c): Digit Recognizer Logistic Regression
 - [Day 118](https://medium.com/@ionejunhong/my-machine-learning-diary-day-118-7f7676ca7b8f): Kernel Trick
 - [Day 119](https://medium.com/@ionejunhong/my-machine-learning-diary-day-119-67baf8bba451): Thank you
-
-My favorite picks are these posts:
-
-- [Day 12](https://medium.com/@ionejunhong/my-machine-learning-daiary-day-12-cf604d2a18): Normal Equation Proof
-- [Day 32](https://medium.com/@ionejunhong/my-machine-learning-daiary-day-32-cfff8d3ad916): Back Propagation Proof
-- [Day 51](https://medium.com/@ionejunhong/my-machine-learning-diary-day-51-835fff858bd8): PCA Proof
-- [Day 54](https://medium.com/@ionejunhong/my-machine-learning-diary-day-54-15a18bf45b58): Recommender System
-- [Day 59](https://medium.com/@ionejunhong/my-machine-learning-diary-day-59-254e338f5625): Proof of Logistic Regression Cost Function
-- [Day 65](https://medium.com/@ionejunhong/my-machine-learning-diary-day-65-4b4fabe38ccd): Intuition of EWMA, Momentum, RMSprop
-- [Day 66](https://medium.com/@ionejunhong/my-machine-learning-diary-day-66-41bd486f783e): Batch Normalization
-- [Day 71](https://medium.com/@ionejunhong/my-machine-learning-diary-day-71-24f542f05008): YOLO
-- [Day 99](https://medium.com/@ionejunhong/my-machine-learning-diary-day-99-8ffcaab16e74): Perceptron Convergence Theorem Proof
-- [Review of Andrew Ng's Coursera ML and DL](https://medium.com/@ionejunhong/review-of-andrew-ngs-machine-learning-and-deep-learning-specialization-courses-on-coursera-4f9dc92437e4)

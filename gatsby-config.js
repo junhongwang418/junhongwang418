@@ -25,6 +25,26 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+      },
+    },
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 960,
+              backgroundColor: "transparent",
+            },
+          },
+        ],
+      },
+    },
   ],
 }

@@ -16,10 +16,10 @@ Here are some of stuff I implemented during my summer internship at MaruMe.
 
 I redesigned the appearence of the buttons so they look nicer.
 
-![feed](https://github.com/ioneone/ioneone.github.io/blob/develop/src/markdowns/marume/feed.jpeg?raw=true)
+![feed](../../images/marume-feed.jpeg)
 
 ### 🙍‍♀️ Profile
 
 I created an user profile page where they can review what products they reviewed.
 
-![profile](https://github.com/ioneone/ioneone.github.io/blob/develop/src/markdowns/marume/profile.jpeg?raw=true)
+![profile](../../images/marume-profile.jpeg)

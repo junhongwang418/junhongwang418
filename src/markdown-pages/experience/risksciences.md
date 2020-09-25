@@ -16,13 +16,13 @@ Here are some of stuff I implemented during my summer internship at GIRS.
 
 ### 🌲 Tree Encoding/Decoding
 
-![tree](https://github.com/ioneone/ioneone.github.io/blob/develop/src/markdowns/risk-sciences/editor.png?raw=true)
+![tree](../../images/risksciences-tree.png)
 
 Every tree node has properties such as name, descriptoion, probablity etc. I wrote an encoder to convert the tree objects into JSON format as well as a decoder to do the reverse.
 
 ### ✏️ Node Editor
 
-![editor](https://github.com/ioneone/ioneone.github.io/blob/develop/src/markdowns/risk-sciences/distribution.png?raw=true)
+![editor](../../images/risksciences-editor.png)
 
 I've coded and designed the node editting feature using React.
 
