@@ -17,7 +17,6 @@ const NavigationItemRoot = styled.a`
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  font-size: 16px;
   font-weight: bold;
   :hover {
     color: ${props => props.theme.colors.secondary};
