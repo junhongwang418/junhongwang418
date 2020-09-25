@@ -1,0 +1,30 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+
+module.exports = {
+  /* Your site config here */
+  plugins: [
+    "gatsby-plugin-theme-ui",
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-typescript",
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Bungee Shade"],
+        },
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "markdown-pages",
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    "gatsby-transformer-remark",
+  ],
+}
