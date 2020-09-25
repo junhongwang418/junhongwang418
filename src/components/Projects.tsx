@@ -17,13 +17,6 @@ const BlockRoot = styled.div`
   }
 `
 
-const LineClampDiv = styled.div`
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-`
-
 const Image = styled.img`
   object-fit: contain;
   flex-shrink: 0;
@@ -56,19 +49,20 @@ const BlockButton: FunctionComponent<React.PropsWithChildren<
 interface BlockProps {
   title: string
   description: string
+  tools: string
   imgUrl: string
   demoUrl: string
   githubUrl: string
 }
 
 const Block: FunctionComponent<BlockProps> = props => {
-  const { title, description, imgUrl, demoUrl, githubUrl } = props
+  const { title, description, tools, imgUrl, demoUrl, githubUrl } = props
   return (
     <BlockRoot>
       <BlockLeftDiv>
         <h2 sx={{ color: "primary" }}>{title}</h2>
-        <LineClampDiv>{description}</LineClampDiv>
-        <Spacing height={16} />
+        <div>{description}</div>
+        <h5>{tools}</h5>
         <ButtonGroupDiv>
           <BlockButton href={demoUrl}>🎮 Demo</BlockButton>
           <Spacing width={8} inlineBlock />
@@ -88,7 +82,8 @@ export default function Projects() {
       <h1>🚀 Projects</h1>
       <Block
         title="Platformer"
-        description="A 2D side scrolling game for fun. (TypeScript, Phaser 3, WebGL)."
+        description="A 2D side scrolling game for fun."
+        tools="TypeScript, Phaser 3, WebGL"
         imgUrl="https://github.com/ioneone/platformer/blob/develop/public/assets/logo.png?raw=true"
         demoUrl="https://ioneone.github.io/platformer/"
         githubUrl="https://github.com/ioneone/platformer"
@@ -96,7 +91,8 @@ export default function Projects() {
       <Spacing height={16} />
       <Block
         title="Jmusic"
-        description="Jmusic is a web application to repeat the songs I like with the lyrics on the side for singing along. (TypeScript, React)"
+        description="Jmusic is a web application to repeat the songs I like with the lyrics on the side for singing along."
+        tools="TypeScript, React"
         imgUrl="https://github.com/ioneone/jmusic/blob/develop/logo.png?raw=true"
         demoUrl="https://ioneone.github.io/jmusic/"
         githubUrl="https://github.com/ioneone/jmusic"
@@ -104,7 +100,8 @@ export default function Projects() {
       <Spacing height={16} />
       <Block
         title="Jflix"
-        description="A Netflix clone that lets you check out TV shows/movies I like. (TypeScript, React, NodeJS, GraphQL)."
+        description="A Netflix clone that lets you check out TV shows/movies I like."
+        tools="TypeScript, React, NodeJS, GraphQL"
         imgUrl="https://github.com/ioneone/Jflix/blob/master/jflix.png?raw=true"
         demoUrl="https://jflix.herokuapp.com/"
         githubUrl="https://github.com/ioneone/Jflix"
@@ -112,9 +109,8 @@ export default function Projects() {
       <Spacing height={16} />
       <Block
         title="Museum 3D"
-        description="Developed a virtual museum with JavaScript and WebGL as a computer graphics class project in a team of 3. 
-        Cited by Professor Ridge at Web3D 2019 Conference as an example of “active textbook”. Implemented advanced graphics features 
-        such as SkyBox, Water, and Mouse Picking. (JavaScript, WebGL)."
+        description="Developed a virtual museum for a computer graphics class team project."
+        tools="JavaScript, WebGL"
         imgUrl="https://github.com/ioneone/Museum-3D/raw/master/images/lightbulb.jpg"
         demoUrl="https://intro-graphics-master.github.io/term-project-8/"
         githubUrl="https://github.com/ioneone/Museum-3D"
