@@ -27,9 +27,13 @@ const LineClampDiv = styled.div`
 const Image = styled.img`
   object-fit: contain;
   flex-shrink: 0;
+  width: 256px;
+  height: 128px;
   @media (max-width: 420px) {
     display: block;
     margin: 0 auto;
+    width: 168px;
+    height: 96px;
   }
 `
 
@@ -73,7 +77,7 @@ const Block: FunctionComponent<BlockProps> = props => {
       </BlockLeftDiv>
       <Spacing flex={32} />
       <Spacing height={16} /> {/* for small screen */}
-      <Image width={256} height={128} src={imgUrl} />
+      <Image src={imgUrl} />
     </BlockRoot>
   )
 }

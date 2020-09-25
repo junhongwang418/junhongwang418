@@ -13,6 +13,9 @@ const Root = styled.a`
     border: 1px solid ${props => props.theme.colors.secondary};
   }
   text-decoration: none;
+  @media (max-width: 420px) {
+    padding: 4px 24px;
+  }
 `
 
 const Button: FunctionComponent<React.PropsWithChildren<
