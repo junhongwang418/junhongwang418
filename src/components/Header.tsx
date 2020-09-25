@@ -1,16 +1,14 @@
 import React from "react"
 import Spacing from "./Spacing"
 import styled from "../styled/index"
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 
 const Root = styled.div`
   display: flex;
   align-items: center;
+  height: 96px;
 `
 
 const LogoRoot = styled.h1`
-  font-family: "Bungee Shade";
   color: ${props => props.theme.colors.primary};
   cursor: pointer;
 `
