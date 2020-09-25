@@ -6,9 +6,9 @@ import { jsx } from "theme-ui"
 import Button from "./Button"
 
 const BlockRoot = styled.div`
-  border: 1px solid ${props => props.theme.colors.secondary};
+  // border: 1px solid ${props => props.theme.colors.secondary};
   border-radius: 2px;
-  padding: 32px;
+  // padding: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,7 +88,7 @@ export default function Projects() {
         demoUrl="https://ioneone.github.io/platformer/"
         githubUrl="https://github.com/ioneone/platformer"
       />
-      <Spacing height={16} />
+      <Spacing height={48} />
       <Block
         title="Jmusic"
         description="Jmusic is a web application to repeat the songs I like with the lyrics on the side for singing along."
@@ -97,7 +97,7 @@ export default function Projects() {
         demoUrl="https://ioneone.github.io/jmusic/"
         githubUrl="https://github.com/ioneone/jmusic"
       />
-      <Spacing height={16} />
+      <Spacing height={48} />
       <Block
         title="Jflix"
         description="A Netflix clone that lets you check out TV shows/movies I like."
@@ -106,7 +106,7 @@ export default function Projects() {
         demoUrl="https://jflix.herokuapp.com/"
         githubUrl="https://github.com/ioneone/Jflix"
       />
-      <Spacing height={16} />
+      <Spacing height={48} />
       <Block
         title="Museum 3D"
         description="Developed a virtual museum for a computer graphics class team project."
