@@ -31,8 +31,10 @@ export default function Header() {
           <img src="/icon.svg" />
         </a>
       </LogoRoot>
-      <Spacing flex={32} />
+      <Spacing flex={64} />
       <NavigationItemRoot href="/resume.pdf">📜 Resume</NavigationItemRoot>
+      <Spacing flex={32} />
+      <NavigationItemRoot href="/book-notes">📚 Book Notes</NavigationItemRoot>
     </Root>
   )
 }

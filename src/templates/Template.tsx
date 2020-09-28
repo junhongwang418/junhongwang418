@@ -1,13 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { ThemeProvider } from "theme-ui"
-import theme from "../gatsby-plugin-theme-ui/index"
-import Header from "../components/Header"
-import Container from "../components/Container"
-import Spacing from "../components/Spacing"
-import Footer from "../components/Footer"
 import styled from "../styled/index"
 import { Helmet } from "react-helmet"
+import Layout from "../components/Layout"
 
 const Markdown = styled.div`
   a {
@@ -30,21 +25,15 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { html, frontmatter } = markdownRemark
   return (
-    <ThemeProvider theme={theme}>
+    <Layout>
       <Helmet>
         <title>{frontmatter.title}</title>
       </Helmet>
-      <Container>
-        <Header />
-        <Spacing height={64} />
-        <div>
-          <h1>{frontmatter.title}</h1>
-          <Markdown dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
-        <Spacing height={128} />
-        <Footer />
-      </Container>
-    </ThemeProvider>
+      <div>
+        <h1>{frontmatter.title}</h1>
+        <Markdown dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+    </Layout>
   )
 }
 

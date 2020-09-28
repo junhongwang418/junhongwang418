@@ -1,27 +1,35 @@
 import React from "react"
-import Container from "../components/Container"
 import Experience from "../components/Experience"
 import About from "../components/About"
 import Spacing from "../components/Spacing"
 import Projects from "../components/Projects"
 import Publication from "../components/Publication"
 import Education from "../components/Education"
-import { ThemeProvider } from "emotion-theming"
-import theme from "../gatsby-plugin-theme-ui/index"
-import Header from "../components/Header"
-import Contact from "../components/Contact"
-import Footer from "../components/Footer"
-import { Helmet } from "react-helmet"
+import styled from "../styled/index"
+import Layout from "../components/Layout"
 
-export default function Home({ data }) {
+const ProfileImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+`
+
+const ProfileImage = styled.img`
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+`
+
+export default function Home() {
   return (
-    <ThemeProvider theme={theme}>
-      <Helmet>
-        <title>Junhong Wang</title>
-      </Helmet>
-      <Container>
-        <Header />
-        <Spacing height={128} />
+    <Layout>
+      <div>
+        <ProfileImageContainer>
+          <ProfileImage src="/profile.png" />
+        </ProfileImageContainer>
         <About />
         <Spacing height={128} />
         <Experience />
@@ -31,11 +39,7 @@ export default function Home({ data }) {
         <Publication />
         <Spacing height={128} />
         <Education />
-        <Spacing height={128} />
-        <Contact />
-        <Spacing height={128} />
-        <Footer />
-      </Container>
-    </ThemeProvider>
+      </div>
+    </Layout>
   )
 }

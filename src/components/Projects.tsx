@@ -20,7 +20,7 @@ const BlockRoot = styled.div`
 const Image = styled.img`
   object-fit: contain;
   flex-shrink: 0;
-  width: 256px;
+  width: 168px;
   height: 128px;
   @media (max-width: 420px) {
     display: block;
@@ -30,21 +30,9 @@ const Image = styled.img`
   }
 `
 
-const BlockLeftDiv = styled.div`
+const BlockBodyLeft = styled.div`
   flex-grow: 1;
 `
-
-const ButtonGroupDiv = styled.div`
-  display: flex;
-`
-
-const BlockButton: FunctionComponent<React.PropsWithChildren<
-  React.HTMLProps<HTMLAnchorElement>
->> = props => (
-  <Button style={{ flexGrow: 1, textAlign: "center" }} {...props}>
-    {props.children}
-  </Button>
-)
 
 interface BlockProps {
   title: string
@@ -52,24 +40,21 @@ interface BlockProps {
   tools: string
   imgUrl: string
   demoUrl: string
-  githubUrl: string
 }
 
 const Block: FunctionComponent<BlockProps> = props => {
-  const { title, description, tools, imgUrl, demoUrl, githubUrl } = props
+  const { title, description, tools, imgUrl, demoUrl } = props
   return (
     <BlockRoot>
-      <BlockLeftDiv>
+      <BlockBodyLeft>
         <h2 sx={{ color: "primary" }}>{title}</h2>
         <div>{description}</div>
         <h5>{tools}</h5>
-        <ButtonGroupDiv>
-          <BlockButton href={demoUrl}>🎮 Demo</BlockButton>
-          <Spacing width={8} inlineBlock />
-          <BlockButton href={githubUrl}>🐙 Github</BlockButton>
-        </ButtonGroupDiv>
-      </BlockLeftDiv>
-      <Spacing flex={32} />
+        <Button href={demoUrl} style={{ width: "100%", textAlign: "center" }}>
+          🎮 Demo
+        </Button>
+      </BlockBodyLeft>
+      <Spacing flex={16} />
       <Spacing height={16} /> {/* for small screen */}
       <Image src={imgUrl} />
     </BlockRoot>
@@ -86,7 +71,6 @@ export default function Projects() {
         tools="TypeScript, Phaser 3, WebGL"
         imgUrl="https://github.com/ioneone/platformer/blob/develop/public/assets/logo.png?raw=true"
         demoUrl="https://ioneone.github.io/platformer/"
-        githubUrl="https://github.com/ioneone/platformer"
       />
       <Spacing height={32} />
       <Block
@@ -95,7 +79,6 @@ export default function Projects() {
         tools="TypeScript, React"
         imgUrl="https://github.com/ioneone/jmusic/blob/develop/logo.png?raw=true"
         demoUrl="https://ioneone.github.io/jmusic/"
-        githubUrl="https://github.com/ioneone/jmusic"
       />
       <Spacing height={32} />
       <Block
@@ -104,7 +87,6 @@ export default function Projects() {
         tools="TypeScript, React, NodeJS, GraphQL"
         imgUrl="https://github.com/ioneone/Jflix/blob/master/jflix.png?raw=true"
         demoUrl="https://jflix.herokuapp.com/"
-        githubUrl="https://github.com/ioneone/Jflix"
       />
       <Spacing height={32} />
       <Block
@@ -112,8 +94,7 @@ export default function Projects() {
         description="Developed a virtual museum for a computer graphics class team project."
         tools="JavaScript, WebGL"
         imgUrl="https://github.com/ioneone/Museum-3D/raw/master/images/lightbulb.jpg"
-        demoUrl="https://intro-graphics-master.github.io/term-project-8/"
-        githubUrl="https://github.com/ioneone/Museum-3D"
+        demoUrl="https://ioneone.github.io//Museum-3D/"
       />
     </div>
   )

@@ -3,7 +3,7 @@ slug: "/publication/machine-learning-diary"
 title: "Machine Learning Diary"
 ---
 
-In 2018, I started to learn machine learning because it was such a cool topic to learn -- simulating intelligence with computer. I followed Andrew Ng's machine learning class on Coursera as well as some random resources online. I found many machine learning resources online are extremely hard to understand. I documented what I learned and wrote this diary such that it's as easy to understand as possible for everyone. Also, it serves as a reference for me to look back later.
+In 2018, I started to learn machine learning because it was such a cool topic to learn — simulating intelligence with computer. I followed Andrew Ng's machine learning class on Coursera as well as some random resources online. I found many machine learning resources online are extremely hard to understand. I documented what I learned and wrote this diary such that it's as easy to understand as possible for everyone. Also, it serves as a reference for me to look back later.
 
 You can find the list of videos of Coursera <a href="https://www.youtube.com/watch?v=UzxYlbK2c7E&list=PLA89DCFA6ADACE599">here</a>. Technically it is a course offered at Stanford university but the content is almost the same except Stanford's version is more mathematically more rigorous than Coursera version.
 
