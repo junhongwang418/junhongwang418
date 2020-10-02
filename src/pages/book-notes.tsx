@@ -46,24 +46,26 @@ const GalleryBlockImage = styled.img`
 
 const GalleryBlockTitle = styled.div`
   padding: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
 
 interface GalleryBlockProps {
+  title: string
   imgSrc: string
   url: string
 }
 
 const GalleryBlock: FunctionComponent<GalleryBlockProps> = props => {
-  const { imgSrc, url } = props
+  const { title, imgSrc, url } = props
   return (
     <GalleryBlockRoot>
       <GalleryBlockLink href={url}>
         <GalleryBlockImageRoot>
           <GalleryBlockImage src={imgSrc} />
         </GalleryBlockImageRoot>
-        <GalleryBlockTitle>
-          👯‍♀️ How to Win Friends and Influence People
-        </GalleryBlockTitle>
+        <GalleryBlockTitle>{title}</GalleryBlockTitle>
       </GalleryBlockLink>
     </GalleryBlockRoot>
   )
@@ -85,14 +87,20 @@ export default function BookNotes() {
         <div>
           Late 2020, I started to read books as a hobby to improve my life. For
           every book I read, I jotted down my key takeaways from the book. This
-          helps me to digest what I learned and reminds me the lessons I should
+          helps me digest what I learned and reminds me the lessons I should
           keep in my mind.
         </div>
         <Spacing height={32} />
         <GalleryDiv>
           <GalleryBlock
+            title="👯‍♀️ How to Win Friends and Influence People"
             imgSrc="https://images-na.ssl-images-amazon.com/images/I/51X7dEUFgoL._SX320_BO1,204,203,200_.jpg"
             url="/book-notes/how-to-win-friends-and-influence-people"
+          />
+          <GalleryBlock
+            title="👱‍♂️ Rich Dad Poor Dad"
+            imgSrc="https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg"
+            url="/book-notes/rich-dad-poor-dad"
           />
         </GalleryDiv>
       </div>
