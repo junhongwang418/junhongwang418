@@ -98,9 +98,14 @@ export default function BookNotes() {
             url="/book-notes/how-to-win-friends-and-influence-people"
           />
           <GalleryBlock
-            title="👱‍♂️ Rich Dad Poor Dad"
+            title="🧔 Rich Dad Poor Dad"
             imgSrc="https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg"
             url="/book-notes/rich-dad-poor-dad"
+          />
+          <GalleryBlock
+            title="🦸‍♂️ The Way of the Superior Man"
+            imgSrc="https://images-na.ssl-images-amazon.com/images/I/61NOI6lJtWL._SX341_BO1,204,203,200_.jpg"
+            url="/book-notes/the-way-of-the-superior-man"
           />
         </GalleryDiv>
       </div>
