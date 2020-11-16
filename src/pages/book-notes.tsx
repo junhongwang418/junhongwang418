@@ -107,6 +107,11 @@ export default function BookNotes() {
             imgSrc="https://images-na.ssl-images-amazon.com/images/I/61NOI6lJtWL._SX341_BO1,204,203,200_.jpg"
             url="/book-notes/the-way-of-the-superior-man"
           />
+          <GalleryBlock
+            title="💰 Think and Grow Rich"
+            imgSrc="https://images-na.ssl-images-amazon.com/images/I/61y04z8SKEL._SX349_BO1,204,203,200_.jpg"
+            url="/book-notes/think-and-grow-rich"
+          />
         </GalleryDiv>
       </div>
     </Layout>
