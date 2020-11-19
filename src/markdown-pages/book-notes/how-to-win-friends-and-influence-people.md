@@ -1,6 +1,7 @@
 ---
 slug: "/book-notes/how-to-win-friends-and-influence-people"
 title: "Book Notes: How to Win Friends and Influence People"
+description: "In this classic Bible of human relashionship, Dale Carnegie discusses the principles everyone must follow to maintain good relashionships with people. Below is the list of quotes that stuck with my heart."
 ---
 
 ![thumbnail](https://images.unsplash.com/photo-1500995617113-cf789362a3e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80)

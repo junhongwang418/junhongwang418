@@ -1,5 +1,4 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import { ThemeProvider } from "theme-ui"
 import theme from "../gatsby-plugin-theme-ui/index"
 import styled from "../styled/index"
@@ -7,6 +6,7 @@ import Contact from "./Contact"
 import Container from "./Container"
 import Footer from "./Footer"
 import Header from "./Header"
+import SEO from "./SEO"
 import Spacing from "./Spacing"
 
 const BodyRoot = styled.div`
@@ -37,9 +37,7 @@ const BodyRight = styled.div`
 export default function Layout({ children }) {
   return (
     <ThemeProvider theme={theme}>
-      <Helmet>
-        <title>Junhong Wang</title>
-      </Helmet>
+      <SEO />
       <Container>
         <Header />
         <BodyRoot>

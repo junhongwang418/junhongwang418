@@ -3,12 +3,13 @@ import Spacing from "../components/Spacing"
 import { Helmet } from "react-helmet"
 import styled from "../styled/index"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 const GalleryBlockRoot = styled.div`
   margin-right: 16px;
   margin-bottom: 16px;
   width: calc((100% - 16px) / 2);
-  :nth-child(2n) {
+  :nth-of-type(2n) {
     margin-right: 0;
   }
   @media (max-width: 420px) {
@@ -77,19 +78,17 @@ const GalleryDiv = styled.div`
 `
 
 export default function BookNotes() {
+  const description = "Late 2020, I started to read books as a hobby to improve my life. For every book I read, I jotted down my key takeaways from the book. This helps me digest what I learned and reminds me the lessons I should keep in my mind."
+  
   return (
     <Layout>
-      <Helmet>
-        <title>Book Notes — Junhong Wang</title>
-      </Helmet>
+      <SEO
+        title="Book Notes — Junhong Wang"
+        description={description}
+      />
       <div>
         <h1>📚 Book Notes</h1>
-        <div>
-          Late 2020, I started to read books as a hobby to improve my life. For
-          every book I read, I jotted down my key takeaways from the book. This
-          helps me digest what I learned and reminds me the lessons I should
-          keep in my mind.
-        </div>
+        <div>{description}</div>
         <Spacing height={32} />
         <GalleryDiv>
           <GalleryBlock

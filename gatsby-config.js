@@ -39,4 +39,10 @@ module.exports = {
       },
     },
   ],
+  siteMetadata: {
+    title: "Junhong Wang",
+    description: "I'm Junhong. I'm a student at UCLA studying Computer Science. On this website, I document interesting things I learned and share my knowledge with you.",
+    url: "https://junhongwang.me", // No trailing slash allowed!
+    image: "/profile.png", // Path to your image you placed in the 'static' folder
+  },
 }
