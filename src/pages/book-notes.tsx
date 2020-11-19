@@ -1,9 +1,7 @@
 import React, { FunctionComponent } from "react"
 import Spacing from "../components/Spacing"
-import { Helmet } from "react-helmet"
 import styled from "../styled/index"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
 
 const GalleryBlockRoot = styled.div`
   margin-right: 16px;
@@ -81,38 +79,35 @@ export default function BookNotes() {
   const description = "Late 2020, I started to read books as a hobby to improve my life. For every book I read, I jotted down my key takeaways from the book. This helps me digest what I learned and reminds me the lessons I should keep in my mind."
   
   return (
-    <Layout>
-      <SEO
-        title="Book Notes — Junhong Wang"
-        description={description}
-      />
-      <div>
-        <h1>📚 Book Notes</h1>
-        <div>{description}</div>
-        <Spacing height={32} />
-        <GalleryDiv>
-          <GalleryBlock
-            title="👯‍♀️ How to Win Friends and Influence People"
-            imgSrc="https://images-na.ssl-images-amazon.com/images/I/51X7dEUFgoL._SX320_BO1,204,203,200_.jpg"
-            url="/book-notes/how-to-win-friends-and-influence-people"
-          />
-          <GalleryBlock
-            title="🧔 Rich Dad Poor Dad"
-            imgSrc="https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg"
-            url="/book-notes/rich-dad-poor-dad"
-          />
-          <GalleryBlock
-            title="🦸‍♂️ The Way of the Superior Man"
-            imgSrc="https://images-na.ssl-images-amazon.com/images/I/61NOI6lJtWL._SX341_BO1,204,203,200_.jpg"
-            url="/book-notes/the-way-of-the-superior-man"
-          />
-          <GalleryBlock
-            title="💰 Think and Grow Rich"
-            imgSrc="https://images-na.ssl-images-amazon.com/images/I/61y04z8SKEL._SX349_BO1,204,203,200_.jpg"
-            url="/book-notes/think-and-grow-rich"
-          />
-        </GalleryDiv>
-      </div>
+    <Layout
+      title="Book Notes — Junhong Wang"
+      description={description}
+    >
+      <h1>📚 Book Notes</h1>
+      <div>{description}</div>
+      <Spacing height={32} />
+      <GalleryDiv>
+        <GalleryBlock
+          title="👯‍♀️ How to Win Friends and Influence People"
+          imgSrc="https://images-na.ssl-images-amazon.com/images/I/51X7dEUFgoL._SX320_BO1,204,203,200_.jpg"
+          url="/book-notes/how-to-win-friends-and-influence-people"
+        />
+        <GalleryBlock
+          title="🧔 Rich Dad Poor Dad"
+          imgSrc="https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg"
+          url="/book-notes/rich-dad-poor-dad"
+        />
+        <GalleryBlock
+          title="🦸‍♂️ The Way of the Superior Man"
+          imgSrc="https://images-na.ssl-images-amazon.com/images/I/61NOI6lJtWL._SX341_BO1,204,203,200_.jpg"
+          url="/book-notes/the-way-of-the-superior-man"
+        />
+        <GalleryBlock
+          title="💰 Think and Grow Rich"
+          imgSrc="https://images-na.ssl-images-amazon.com/images/I/61y04z8SKEL._SX349_BO1,204,203,200_.jpg"
+          url="/book-notes/think-and-grow-rich"
+        />
+      </GalleryDiv>
     </Layout>
   )
 }

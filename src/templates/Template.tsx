@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "../styled/index"
-import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
 
 const Markdown = styled.div`
   a {
@@ -26,11 +24,10 @@ export default function Template({
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { html, frontmatter } = markdownRemark
   return (
-    <Layout>
-      <SEO
-        title={frontmatter.title}
-        description={frontmatter.description}
-      />
+    <Layout
+      title={frontmatter.title}
+      description={frontmatter.description}
+    >
       <div>
         <h1>{frontmatter.title}</h1>
         <Markdown dangerouslySetInnerHTML={{ __html: html }} />

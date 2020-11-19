@@ -30,14 +30,24 @@ const BodyRight = styled.div`
 `
 
 /**
+ * title and description are used for SEO
+ */
+interface LayoutProps {
+  title?: string
+  description?: string
+  children?: React.ReactNode
+}
+
+/**
  * Layout components are for sections of your site that you want to share across multiple pages.
  * For example, Gatsby sites will commonly have a layout component with a shared header and footer.
  * Other common things to add to layouts are a sidebar and/or navigation menu.
  */
-export default function Layout({ children }) {
+export default function Layout(props: LayoutProps) {
+  const { title, description, children } = props
   return (
     <ThemeProvider theme={theme}>
-      <SEO />
+      <SEO title={title} description={description} />
       <Container>
         <Header />
         <BodyRoot>
