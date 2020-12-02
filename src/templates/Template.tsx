@@ -23,6 +23,7 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { html, frontmatter } = markdownRemark
+  console.log(frontmatter)
   return (
     <Layout
       title={frontmatter.title}
@@ -43,6 +44,7 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         title
+        description
       }
     }
   }

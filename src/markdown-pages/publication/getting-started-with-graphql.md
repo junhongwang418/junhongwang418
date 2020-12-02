@@ -1,6 +1,7 @@
 ---
 slug: "/publication/getting-started-with-graphql"
 title: "Getting Started with GraphQL"
+description: "I published a series of tutorials about GraphQL on Medium."
 ---
 
 I took a class at UCLA in which the professor invited a guest from industry to introduce GraphQL. I thought it's such an interesting technology to learn because it changes the way we see APIs. I thought it's cool that you can make a query from the front-end to get what you want from the server. Since it was a pretty new technology, I decided to give back to the community by documenting my learning process of GraphQL.

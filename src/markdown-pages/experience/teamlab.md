@@ -1,6 +1,7 @@
 ---
 slug: "/experience/teamlab"
 title: "iOS App Developer Intern, TeamLab, Jul 2018 - Sep 2018"
+description: "I joined TeamLab's iOS app development team to build a shopping app for BigCamera."
 ---
 
 ## 👀 Overview

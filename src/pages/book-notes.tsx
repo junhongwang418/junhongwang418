@@ -62,7 +62,7 @@ const GalleryBlock: FunctionComponent<GalleryBlockProps> = props => {
     <GalleryBlockRoot>
       <GalleryBlockLink href={url}>
         <GalleryBlockImageRoot>
-          <GalleryBlockImage src={imgSrc} />
+          <GalleryBlockImage src={imgSrc} alt={title} />
         </GalleryBlockImageRoot>
         <GalleryBlockTitle>{title}</GalleryBlockTitle>
       </GalleryBlockLink>

@@ -28,7 +28,7 @@ export default function Header() {
     <Root>
       <LogoRoot>
         <a href="/">
-          <img src="/icon.svg" />
+          <img src="/icon.svg" alt="icon" />
         </a>
       </LogoRoot>
       <Spacing flex={64} />

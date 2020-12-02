@@ -56,7 +56,7 @@ const Block: FunctionComponent<BlockProps> = props => {
       </BlockBodyLeft>
       <Spacing flex={16} />
       <Spacing height={16} /> {/* for small screen */}
-      <Image src={imgUrl} />
+      <Image src={imgUrl} alt={title} />
     </BlockRoot>
   )
 }

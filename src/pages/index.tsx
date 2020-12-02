@@ -28,7 +28,7 @@ export default function Home() {
     <Layout>
       <div>
         <ProfileImageContainer>
-          <ProfileImage src="/profile.png" />
+          <ProfileImage src="/profile.png" alt="profile" />
         </ProfileImageContainer>
         <About />
         <Spacing height={128} />

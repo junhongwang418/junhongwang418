@@ -1,6 +1,7 @@
 ---
 slug: "/experience/risksciences"
 title: "Software Developer Intern, GIRS @UCLA, Jun 2019 - Sep 2019"
+description: "I joined GIRS as a student developer to design, prototype, and build NASA JPL's internal software for system reliability analysis."
 ---
 
 ## 👀 Overview
