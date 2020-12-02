@@ -4,7 +4,7 @@
   <img width="360" src="static/profile.png" alt="profile" />
 </p>
 
-![build status](https://travis-ci.com/ioneone/ioneone.github.io.svg?branch=develop&status=created)
+[![Build Status](https://travis-ci.com/ioneone/ioneone.github.io.svg?branch=master)](https://travis-ci.com/ioneone/ioneone.github.io)
 
 I'm Junhong. I'm a student at UCLA studying Computer Science. On this website, I document interesting things I learned and share my experience with you.
 
