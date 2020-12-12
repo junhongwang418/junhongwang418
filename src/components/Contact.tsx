@@ -47,11 +47,7 @@ export default function Contact() {
         description="ionejunhong@gmail.com"
       />
       <Spacing height={8} />
-      <Block
-        emoji="🐦"
-        title="Twitter"
-        link="https://twitter.com/toshihirowan"
-      />
+      <Block emoji="🐦" title="Twitter" link="https://twitter.com/junhongone" />
       <Spacing height={8} />
       <Block
         emoji="🔗"

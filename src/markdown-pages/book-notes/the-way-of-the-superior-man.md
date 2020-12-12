@@ -1,12 +1,9 @@
 ---
 slug: "/book-notes/the-way-of-the-superior-man"
 title: "Book Notes: The Way of the Superior Man"
+thumbnailUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
 description: "In this book, David Deida teaches you how to be the man. Although most of the topics discussed were irrelevant to me, he proposed some interesting ideas worth noting."
 ---
-
-![thumbnail](https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80)
-
-In this book, David Deida teaches you how to be the man. Although most of the topics discussed were irrelevant to me, he proposed some interesting ideas worth noting.
 
 ## "Sexual attraction is based on sexual polarity, which is the force of passion that arcs between masculine and feminine poles."
 

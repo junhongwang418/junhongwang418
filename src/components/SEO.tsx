@@ -18,7 +18,7 @@ const SEO = (props: SEOProps) => {
     siteUrl,
     defaultImage,
   } = site.siteMetadata
-  
+
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,

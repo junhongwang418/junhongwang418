@@ -1,36 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styled from "../styled/index"
 import Layout from "../components/Layout"
+import Markdown from "./Markdown"
 
-const Markdown = styled.div`
-  a {
-    color: ${props => props.theme.colors.text};
-    :hover {
-      color: ${props => props.theme.colors.secondary};
-    }
-  }
-  img,
-  iframe {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-`
-
-export default function Template({
+export default function MarkdownTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { html, frontmatter } = markdownRemark
-  console.log(frontmatter)
+  const { title, description } = frontmatter
   return (
-    <Layout
-      title={frontmatter.title}
-      description={frontmatter.description}
-    >
+    <Layout title={title} description={description}>
       <div>
-        <h1>{frontmatter.title}</h1>
+        <h1>{title}</h1>
         <Markdown dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>

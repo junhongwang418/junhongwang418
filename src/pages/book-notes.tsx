@@ -52,17 +52,17 @@ const GalleryBlockTitle = styled.div`
 
 interface GalleryBlockProps {
   title: string
-  imgSrc: string
+  imgUrl: string
   url: string
 }
 
 const GalleryBlock: FunctionComponent<GalleryBlockProps> = props => {
-  const { title, imgSrc, url } = props
+  const { title, imgUrl, url } = props
   return (
     <GalleryBlockRoot>
       <GalleryBlockLink href={url}>
         <GalleryBlockImageRoot>
-          <GalleryBlockImage src={imgSrc} alt={title} />
+          <GalleryBlockImage src={imgUrl} alt={title} />
         </GalleryBlockImageRoot>
         <GalleryBlockTitle>{title}</GalleryBlockTitle>
       </GalleryBlockLink>
@@ -76,36 +76,39 @@ const GalleryDiv = styled.div`
 `
 
 export default function BookNotes() {
-  const description = "Late 2020, I started to read books as a hobby to improve my life. For every book I read, I jotted down my key takeaways from the book. This helps me digest what I learned and reminds me the lessons I should keep in my mind."
-  
+  const description =
+    "Late 2020, I started to read books as a hobby to improve my life. For every book I read, I jotted down my key takeaways from the book. This helps me digest what I learned and reminds me the lessons I should keep in my mind."
+
   return (
-    <Layout
-      title="Book Notes — Junhong Wang"
-      description={description}
-    >
+    <Layout title="Book Notes — Junhong Wang" description={description}>
       <h1>📚 Book Notes</h1>
       <div>{description}</div>
       <Spacing height={32} />
       <GalleryDiv>
         <GalleryBlock
           title="👯‍♀️ How to Win Friends and Influence People"
-          imgSrc="https://images-na.ssl-images-amazon.com/images/I/51X7dEUFgoL._SX320_BO1,204,203,200_.jpg"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51X7dEUFgoL._SX320_BO1,204,203,200_.jpg"
           url="/book-notes/how-to-win-friends-and-influence-people"
         />
         <GalleryBlock
           title="🧔 Rich Dad Poor Dad"
-          imgSrc="https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg"
           url="/book-notes/rich-dad-poor-dad"
         />
         <GalleryBlock
           title="🦸‍♂️ The Way of the Superior Man"
-          imgSrc="https://images-na.ssl-images-amazon.com/images/I/61NOI6lJtWL._SX341_BO1,204,203,200_.jpg"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/61NOI6lJtWL._SX341_BO1,204,203,200_.jpg"
           url="/book-notes/the-way-of-the-superior-man"
         />
         <GalleryBlock
           title="💰 Think and Grow Rich"
-          imgSrc="https://images-na.ssl-images-amazon.com/images/I/61y04z8SKEL._SX349_BO1,204,203,200_.jpg"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/61y04z8SKEL._SX349_BO1,204,203,200_.jpg"
           url="/book-notes/think-and-grow-rich"
+        />
+        <GalleryBlock
+          title="⏳ The 4-Hour Workweek"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51I2EIRF44L._SX329_BO1,204,203,200_.jpg"
+          url="/book-notes/the-4-hour-workweek"
         />
       </GalleryDiv>
     </Layout>

@@ -6,7 +6,12 @@
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const template = require.resolve(`./src/templates/Template.tsx`)
+  const MarkdownTemplate = require.resolve(
+    `./src/templates/MarkdownTemplate.tsx`
+  )
+  const BookNotesTemplate = require.resolve(
+    `./src/templates/BookNotesTemplate.tsx`
+  )
 
   const result = await graphql(`
     {
@@ -28,10 +33,19 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
+  function getTemplate(slug) {
+    if (slug.startsWith("/book-notes")) {
+      return BookNotesTemplate
+    }
+
+    return MarkdownTemplate
+  }
+
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    console.log(node)
     createPage({
       path: node.frontmatter.slug,
-      component: template,
+      component: getTemplate(node.frontmatter.slug),
       context: {
         // additional data can be passed via context
         slug: node.frontmatter.slug,
