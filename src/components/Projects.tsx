@@ -66,11 +66,11 @@ export default function Projects() {
     <div>
       <h1>🚀 Projects</h1>
       <Block
-        title="Platformer"
-        description="A 2D side scrolling game for fun."
-        tools="TypeScript, Phaser 3, WebGL"
-        imgUrl="https://github.com/ioneone/platformer/blob/develop/public/assets/logo.png?raw=true"
-        demoUrl="https://ioneone.github.io/platformer/"
+        title="Pixel"
+        description="2D side scrolling multiplayer game for fun."
+        tools="TypeScript, PixiJS"
+        imgUrl="https://github.com/ioneone/pixel/raw/master/icon.png?raw=true"
+        demoUrl="https://ioneone-pixel.herokuapp.com/"
       />
       <Spacing height={32} />
       <Block
@@ -79,14 +79,6 @@ export default function Projects() {
         tools="TypeScript, React"
         imgUrl="https://github.com/ioneone/jmusic/blob/develop/logo.png?raw=true"
         demoUrl="https://ioneone.github.io/jmusic/"
-      />
-      <Spacing height={32} />
-      <Block
-        title="Jflix"
-        description="A Netflix clone that lets you check out TV shows/movies I like."
-        tools="TypeScript, React, NodeJS, GraphQL"
-        imgUrl="https://github.com/ioneone/Jflix/blob/master/jflix.png?raw=true"
-        demoUrl="https://jflix.herokuapp.com/"
       />
       <Spacing height={32} />
       <Block
