@@ -14,7 +14,7 @@ const Block: FunctionComponent<BlockProps> = props => {
   const { title, description, url } = props
   return (
     <div>
-      <h2 sx={{ color: "primary" }}>{title}</h2>
+      <h3 sx={{ color: "primary" }}>{title}</h3>
       <div>{description}</div>
       <Spacing height={16} />
       <Button href={url}>See More</Button>

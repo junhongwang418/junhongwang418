@@ -86,19 +86,14 @@ export default function BookNotes() {
       <Spacing height={32} />
       <GalleryDiv>
         <GalleryBlock
-          title="👯‍♀️ How to Win Friends and Influence People"
-          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51X7dEUFgoL._SX320_BO1,204,203,200_.jpg"
-          url="/book-notes/how-to-win-friends-and-influence-people"
+          title="🥙 Never Eat Alone"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/41x1dFaUd7L._SX327_BO1,204,203,200_.jpg"
+          url="/book-notes/never-eat-alone"
         />
         <GalleryBlock
-          title="🧔 Rich Dad Poor Dad"
-          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg"
-          url="/book-notes/rich-dad-poor-dad"
-        />
-        <GalleryBlock
-          title="🦸‍♂️ The Way of the Superior Man"
-          imgUrl="https://images-na.ssl-images-amazon.com/images/I/61NOI6lJtWL._SX341_BO1,204,203,200_.jpg"
-          url="/book-notes/the-way-of-the-superior-man"
+          title="⏳ The 4-Hour Workweek"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51I2EIRF44L._SX329_BO1,204,203,200_.jpg"
+          url="/book-notes/the-4-hour-workweek"
         />
         <GalleryBlock
           title="💰 Think and Grow Rich"
@@ -106,9 +101,19 @@ export default function BookNotes() {
           url="/book-notes/think-and-grow-rich"
         />
         <GalleryBlock
-          title="⏳ The 4-Hour Workweek"
-          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51I2EIRF44L._SX329_BO1,204,203,200_.jpg"
-          url="/book-notes/the-4-hour-workweek"
+          title="🦸‍♂️ The Way of the Superior Man"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/61NOI6lJtWL._SX341_BO1,204,203,200_.jpg"
+          url="/book-notes/the-way-of-the-superior-man"
+        />
+        <GalleryBlock
+          title="🧔 Rich Dad Poor Dad"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51wOOMQ+F3L._SX312_BO1,204,203,200_.jpg"
+          url="/book-notes/rich-dad-poor-dad"
+        />
+        <GalleryBlock
+          title="👯‍♀️ How to Win Friends and Influence People"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51X7dEUFgoL._SX320_BO1,204,203,200_.jpg"
+          url="/book-notes/how-to-win-friends-and-influence-people"
         />
       </GalleryDiv>
     </Layout>

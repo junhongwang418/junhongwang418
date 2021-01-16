@@ -19,18 +19,20 @@ const ItalicSpan = styled.span`
   font-style: italic;
 `
 
+const BlockRoot = styled.div``
+
 const Block: FunctionComponent<BlockProps> = props => {
   const { title, company, location, period, description, tools, url } = props
   return (
-    <div>
-      <h2 sx={{ color: "primary" }}>{title}</h2>
+    <BlockRoot>
+      <h3 sx={{ color: "primary" }}>{title}</h3>
       <h4>
         <ItalicSpan>{company}</ItalicSpan>, {location} — ({period})
       </h4>
       <div>{description}</div>
       <h5>{tools}</h5>
       <Button href={url}>See More</Button>
-    </div>
+    </BlockRoot>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from "react"
 import Spacing from "./Spacing"
+import Contact from "./Contact"
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
@@ -18,6 +19,9 @@ export default function Footer() {
           website, I document interesting things I learned and share my
           knowledge with you.
         </div>
+        <Spacing height={32} />
+        <Contact />
+        <Spacing height={32} />
         <div style={{ textAlign: "center" }}>
           <h5>Code & Design by Junhong Wang ©︎ 2020</h5>
         </div>

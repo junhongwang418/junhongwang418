@@ -14,7 +14,7 @@ const Block: FunctionComponent<BlockProps> = props => {
   const { school, degree, major, date } = props
   return (
     <div>
-      <h2 sx={{ color: "primary" }}>{school}</h2>
+      <h3 sx={{ color: "primary" }}>{school}</h3>
       <div>
         {degree} in {major}. ​{date}.
       </div>

@@ -5,9 +5,19 @@ import styled from "../styled/index"
 interface BlockProps {
   emoji: string
   title: string
-  description?: string
+  mailto?: string
   link?: string
 }
+
+const Root = styled.div``
+
+const Body = styled.div`
+  display: flex;
+  justify-content: center;
+  @media (max-width: 420px) {
+    display: block;
+  }
+`
 
 const BoldSpan = styled.span`
   font-weight: bold;
@@ -21,41 +31,44 @@ const Link = styled.a`
 `
 
 const Block: FunctionComponent<BlockProps> = props => {
-  const { emoji, title, description, link } = props
+  const { emoji, title, mailto, link } = props
   return (
     <div>
       {emoji}{" "}
-      {link ? (
-        <Link href={link}>
+      {link || mailto ? (
+        <Link href={mailto ? `mailto:${mailto}` : link}>
           <BoldSpan>{title}</BoldSpan>
         </Link>
       ) : (
         <BoldSpan>{title}</BoldSpan>
       )}{" "}
-      {description}
     </div>
   )
 }
 
 export default function Contact() {
   return (
-    <div>
-      <h1>☕️ Contact</h1>
-      <Block
-        emoji="📧"
-        title="Email address"
-        description="ionejunhong@gmail.com"
-      />
-      <Spacing height={8} />
-      <Block emoji="🐦" title="Twitter" link="https://twitter.com/junhongone" />
-      <Spacing height={8} />
-      <Block
-        emoji="🔗"
-        title="LinkedIn"
-        link="https://www.linkedin.com/in/junhongwang/"
-      />
-      <Spacing height={8} />
-      <Block emoji="🐙" title="Github" link="https://github.com/ioneone" />
-    </div>
+    <Root>
+      <Body>
+        <Block emoji="📧" title="Email" mailto="ionejunhong@gmail.com" />
+        <Spacing flex={8} />
+        <Spacing height={8} />
+        <Block
+          emoji="🐦"
+          title="Twitter"
+          link="https://twitter.com/junhongone"
+        />
+        <Spacing flex={8} />
+        <Spacing height={8} />
+        <Block
+          emoji="🔗"
+          title="LinkedIn"
+          link="https://www.linkedin.com/in/junhongwang/"
+        />
+        <Spacing flex={8} />
+        <Spacing height={8} />
+        <Block emoji="🐙" title="Github" link="https://github.com/ioneone" />
+      </Body>
+    </Root>
   )
 }
