@@ -6,9 +6,6 @@ import { jsx } from "theme-ui"
 import Button from "./Button"
 
 const BlockRoot = styled.div`
-  border: 1px solid ${props => props.theme.colors.secondary};
-  border-radius: 2px;
-  padding: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,20 +36,32 @@ interface BlockProps {
   description: string
   tools: string
   imgUrl: string
-  demoUrl: string
+  githubUrl: string
+  demoUrl?: string
 }
 
 const Block: FunctionComponent<BlockProps> = props => {
-  const { title, description, tools, imgUrl, demoUrl } = props
+  const { title, description, tools, imgUrl, githubUrl, demoUrl } = props
   return (
     <BlockRoot>
       <BlockBodyLeft>
         <h2 sx={{ color: "primary" }}>{title}</h2>
         <div>{description}</div>
         <h5>{tools}</h5>
-        <Button href={demoUrl} style={{ width: "100%", textAlign: "center" }}>
-          🎮 Demo
+        <Button href={githubUrl} style={{ width: "100%", textAlign: "center" }}>
+          🐙 Code
         </Button>
+        {demoUrl && (
+          <React.Fragment>
+            <Spacing height={8} />
+            <Button
+              href={demoUrl}
+              style={{ width: "100%", textAlign: "center" }}
+            >
+              🎮 Demo
+            </Button>
+          </React.Fragment>
+        )}
       </BlockBodyLeft>
       <Spacing flex={16} />
       <Spacing height={16} /> {/* for small screen */}
@@ -66,27 +75,20 @@ export default function Projects() {
     <div>
       <h1>🚀 Projects</h1>
       <Block
+        title="Alice"
+        description="Artificial virtual assistant"
+        tools="Python"
+        imgUrl="https://github.com/ioneone/alice/raw/main/alice.png"
+        githubUrl="https://github.com/ioneone/alice"
+      />
+      <Spacing height={32} />
+      <Block
         title="Pixel"
-        description="2D side scrolling multiplayer game for fun."
-        tools="TypeScript, PixiJS"
+        description="2D side scrolling multiplayer game"
+        tools="TypeScript, PixiJS, SocketIO"
         imgUrl="https://github.com/ioneone/pixel/raw/master/icon.png?raw=true"
+        githubUrl="https://github.com/ioneone/pixel"
         demoUrl="https://ioneone-pixel.herokuapp.com/"
-      />
-      <Spacing height={32} />
-      <Block
-        title="Jmusic"
-        description="Jmusic is a web application to repeat the songs I like with the lyrics on the side for singing along."
-        tools="TypeScript, React"
-        imgUrl="https://github.com/ioneone/jmusic/blob/develop/logo.png?raw=true"
-        demoUrl="https://ioneone.github.io/jmusic/"
-      />
-      <Spacing height={32} />
-      <Block
-        title="Museum 3D"
-        description="Developed a virtual museum for a computer graphics class team project."
-        tools="JavaScript, WebGL"
-        imgUrl="https://github.com/ioneone/Museum-3D/raw/master/images/lightbulb.jpg"
-        demoUrl="https://ioneone.github.io//Museum-3D/"
       />
     </div>
   )
