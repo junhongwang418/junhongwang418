@@ -1,11 +1,11 @@
 ---
 slug: "/book-notes/rich-dad-poor-dad"
-title: "Book Notes: Rich Dad Poor Dad"
+title: "Book Notes — Rich Dad Poor Dad"
 thumbnailUrl: "https://images.unsplash.com/photo-1518183214770-9cffbec72538?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 description: "In this best-selling personal finance education book, Robert Kiosaki teaches us how to build wealth and be rich. Here are some of the quotes from the book that resonated with me."
 ---
 
-## "The poor and the middle class work for money. The rich have money work for them."
+### "The poor and the middle class work for money. The rich have money work for them."
 
 To be rich, you must figure out how to have your money work for you. There are two ways to do it.
 
@@ -16,11 +16,11 @@ Portfolio income is moneny you make from investment. An example of passive incom
 
 From what I understand, you need some capital to begin with to generate passive income. For example, if you want to purchase a real estate and generate rental income from it, you would need to have enough money for the down payment. On the other hand, you can start investing even from \$1. So to be rich, you get a job to start investing. Then once you have enough money, you can start real estate to make even more money.
 
-## "It’s not how much money you make. It’s how much money you keep."
+### "It’s not how much money you make. It’s how much money you keep."
 
 Be frugal and spend on what you need, but not what you want. With that extra cash you save, you can invest it and make more money.
 
-## "The rich focus on their asset columns while everyone else focuses on their income statements."
+### "The rich focus on their asset columns while everyone else focuses on their income statements."
 
 This quote refers to the income statement and balance sheet mentioned in the book. Income goes directly to expenses for poor/middle class.
 
@@ -32,38 +32,38 @@ This is problematic because when you lose your job, you are screwed. To be rich,
 
 Even if you quit your job, you can still somewhat sustain yourself from assets. If you can fully live off your assets without earned income, then you are officially retired. You can do whatever you want to do with your life from that point.
 
-## "Time is one of your greatest assets."
+### "Time is one of your greatest assets."
 
 When you work for a company, you earn income in exchange for your time. Spend your time wisely. Whenever you are wasting your time, you are essentially throwing your money away.
 
-## "Our lives are a reflection of our habits more than our education."
+### "Our lives are a reflection of our habits more than our education."
 
 Habits exist so your brain doesn't have to think. Most of what we do daily are habits. To take control of your life, take control of your habits.
 
-## "There are times when I have given and nothing has come back, or what I have received is not what I wanted. But upon closer inspection and soul searching, I was often giving to receive in those instances, instead of giving for the joy that giving itself brings."
+### "There are times when I have given and nothing has come back, or what I have received is not what I wanted. But upon closer inspection and soul searching, I was often giving to receive in those instances, instead of giving for the joy that giving itself brings."
 
 To receive what you want, give what they want. This idea is similar to what is presented in _How to Win Friends and Influence People_. Make them want to do what you want them to do.
 
-## "Stop doing what you’re doing."
+### "Stop doing what you’re doing."
 
 No one likes changes. We all look for stability. But without a change, there is no improvement. For example, I recently looked at my grocery expenses and realized I was spending a lot on my grocery. So I actively seek for opportunities to save on those items. I then found that the bottled water I usually purchase is roughly 70 cents cheaper in Ralphs. Act now. Look for improvements in your life.
 
-## "Find someone who has done what you want to do."
+### "Find someone who has done what you want to do."
 
 You can learn about how they did what you want to do. As explained in _How to Win Friends and Influence People_, people love talking about themselves. Let them talk about their success and you will learn from them.
 
-## "Most sellers ask too much. It is rare that a seller asks a price that is less than something is worth."
+### "Most sellers ask too much. It is rare that a seller asks a price that is less than something is worth."
 
 This quote was referring to real estate but it is applicable to marketplce in general. Prices are always negotiable.
 
-## "Finding a good deal, the right business, the right people, the right investors, or whatever is just like dating. You must go to the market and talk to a lot of people, make a lot of offers, counteroffers, negotiate, reject, and accept. I know single people who sit at home and wait for the phone to ring, but it’s better to go to the market, even if it’s only the supermarket. Search, offer, reject, negotiate, and accept are all parts of the process of almost everything in life."
+### "Finding a good deal, the right business, the right people, the right investors, or whatever is just like dating. You must go to the market and talk to a lot of people, make a lot of offers, counteroffers, negotiate, reject, and accept. I know single people who sit at home and wait for the phone to ring, but it’s better to go to the market, even if it’s only the supermarket. Search, offer, reject, negotiate, and accept are all parts of the process of almost everything in life."
 
 Be bold. Poor and middle classes are afraid of the risks. The rich manages the risks.
 
-## "Always remember: Profits are made in the buying, not in the selling."
+### "Always remember: Profits are made in the buying, not in the selling."
 
 Find a good deal. Study the market and learn what a good deal is. If you buy a bad deal, you will find hard time selling it and make profit.
 
-## "Action always beats inaction."
+### "Action always beats inaction."
 
 Again, act now. Don't be afraid of risks. You lose, you learn from it.

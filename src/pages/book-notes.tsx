@@ -3,18 +3,7 @@ import Spacing from "../components/Spacing"
 import styled from "../styled/index"
 import Layout from "../components/Layout"
 
-const GalleryBlockRoot = styled.div`
-  margin-right: 16px;
-  margin-bottom: 16px;
-  width: calc((100% - 16px) / 2);
-  :nth-of-type(2n) {
-    margin-right: 0;
-  }
-  @media (max-width: 420px) {
-    width: 100%;
-    margin-right: 0px;
-  }
-`
+const GalleryBlockRoot = styled.div``
 
 const GalleryBlockLink = styled.a`
   color: inherit;
@@ -50,6 +39,37 @@ const GalleryBlockTitle = styled.div`
   text-overflow: ellipsis;
 `
 
+const GalleryDiv = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  @media (max-width: 420px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+`
+
+const Header = styled.div`
+  display: flex;
+  @media (max-width: 420px) {
+    display: block;
+  }
+`
+
+const HeaderLeft = styled.div`
+  flex-basis: 256px;
+  flex-grow: 0;
+  flex-shrink: 0;
+`
+
+const Title = styled.h1`
+  margin-top: 0;
+`
+
+const HeaderRight = styled.div`
+  flex-grow: 1;
+`
+
 interface GalleryBlockProps {
   title: string
   imgUrl: string
@@ -70,19 +90,19 @@ const GalleryBlock: FunctionComponent<GalleryBlockProps> = props => {
   )
 }
 
-const GalleryDiv = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
-
 export default function BookNotes() {
   const description =
     "Late 2020, I started to read books as a hobby to improve my life. For every book I read, I jotted down my key takeaways from the book. This helps me digest what I learned and reminds me the lessons I should keep in my mind."
 
   return (
     <Layout title="Book Notes — Junhong Wang" description={description}>
-      <h1>📚 Book Notes</h1>
-      <div>{description}</div>
+      <Spacing height={32} />
+      <Header>
+        <HeaderLeft>
+          <Title>📚 Book Notes</Title>
+        </HeaderLeft>
+        <HeaderRight>{description}</HeaderRight>
+      </Header>
       <Spacing height={32} />
       <GalleryDiv>
         <GalleryBlock

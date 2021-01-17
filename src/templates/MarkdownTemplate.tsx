@@ -2,6 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Markdown from "./Markdown"
+import styled from "../styled"
+
+const Body = styled.div`
+  max-width: 680px;
+  margin: 0 auto;
+`
 
 export default function MarkdownTemplate({
   data, // this prop will be injected by the GraphQL query below.
@@ -11,10 +17,10 @@ export default function MarkdownTemplate({
   const { title, description } = frontmatter
   return (
     <Layout title={title} description={description}>
-      <div>
+      <Body>
         <h1>{title}</h1>
         <Markdown dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
+      </Body>
     </Layout>
   )
 }

@@ -23,7 +23,7 @@ export default function Footer() {
         <Contact />
         <Spacing height={32} />
         <div style={{ textAlign: "center" }}>
-          <h5>Code & Design by Junhong Wang ©︎ 2020</h5>
+          <h5>Code & Design by Junhong Wang ©︎ 2021</h5>
         </div>
       </div>
       <Spacing height={32} />

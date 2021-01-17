@@ -23,7 +23,7 @@ const ProfileImage = styled.img`
   height: 256px;
   border-radius: 50%;
   display: block;
-  margin: 0 auto;
+  margin: 32px;
 `
 
 const Body = styled.div``
@@ -34,7 +34,6 @@ export default function About() {
   return (
     <Root>
       <ProfileImage src="/profile.png" alt="profile" />
-      <Spacing flex={64} />
       <Body>
         <Header sx={{ color: "primary" }}>Hello world 👋</Header>
         <Subheader>

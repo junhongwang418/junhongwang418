@@ -11,9 +11,10 @@ const Root = styled.div`
 const LogoRoot = styled.h1`
   color: ${props => props.theme.colors.primary};
   cursor: pointer;
+  margin: 0 16px;
 `
 
-const NavigationItemRoot = styled.a`
+const NavigationItem = styled.a`
   cursor: pointer;
   text-decoration: none;
   color: inherit;
@@ -31,10 +32,10 @@ export default function Header() {
           <img src="/icon.svg" alt="icon" />
         </a>
       </LogoRoot>
-      <Spacing flex={64} />
-      <NavigationItemRoot href="/resume.pdf">📜 Resume</NavigationItemRoot>
       <Spacing flex={32} />
-      <NavigationItemRoot href="/book-notes">📚 Book Notes</NavigationItemRoot>
+      <NavigationItem href="/resume.pdf">📜 Resume</NavigationItem>
+      <Spacing flex={32} />
+      <NavigationItem href="/book-notes">📚 Book Notes</NavigationItem>
     </Root>
   )
 }

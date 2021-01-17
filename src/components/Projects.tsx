@@ -18,7 +18,7 @@ const Image = styled.img`
   object-fit: contain;
   width: 256px;
   height: 256px;
-  padding: 32px;
+  padding: 0 64px;
   @media (max-width: 420px) {
     display: block;
     margin: 0 auto;
@@ -54,8 +54,6 @@ const Block: FunctionComponent<BlockProps> = props => {
           </React.Fragment>
         )}
       </BlockBodyLeft>
-      <Spacing flex={16} />
-      <Spacing height={16} /> {/* for small screen */}
       <Image src={imgUrl} alt={title} />
     </BlockRoot>
   )
