@@ -53,27 +53,19 @@ export default function Education() {
   return (
     <Root>
       <h1>👨‍🏫 Education</h1>
-      <Body>
-        <BodyLeft>
-          <Block
-            school="University of California, Los Angeles."
-            degree="Bachelor of Science"
-            major="Computer Science"
-            date="​March 2021"
-          />
-          <Spacing height={32} />
-          <Block
-            school="Berkeley City College"
-            degree="Associate of Science"
-            major="Mathematics"
-            date="​May 2018"
-          />
-        </BodyLeft>
-        <Spacing height={64} />
-        <BodyRight>
-          <Image src="/education.svg" alt="education" />
-        </BodyRight>
-      </Body>
+      <Block
+        school="University of California, Los Angeles."
+        degree="Bachelor of Science"
+        major="Computer Science"
+        date="​March 2021"
+      />
+      <Spacing height={32} />
+      <Block
+        school="Berkeley City College"
+        degree="Associate of Science"
+        major="Mathematics"
+        date="​May 2018"
+      />
     </Root>
   )
 }

@@ -16,11 +16,8 @@ export default function Footer() {
         <h4>Junhong Wang</h4>
         <div>
           I'm Junhong. I'm a student at UCLA studying Computer Science. On this
-          website, I document interesting things I learned and share my
-          knowledge with you.
+          website, I document myself and things I learned.
         </div>
-        <Spacing height={32} />
-        <Contact />
         <Spacing height={32} />
         <div style={{ textAlign: "center" }}>
           <h5>Code & Design by Junhong Wang ©︎ 2021</h5>

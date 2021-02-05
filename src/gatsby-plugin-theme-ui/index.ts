@@ -1,19 +1,19 @@
 import { roboto } from "@theme-ui/presets"
 
 /**
- * Use https://colorhunt.co/palette/2763 as the theme.
+ * Monokai Colors
  */
-const BLACK = "#222831"
-const GRAY = "#a6a6a4"
-const TURQUOISE = "#00adb5"
-const WHITE = "#eeeeee"
+const BLACK = "#272822"
+const GRAY = "#75715E"
+const BLUE = "#66D9EF"
+const WHITE = "#F8F8F2"
 
 export default {
   ...roboto,
   colors: {
     text: WHITE,
     background: BLACK,
-    primary: TURQUOISE,
+    primary: BLUE,
     secondary: GRAY,
   },
 }

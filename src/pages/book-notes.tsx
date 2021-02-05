@@ -41,7 +41,7 @@ const GalleryBlockTitle = styled.div`
 
 const GalleryDiv = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   @media (max-width: 420px) {
@@ -49,12 +49,7 @@ const GalleryDiv = styled.div`
   }
 `
 
-const Header = styled.div`
-  display: flex;
-  @media (max-width: 420px) {
-    display: block;
-  }
-`
+const Header = styled.div``
 
 const HeaderLeft = styled.div`
   flex-basis: 256px;
@@ -96,12 +91,9 @@ export default function BookNotes() {
 
   return (
     <Layout title="Book Notes — Junhong Wang" description={description}>
-      <Spacing height={32} />
       <Header>
-        <HeaderLeft>
-          <Title>📚 Book Notes</Title>
-        </HeaderLeft>
-        <HeaderRight>{description}</HeaderRight>
+        <h1>📚 Book Notes</h1>
+        <p>{description}</p>
       </Header>
       <Spacing height={32} />
       <GalleryDiv>

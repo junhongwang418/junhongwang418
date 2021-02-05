@@ -2,13 +2,23 @@ import React from "react"
 import { ThemeProvider } from "theme-ui"
 import theme from "../gatsby-plugin-theme-ui/index"
 import styled from "../styled/index"
+import Contact from "./Contact"
 import Container from "./Container"
 import Footer from "./Footer"
 import Header from "./Header"
 import SEO from "./SEO"
 import Spacing from "./Spacing"
 
-const BodyRoot = styled.div``
+const BodyRoot = styled.div`
+  display: flex;
+  @media (max-width: 960px) {
+    display: block;
+  }
+`
+
+const BodyLeft = styled.div`
+  max-width: 680px;
+`
 
 /**
  * title and description are used for SEO
@@ -29,9 +39,15 @@ export default function Layout(props: LayoutProps) {
   return (
     <ThemeProvider theme={theme}>
       <SEO title={title} description={description} />
-      <Container>
+      <Container maxWidth={960}>
         <Header />
-        <BodyRoot>{children}</BodyRoot>
+        <Spacing height={32} />
+        <BodyRoot>
+          <BodyLeft>{children}</BodyLeft>
+          <Spacing flex={64} />
+          <Spacing height={128} />
+          <Contact />
+        </BodyRoot>
         <Spacing height={128} />
         <Footer />
       </Container>

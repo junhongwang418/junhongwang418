@@ -9,23 +9,23 @@ const BlockRoot = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 420px) {
+  flex-direction: row-reverse;
+  @media (max-width: 620px) {
     display: block;
   }
 `
 
 const Image = styled.img`
   object-fit: contain;
-  width: 256px;
-  height: 256px;
-  padding: 0 64px;
+  width: 128px;
+  height: 128px;
   @media (max-width: 420px) {
     display: block;
     margin: 0 auto;
   }
 `
 
-const BlockBodyLeft = styled.div`
+const BlockBody = styled.div`
   flex-grow: 1;
 `
 
@@ -42,7 +42,9 @@ const Block: FunctionComponent<BlockProps> = props => {
   const { title, description, tools, imgUrl, githubUrl, demoUrl } = props
   return (
     <BlockRoot>
-      <BlockBodyLeft>
+      <Image src={imgUrl} alt={title} />
+      <Spacing flex={36} />
+      <BlockBody>
         <h3 sx={{ color: "primary" }}>{title}</h3>
         <div>{description}</div>
         <h5>{tools}</h5>
@@ -53,8 +55,7 @@ const Block: FunctionComponent<BlockProps> = props => {
             <Button href={demoUrl}>🎮 Demo</Button>
           </React.Fragment>
         )}
-      </BlockBodyLeft>
-      <Image src={imgUrl} alt={title} />
+      </BlockBody>
     </BlockRoot>
   )
 }

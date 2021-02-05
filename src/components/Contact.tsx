@@ -11,14 +11,6 @@ interface BlockProps {
 
 const Root = styled.div``
 
-const Body = styled.div`
-  display: flex;
-  justify-content: center;
-  @media (max-width: 420px) {
-    display: block;
-  }
-`
-
 const BoldSpan = styled.span`
   font-weight: bold;
 `
@@ -28,6 +20,12 @@ const Link = styled.a`
   :hover {
     color: ${props => props.theme.colors.secondary};
   }
+`
+
+const ProfileImage = styled.img`
+  object-fit: cover;
+  width: 128px;
+  display: block;
 `
 
 const Block: FunctionComponent<BlockProps> = props => {
@@ -49,26 +47,20 @@ const Block: FunctionComponent<BlockProps> = props => {
 export default function Contact() {
   return (
     <Root>
-      <Body>
-        <Block emoji="📧" title="Email" mailto="ionejunhong@gmail.com" />
-        <Spacing flex={8} />
-        <Spacing height={8} />
-        <Block
-          emoji="🐦"
-          title="Twitter"
-          link="https://twitter.com/junhongone"
-        />
-        <Spacing flex={8} />
-        <Spacing height={8} />
-        <Block
-          emoji="🔗"
-          title="LinkedIn"
-          link="https://www.linkedin.com/in/junhongwang/"
-        />
-        <Spacing flex={8} />
-        <Spacing height={8} />
-        <Block emoji="🐙" title="Github" link="https://github.com/ioneone" />
-      </Body>
+      <h1>☕️ Contact</h1>
+      <ProfileImage src="/profile.png" alt="profile" />
+      <Spacing height={16} />
+      <Block emoji="📧" title="Email" mailto="ionejunhong@gmail.com" />
+      <Spacing height={8} />
+      <Block emoji="🐦" title="Twitter" link="https://twitter.com/junhongone" />
+      <Spacing height={8} />
+      <Block
+        emoji="🔗"
+        title="LinkedIn"
+        link="https://www.linkedin.com/in/junhongwang/"
+      />
+      <Spacing height={8} />
+      <Block emoji="🐙" title="Github" link="https://github.com/ioneone" />
     </Root>
   )
 }
