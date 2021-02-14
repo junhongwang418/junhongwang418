@@ -24,7 +24,7 @@ const Block = styled.div`
 export default function Home() {
   return (
     <Layout>
-      <Spacing height={128} />
+      <Spacing height={64} />
       <About />
       <Spacing height={128} />
       <Experience />

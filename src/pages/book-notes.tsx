@@ -98,6 +98,11 @@ export default function BookNotes() {
       <Spacing height={32} />
       <GalleryDiv>
         <GalleryBlock
+          title="💹 The Little Book of Common Sense Investing"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51cCQzs8EBL._SX352_BO1,204,203,200_.jpg"
+          url="/book-notes/the-little-book-of-common-sense-investing"
+        />
+        <GalleryBlock
           title="🥙 Never Eat Alone"
           imgUrl="https://images-na.ssl-images-amazon.com/images/I/41x1dFaUd7L._SX327_BO1,204,203,200_.jpg"
           url="/book-notes/never-eat-alone"
