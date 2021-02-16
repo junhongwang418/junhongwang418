@@ -1,7 +1,5 @@
 import React, { FunctionComponent } from "react"
 import Spacing from "./Spacing"
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import Button from "./Button"
 import styled from "../styled"
 
@@ -11,42 +9,34 @@ interface BlockProps {
   url: string
 }
 
+const BlockTitle = styled.h3`
+  color: ${props => props.theme.colors.primary};
+  margin: 0;
+`
+
+const Link = styled.a`
+  color: ${props => props.theme.colors.secondary};
+  float: right;
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
+  }
+`
+
 const Block: FunctionComponent<BlockProps> = props => {
   const { title, description, url } = props
   return (
     <div>
-      <h3 sx={{ color: "primary" }}>{title}</h3>
+      <BlockTitle>{title}</BlockTitle>
+      <Spacing height={8} />
       <div>{description}</div>
-      <Spacing height={16} />
-      <Button href={url}>See More</Button>
+      <Spacing height={8} />
+      <Link href={url}>Read More →</Link>
     </div>
   )
 }
 
 const Root = styled.div``
-
-const Body = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  @media (max-width: 420px) {
-    display: block;
-  }
-`
-
-const BodyLeft = styled.div``
-
-const BodyRight = styled.div`
-  text-align: center;
-`
-
-const Image = styled.img`
-  width: 256px;
-  margin: 0 64px;
-  @media (max-width: 420px) {
-    margin: 0;
-  }
-`
 
 export default function Publication() {
   return (
@@ -58,7 +48,7 @@ export default function Publication() {
         of Jflix and taught readers how to use GraphQL (Apollo) with React."
         url="/publication/getting-started-with-graphql"
       />
-      <Spacing height={32} />
+      <Spacing height={48} />
       <Block
         title="Machine Learning Diary"
         description="Studied machine learning from the beginning for 100 days in a row and recorded my learning process. 

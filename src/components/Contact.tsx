@@ -16,9 +16,9 @@ const BoldSpan = styled.span`
 `
 
 const Link = styled.a`
-  color: ${props => props.theme.colors.text};
+  color: ${props => props.theme.colors.foreground};
   :hover {
-    color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.comment};
   }
 `
 

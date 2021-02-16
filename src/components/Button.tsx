@@ -2,15 +2,15 @@ import React, { FunctionComponent } from "react"
 import styled from "../styled/index"
 
 const Root = styled.a`
-  color: ${props => props.theme.colors.text};
-  border: 1px solid ${props => props.theme.colors.text};
+  color: ${props => props.theme.colors.secondary};
+  border: 1px solid ${props => props.theme.colors.secondary};
   cursor: pointer;
   display: inline-block;
   padding: 8px 48px;
   border-radius: 2px;
   :hover {
-    color: ${props => props.theme.colors.secondary};
-    border: 1px solid ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.comment};
+    border: 1px solid ${props => props.theme.colors.comment};
   }
   text-decoration: none;
   @media (max-width: 420px) {

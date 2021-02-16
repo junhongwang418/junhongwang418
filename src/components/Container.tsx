@@ -9,6 +9,7 @@ const Root = styled.div`
   margin: 0 auto;
   max-width: ${(props: RootProps) => props.maxWidth}px;
   padding: 0 16px;
+  color: ${props => props.theme.colors.foreground};
 `
 
 interface ContainerProps {

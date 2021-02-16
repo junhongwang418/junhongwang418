@@ -5,10 +5,11 @@ import styled, { CreateStyled } from "@emotion/styled"
  */
 type Theme = {
   colors: {
+    foreground: string
     background: string
     primary: string
     secondary: string
-    text: string
+    comment: string
   }
 }
 

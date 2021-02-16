@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div>
       <div
-        sx={{ backgroundColor: "secondary" }}
+        sx={{ backgroundColor: "comment" }}
         style={{ width: "100%", height: "1px" }}
       ></div>
       <Spacing height={32} />
