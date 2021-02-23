@@ -1,7 +1,7 @@
 # Junhong Wang
 
 <p align="center">
-  <img width="360" src="static/profile.png" alt="profile" />
+  <img src="static/profile.png" alt="profile" />
 </p>
 
 [![Build Status](https://travis-ci.com/ioneone/ioneone.github.io.svg?branch=master)](https://travis-ci.com/ioneone/ioneone.github.io)
