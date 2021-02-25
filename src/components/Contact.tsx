@@ -52,8 +52,6 @@ export default function Contact() {
       <Spacing height={16} />
       <Block emoji="📧" title="Email" mailto="ionejunhong@gmail.com" />
       <Spacing height={8} />
-      <Block emoji="🐦" title="Twitter" link="https://twitter.com/junhongone" />
-      <Spacing height={8} />
       <Block
         emoji="🔗"
         title="LinkedIn"
