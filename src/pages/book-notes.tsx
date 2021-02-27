@@ -51,20 +51,6 @@ const GalleryDiv = styled.div`
 
 const Header = styled.div``
 
-const HeaderLeft = styled.div`
-  flex-basis: 256px;
-  flex-grow: 0;
-  flex-shrink: 0;
-`
-
-const Title = styled.h1`
-  margin-top: 0;
-`
-
-const HeaderRight = styled.div`
-  flex-grow: 1;
-`
-
 interface GalleryBlockProps {
   title: string
   imgUrl: string
@@ -97,6 +83,11 @@ export default function BookNotes() {
       </Header>
       <Spacing height={32} />
       <GalleryDiv>
+        <GalleryBlock
+          title="🏃‍♂️ Atomic Habits"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51Tlm0GZTXL._SX329_BO1,204,203,200_.jpg"
+          url="/book-notes/atomic-habits"
+        />
         <GalleryBlock
           title="💹 The Little Book of Common Sense Investing"
           imgUrl="https://images-na.ssl-images-amazon.com/images/I/51cCQzs8EBL._SX352_BO1,204,203,200_.jpg"
