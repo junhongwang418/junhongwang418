@@ -16,8 +16,11 @@ const BodyRoot = styled.div`
   }
 `
 
-const BodyLeft = styled.div`
-  max-width: 680px;
+const BodyLeft = styled.div``
+
+const BodyRight = styled.div`
+  flex-basis: 160px;
+  flex-shrink: 0;
 `
 
 /**
@@ -43,13 +46,18 @@ export default function Layout(props: LayoutProps) {
         <Header />
         <Spacing height={32} />
         <BodyRoot>
-          <BodyLeft>{children}</BodyLeft>
+          <BodyLeft>
+            {children}
+            <Spacing height={64} />
+          </BodyLeft>
           <Spacing flex={64} />
           <Spacing height={128} />
-          <Contact />
+          <BodyRight>
+            <Contact />
+          </BodyRight>
         </BodyRoot>
-        <Spacing height={128} />
         <Footer />
+        <Spacing height={32} />
       </Container>
     </ThemeProvider>
   )

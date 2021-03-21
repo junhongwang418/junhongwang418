@@ -10,7 +10,7 @@ const Root = styled.a`
   }
 `
 
-interface IconLinkProps extends React.HTMLProps<HTMLAnchorElement> {
+export interface IconLinkProps extends React.HTMLProps<HTMLAnchorElement> {
   icon: IconProp
 }
 

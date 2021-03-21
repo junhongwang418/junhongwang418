@@ -1,64 +1,75 @@
 import React, { FunctionComponent } from "react"
 import Spacing from "./Spacing"
 import styled from "../styled/index"
-
-interface BlockProps {
-  emoji: string
-  title: string
-  mailto?: string
-  link?: string
-}
+import IconLink from "./IconLink"
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const Root = styled.div``
 
-const BoldSpan = styled.span`
-  font-weight: bold;
+const ProfileImage = styled.img`
+  object-fit: cover;
+  width: 96px;
+  display: block;
+  border-radius: 50%;
 `
 
-const Link = styled.a`
-  color: ${props => props.theme.colors.foreground};
-  :hover {
-    color: ${props => props.theme.colors.comment};
+const ProfileRoot = styled.div`
+  display: block;
+  @media (max-width: 960px) {
+    display: flex;
   }
 `
 
-const ProfileImage = styled.img`
-  object-fit: cover;
-  width: 128px;
-  display: block;
+const Name = styled.h3`
+  margin: 0;
 `
 
-const Block: FunctionComponent<BlockProps> = props => {
-  const { emoji, title, mailto, link } = props
+const Profile = () => {
   return (
-    <div>
-      {emoji}{" "}
-      {link || mailto ? (
-        <Link href={mailto ? `mailto:${mailto}` : link}>
-          <BoldSpan>{title}</BoldSpan>
-        </Link>
-      ) : (
-        <BoldSpan>{title}</BoldSpan>
-      )}{" "}
-    </div>
+    <ProfileRoot>
+      <div>
+        <ProfileImage src="/profile.png" alt="profile" />
+      </div>
+      <Spacing flex={32} />
+      <Spacing height={32} />
+      <div>
+        <Name>Junhong Wang</Name>
+        <Spacing height={8} />
+        <div>
+          Software Engineer. On this website, I document myself and things I
+          learned.
+        </div>
+      </div>
+    </ProfileRoot>
+  )
+}
+
+const MediaRoot = styled.div`
+  text-align: center;
+`
+
+const Media = () => {
+  return (
+    <MediaRoot>
+      <IconLink href="mailto:ionejunhong@gmail.com" icon={faEnvelope} />
+      <Spacing width={16} inlineBlock />
+      <IconLink
+        href="https://www.linkedin.com/in/junhongwang/"
+        icon={faLinkedinIn}
+      />
+      <Spacing width={16} inlineBlock />
+      <IconLink href="https://github.com/ioneone" icon={faGithub} />
+    </MediaRoot>
   )
 }
 
 export default function Contact() {
   return (
     <Root>
-      <h1>☕️ Contact</h1>
-      <ProfileImage src="/profile.png" alt="profile" />
-      <Spacing height={16} />
-      <Block emoji="📧" title="Email" mailto="ionejunhong@gmail.com" />
-      <Spacing height={8} />
-      <Block
-        emoji="🔗"
-        title="LinkedIn"
-        link="https://www.linkedin.com/in/junhongwang/"
-      />
-      <Spacing height={8} />
-      <Block emoji="🐙" title="Github" link="https://github.com/ioneone" />
+      <Profile />
+      <Spacing height={32} />
+      <Media />
     </Root>
   )
 }

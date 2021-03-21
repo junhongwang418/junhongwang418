@@ -10,7 +10,6 @@ import Layout from "../components/Layout"
 export default function Home() {
   return (
     <Layout>
-      <Spacing height={64} />
       <About />
       <Spacing height={128} />
       <Experience />

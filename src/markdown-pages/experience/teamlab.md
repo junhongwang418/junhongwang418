@@ -24,4 +24,4 @@ I implemented a skeleton loading component. It's the gray shining rectanble to i
 
 Check out this video that summarizes my contributions.
 
-<iframe width="680" height="382" src="https://www.youtube.com/embed/cLFaLSaN9b0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/cLFaLSaN9b0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

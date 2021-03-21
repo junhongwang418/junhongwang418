@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from "react"
 import Spacing from "./Spacing"
-import Button from "./Button"
 import styled from "../styled"
 
 interface BlockProps {

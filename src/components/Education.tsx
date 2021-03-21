@@ -1,6 +1,4 @@
 import React, { FunctionComponent } from "react"
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import Spacing from "./Spacing"
 import styled from "../styled"
 
@@ -11,11 +9,15 @@ interface BlockProps {
   date: string
 }
 
+const SchoolName = styled.h3`
+  color: ${props => props.theme.colors.primary};
+`
+
 const Block: FunctionComponent<BlockProps> = props => {
   const { school, degree, major, date } = props
   return (
     <div>
-      <h3 sx={{ color: "primary" }}>{school}</h3>
+      <SchoolName>{school}</SchoolName>
       <div>
         {degree} in {major}. ​{date}.
       </div>
@@ -24,30 +26,6 @@ const Block: FunctionComponent<BlockProps> = props => {
 }
 
 const Root = styled.div``
-
-const Body = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: 420px) {
-    display: block;
-  }
-`
-
-const BodyLeft = styled.div`
-  flex-grow: 1;
-`
-
-const BodyRight = styled.div`
-  text-align: center;
-`
-
-const Image = styled.img`
-  width: 256px;
-  margin: 0 64px;
-  @media (max-width: 420px) {
-    margin: 0;
-  }
-`
 
 export default function Education() {
   return (

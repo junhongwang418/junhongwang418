@@ -1,6 +1,4 @@
 import React, { FunctionComponent } from "react"
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import Spacing from "./Spacing"
 import styled from "../styled/index"
 
@@ -13,10 +11,6 @@ interface BlockProps {
   url: string
   imgUrl: string
 }
-
-const ItalicSpan = styled.span`
-  font-style: italic;
-`
 
 const BlockRoot = styled.div`
   display: flex;

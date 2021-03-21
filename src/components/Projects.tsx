@@ -1,8 +1,6 @@
 import React, { FunctionComponent } from "react"
 import styled from "../styled/index"
 import Spacing from "./Spacing"
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import IconLink from "./IconLink"

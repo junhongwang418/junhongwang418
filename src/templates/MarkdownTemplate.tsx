@@ -5,7 +5,6 @@ import Markdown from "./Markdown"
 import styled from "../styled"
 
 const Body = styled.div`
-  max-width: 680px;
   margin: 0 auto;
 `
 
