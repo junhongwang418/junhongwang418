@@ -27,10 +27,12 @@ const Block: FunctionComponent<BlockProps> = props => {
 
 const Root = styled.div``
 
+const Title = styled.h1``
+
 export default function Education() {
   return (
     <Root>
-      <h1>👨‍🏫 Education</h1>
+      <Title>👨‍🏫 Education</Title>
       <Block
         school="University of California, Los Angeles."
         degree="Bachelor of Science"

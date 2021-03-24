@@ -9,7 +9,7 @@ const Root = styled.div`
 `
 
 const Logo = styled.a`
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.secondary};
   cursor: pointer;
   margin: 0 16px;
   text-decoration: none;

@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react"
+import React from "react"
 import Spacing from "./Spacing"
 import styled from "../styled/index"
 import IconLink from "./IconLink"

@@ -37,10 +37,12 @@ const Block: FunctionComponent<BlockProps> = props => {
 
 const Root = styled.div``
 
+const Header = styled.h1``
+
 export default function Publication() {
   return (
     <Root>
-      <h1>📚 Publication</h1>
+      <Header>📚 Publication</Header>
       <Block
         title="Getting Started with GraphQL"
         description="Published under Better Programming. Documented the development process 

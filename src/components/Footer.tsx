@@ -5,10 +5,12 @@ const Root = styled.div`
   text-align: center;
 `
 
+const CopyRight = styled.h5``
+
 export default function Footer() {
   return (
     <Root>
-      <h5>©︎ Junhong Wang 2021</h5>
+      <CopyRight>©︎ Junhong Wang 2021</CopyRight>
     </Root>
   )
 }

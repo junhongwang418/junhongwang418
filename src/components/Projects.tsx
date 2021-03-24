@@ -5,7 +5,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons"
 import IconLink from "./IconLink"
 
-const BlockRoot = styled.div`
+const ProjectRoot = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +15,7 @@ const BlockRoot = styled.div`
   }
 `
 
-const Image = styled.img`
+const ProjectImage = styled.img`
   object-fit: contain;
   width: 128px;
   height: 128px;
@@ -25,11 +25,11 @@ const Image = styled.img`
   }
 `
 
-const BlockBody = styled.div`
+const ProjectContent = styled.div`
   flex-grow: 1;
 `
 
-interface BlockProps {
+interface ProjectProps {
   title: string
   description: string
   imgUrl: string
@@ -37,21 +37,32 @@ interface BlockProps {
   demoUrl?: string
 }
 
-const BlockTitle = styled.h3`
+const ProjectTitle = styled.h3`
   color: ${props => props.theme.colors.primary};
   margin: 0;
 `
 
-const Block: FunctionComponent<BlockProps> = props => {
+const ProjectHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const ProjectLinksContainer = styled.div`
+  display: flex;
+`
+
+const ProjectDescription = styled.div``
+
+const Project: FunctionComponent<ProjectProps> = props => {
   const { title, description, imgUrl, githubUrl, demoUrl } = props
   return (
-    <BlockRoot>
-      <Image src={imgUrl} alt={title} />
+    <ProjectRoot>
+      <ProjectImage src={imgUrl} alt={title} />
       <Spacing flex={36} />
-      <BlockBody>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <BlockTitle>{title}</BlockTitle>
-          <div style={{ display: "flex" }}>
+      <ProjectContent>
+        <ProjectHeader>
+          <ProjectTitle>{title}</ProjectTitle>
+          <ProjectLinksContainer>
             <IconLink href={githubUrl} icon={faGithub} />
             {demoUrl && (
               <React.Fragment>
@@ -63,33 +74,37 @@ const Block: FunctionComponent<BlockProps> = props => {
                 />
               </React.Fragment>
             )}
-          </div>
-        </div>
+          </ProjectLinksContainer>
+        </ProjectHeader>
         <Spacing height={8} />
-        <div>{description}</div>
-      </BlockBody>
-    </BlockRoot>
+        <ProjectDescription>{description}</ProjectDescription>
+      </ProjectContent>
+    </ProjectRoot>
   )
 }
 
+const Root = styled.div``
+
+const Header = styled.h1``
+
 export default function Projects() {
   return (
-    <div>
-      <h1>🚀 Projects</h1>
-      <Block
+    <Root>
+      <Header>🚀 Projects</Header>
+      <Project
         title="Alice"
         description="Artificial virtual assistant 🤖. The objective is to automate tasks to make my life easier. The more time I save, the more new things I can try. For example, she sends me a notification in the morning if it will rain that day."
         imgUrl="https://github.com/ioneone/alice/raw/main/alice.png"
         githubUrl="https://github.com/ioneone/alice"
       />
       <Spacing height={32} />
-      <Block
+      <Project
         title="Pixel"
         description="2D side scrolling multiplayer game. The objective is to learn multiplayer client-server architechture. Built a simple chat system 💬."
         imgUrl="https://github.com/ioneone/pixel/raw/master/icon.png?raw=true"
         githubUrl="https://github.com/ioneone/pixel"
         demoUrl="https://ioneone-pixel.herokuapp.com/"
       />
-    </div>
+    </Root>
   )
 }
