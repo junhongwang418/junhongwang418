@@ -1,9 +1,12 @@
 ---
 slug: "/book-notes/never-eat-alone"
-title: "Book Notes — Never Eat Alone"
-thumbnailUrl: "https://images.unsplash.com/photo-1474031317822-f51f48735ddd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-description: "In this book, Keith Ferrazzi argues the power of human relationships and how to be succsessful. There are tons to learn from this book."
 ---
+
+# Book Notes — Never Eat Alone
+
+![thumbnail](https://images.unsplash.com/photo-1474031317822-f51f48735ddd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)
+
+In this book, Keith Ferrazzi argues the power of human relationships and how to be succsessful. There are tons to learn from this book.
 
 ### "When you help others, they often help you. _Reciprocity_ is the gussied-up word people use later in life to describe this ageless principle."
 

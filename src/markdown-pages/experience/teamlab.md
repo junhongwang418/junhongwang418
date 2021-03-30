@@ -1,10 +1,8 @@
 ---
 slug: "/experience/teamlab"
-title: "iOS App Developer Intern, TeamLab, Jul 2018 - Sep 2018"
-description: "I joined TeamLab's iOS app development team to build a shopping app for BigCamera."
 ---
 
-## 👀 Overview
+# iOS App Developer Intern, TeamLab, Jul 2018 - Sep 2018
 
 I joined [TeamLab](https://www.teamlab.art/)'s iOS app development team to build a shopping app for [BigCamera](https://www.biccamera.com/bc/main/), one of the largest electronics retailers in Japan (kind of like BestBuy).
 

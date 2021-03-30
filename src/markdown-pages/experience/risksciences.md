@@ -1,10 +1,8 @@
 ---
 slug: "/experience/risksciences"
-title: "Software Developer Intern, GIRS @UCLA, Jun 2019 - Sep 2019"
-description: "I joined GIRS as a student developer to design, prototype, and build NASA JPL's internal software for system reliability analysis."
 ---
 
-## 👀 Overview
+# Software Developer Intern, GIRS @UCLA, Jun 2019 - Sep 2019
 
 [The B. John Grarrik Institute for The Risk Sciences](https://www.risksciences.ucla.edu/) (GIRS) is a research lab at UCLA that studies the quantification and management of the risk of complex natural and engineered systems and processes. I joined GIRS as a student developer to design, prototype, and build NASA Jet Propulsion Laboratory's internal software for system reliability analysis.
 

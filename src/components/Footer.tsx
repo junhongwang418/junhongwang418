@@ -8,9 +8,10 @@ const Root = styled.div`
 const CopyRight = styled.h5``
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
   return (
     <Root>
-      <CopyRight>©︎ Junhong Wang 2021</CopyRight>
+      <CopyRight>©︎ Junhong Wang {currentYear}</CopyRight>
     </Root>
   )
 }

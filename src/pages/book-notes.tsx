@@ -73,7 +73,7 @@ const GalleryBlock: FunctionComponent<GalleryBlockProps> = props => {
 
 export default function BookNotes() {
   const description =
-    "Late 2020, I started to read books as a hobby to improve my life. For every book I read, I jotted down my key takeaways from the book. This helps me digest what I learned and reminds me the lessons I should keep in my mind."
+    "When I was senior year in my college, I started reading books for self improvement. For every book I read, I jotted down my key takeaways from the book. This helps me review the lessons later without reading the entire book again."
 
   return (
     <Layout title="Book Notes — Junhong Wang" description={description}>
@@ -83,6 +83,11 @@ export default function BookNotes() {
       </Header>
       <Spacing height={32} />
       <GalleryDiv>
+        <GalleryBlock
+          title="🚄 7 Habits of Highly Effective People"
+          imgUrl="https://images-na.ssl-images-amazon.com/images/I/51hV5vGr4AL._SX326_BO1,204,203,200_.jpg"
+          url="/book-notes/7-habits-of-highly-effective-people"
+        />
         <GalleryBlock
           title="🏃‍♂️ Atomic Habits"
           imgUrl="https://images-na.ssl-images-amazon.com/images/I/51Tlm0GZTXL._SX329_BO1,204,203,200_.jpg"

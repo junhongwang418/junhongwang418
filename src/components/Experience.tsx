@@ -44,11 +44,11 @@ const JobDescription = styled.div``
 
 const Link = styled.a`
   color: ${props => props.theme.colors.secondary};
-  float: right;
   text-decoration: none;
   :hover {
     text-decoration: underline;
   }
+  font-weight: bold;
 `
 
 const CompanyLogo = styled.img`
@@ -75,7 +75,7 @@ const Block: FunctionComponent<BlockProps> = props => {
         <Spacing height={8} />
         <JobDescription>{description}</JobDescription>
         <Spacing height={8} />
-        <Link href={url}>Read More →</Link>
+        <Link href={url}>Read More</Link>
       </BlockRight>
     </BlockRoot>
   )
@@ -96,7 +96,7 @@ export default function Experience() {
         url="/experience/appfolio"
         imgUrl="https://media-exp1.licdn.com/dms/image/C560BAQEZzWml4YYbEQ/company-logo_200_200/0/1609798850247?e=1619049600&v=beta&t=9CddHYc2iB28D1-PQ8dUtHuzIkt1hll0cr5sML376e0"
       />
-      <Spacing height={48} />
+      <Spacing height={32} />
       <Block
         title="Software Developer Intern"
         company="GIRS @UCLA"
@@ -106,7 +106,7 @@ export default function Experience() {
         url="/experience/risksciences"
         imgUrl="https://media-exp1.licdn.com/dms/image/C4E0BAQH_ztIBjSgx_w/company-logo_200_200/0/1522961601498?e=1619049600&v=beta&t=FbGewlZMEKpr1TC2Ib6-A5gTIVo80DXSuH5hn09dmkk"
       />
-      <Spacing height={48} />
+      <Spacing height={32} />
       <Block
         title="iOS App Developer Intern"
         company="TeamLab"
@@ -116,7 +116,7 @@ export default function Experience() {
         url="/experience/teamlab"
         imgUrl="https://media-exp1.licdn.com/dms/image/C4D0BAQHcWkIkHJZuUw/company-logo_200_200/0/1519952344898?e=1619049600&v=beta&t=rkR_83QL0FuiH2nDjZUTXFvPPG6P9xbDu9IzoMkdbh8"
       />
-      <Spacing height={48} />
+      <Spacing height={32} />
       <Block
         title="iOS App Developer Intern"
         company="MaruMe"

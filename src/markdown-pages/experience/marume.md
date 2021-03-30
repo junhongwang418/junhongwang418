@@ -1,10 +1,8 @@
 ---
 slug: "/experience/marume"
-title: "iOS App Developer Intern, MaruMe, Jun 2016 - Aug 2016"
-description: "I interned at MaruMe, a startup company based in Berkeley, CA, as an iOS app developer to build a product review app."
 ---
 
-## Overview
+# iOS App Developer Intern, MaruMe, Jun 2016 - Aug 2016
 
 I interned at MaruMe, a startup company based in Berkeley, CA, as an iOS app developer to build a product review app (kind of like Yelp for products).
 

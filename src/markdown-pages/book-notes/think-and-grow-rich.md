@@ -1,9 +1,12 @@
 ---
 slug: "/book-notes/think-and-grow-rich"
-title: "Book Notes — Think and Grow Rich"
-thumbnailUrl: "https://images.unsplash.com/photo-1604594849809-dfedbc827105?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-description: "In this book, Napoleon Hill teaches you the mindset you should have to become rich."
 ---
+
+# Book Notes — Think and Grow Rich
+
+![thumbnail](https://images.unsplash.com/photo-1604594849809-dfedbc827105?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
+
+In this book, Napoleon Hill teaches you the mindset you should have to become rich.
 
 ### "One of the most common causes of failure is the habit of quitting when one is overtaken by temporary defeat."
 

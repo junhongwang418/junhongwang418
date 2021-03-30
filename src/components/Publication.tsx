@@ -15,11 +15,11 @@ const BlockTitle = styled.h3`
 
 const Link = styled.a`
   color: ${props => props.theme.colors.secondary};
-  float: right;
   text-decoration: none;
   :hover {
     text-decoration: underline;
   }
+  font-weight: bold;
 `
 
 const Block: FunctionComponent<BlockProps> = props => {
@@ -30,7 +30,7 @@ const Block: FunctionComponent<BlockProps> = props => {
       <Spacing height={8} />
       <div>{description}</div>
       <Spacing height={8} />
-      <Link href={url}>Read More →</Link>
+      <Link href={url}>Read More</Link>
     </div>
   )
 }
@@ -49,7 +49,7 @@ export default function Publication() {
         of Jflix and taught readers how to use GraphQL (Apollo) with React."
         url="/publication/getting-started-with-graphql"
       />
-      <Spacing height={48} />
+      <Spacing height={32} />
       <Block
         title="Machine Learning Diary"
         description="Studied machine learning from the beginning for 100 days in a row and recorded my learning process. 

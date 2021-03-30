@@ -1,9 +1,12 @@
 ---
 slug: "/book-notes/the-4-hour-workweek"
-title: "Book Notes — The 4-Hour Workweek"
-thumbnailUrl: "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80"
-description: "In this book, Tim Ferriss introduces the idea of NR (New Rich) and how to live like a millionaire without a million dollars."
 ---
+
+# Book Notes — The 4-Hour Workweek
+
+![thumbnail](https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80)
+
+In this book, Tim Ferriss introduces the idea of NR (New Rich) and how to live like a millionaire without a million dollars.
 
 ### "Retirement Is Worst-Case-Scenario Insurance."
 

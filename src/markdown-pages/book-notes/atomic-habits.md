@@ -1,9 +1,12 @@
 ---
 slug: "/book-notes/atomic-habits"
-title: "Book Notes — Atomic Habits"
-thumbnailUrl: "https://images.unsplash.com/flagged/photo-1556746834-cbb4a38ee593?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
-description: "This is my most favorite book so far. In this book, the author explains the anatomy of habits. This book teaches you how to form good habits and quit bad ones"
 ---
+
+# Book Notes — Atomic Habits
+
+![thumbnail](https://images.unsplash.com/flagged/photo-1556746834-cbb4a38ee593?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80)
+
+This is my most favorite book so far. In this book, the author explains the anatomy of habits. This book teaches you how to form good habits and quit bad ones.
 
 ### "1% Better Everyday"
 

@@ -1,9 +1,12 @@
 ---
 slug: "/book-notes/the-little-book-of-common-sense-investing"
-title: "Book Notes — The Little Book of Common Sense Investing"
-thumbnailUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-description: "This book teaches you how to be rich by investing in low-cost index fund, written by Jack Bogle, founder of Vanguard."
 ---
+
+# Book Notes — The Little Book of Common Sense Investing
+
+![thumbnail](https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80)
+
+This book teaches you how to be rich by investing in low-cost index fund, written by Jack Bogle, founder of Vanguard.
 
 ### "My advice to investors: ignore the short-term sound and fury of the emotions reflected in our financial markets, and focus on the productive long-term economics of our corporate businesses. The way to investment success is to get out of the expectations market of stock prices and cast your lot with the real market of business."
 

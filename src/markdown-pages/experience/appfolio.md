@@ -1,10 +1,8 @@
 ---
 slug: "/experience/appfolio"
-title: "Software Engineer Intern, AppFolio, Jun 2020 - Sep 2020"
-description: "I joined AppFolio's Dynasty team to develop the AI for real estate — Lisa."
 ---
 
-## 👀 Overview
+# Software Engineer Intern, AppFolio, Jun 2020 - Sep 2020
 
 I joined AppFolio's [Dynasty](https://www.dynasty.com/) team to develop the AI for real estate — Lisa.
 

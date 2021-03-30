@@ -11,6 +11,7 @@ interface BlockProps {
 
 const SchoolName = styled.h3`
   color: ${props => props.theme.colors.primary};
+  margin: 0;
 `
 
 const Block: FunctionComponent<BlockProps> = props => {
@@ -18,6 +19,7 @@ const Block: FunctionComponent<BlockProps> = props => {
   return (
     <div>
       <SchoolName>{school}</SchoolName>
+      <Spacing height={8} />
       <div>
         {degree} in {major}. ​{date}.
       </div>

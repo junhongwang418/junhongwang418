@@ -1,9 +1,12 @@
 ---
 slug: "/book-notes/rich-dad-poor-dad"
-title: "Book Notes — Rich Dad Poor Dad"
-thumbnailUrl: "https://images.unsplash.com/photo-1518183214770-9cffbec72538?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-description: "In this best-selling personal finance education book, Robert Kiosaki teaches us how to build wealth and be rich. Here are some of the quotes from the book that resonated with me."
 ---
+
+# Book Notes — Rich Dad Poor Dad
+
+![thumbnail](https://images.unsplash.com/photo-1518183214770-9cffbec72538?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
+
+In this best-selling personal finance education book, Robert Kiosaki teaches us how to build wealth and be rich. Here are some of the quotes from the book that resonated with me.
 
 ### "The poor and the middle class work for money. The rich have money work for them."
 
