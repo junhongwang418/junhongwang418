@@ -34,7 +34,7 @@ interface ProjectProps {
   description: string
   imgUrl: string
   githubUrl: string
-  demoUrl?: string
+  demoUrl: string
 }
 
 const ProjectTitle = styled.h3`
@@ -64,16 +64,8 @@ const Project: FunctionComponent<ProjectProps> = props => {
           <ProjectTitle>{title}</ProjectTitle>
           <ProjectLinksContainer>
             <IconLink href={githubUrl} icon={faGithub} />
-            {demoUrl && (
-              <React.Fragment>
-                <Spacing width={8} />
-                <IconLink
-                  href={demoUrl}
-                  icon={faExternalLinkAlt}
-                  target="_blank"
-                />
-              </React.Fragment>
-            )}
+            <Spacing width={8} />
+            <IconLink href={demoUrl} icon={faExternalLinkAlt} target="_blank" />
           </ProjectLinksContainer>
         </ProjectHeader>
         <Spacing height={8} />
@@ -92,18 +84,19 @@ export default function Projects() {
     <Root>
       <Header>🚀 Projects</Header>
       <Project
-        title="Alice"
-        description="Artificial virtual assistant 🤖. The objective is to automate tasks to make my life easier. The more time I save, the more new things I can try. For example, she sends me a notification in the morning if it will rain that day."
-        imgUrl="https://github.com/ioneone/alice/raw/main/alice.png"
-        githubUrl="https://github.com/ioneone/alice"
+        title="Tycoon"
+        description="Real-time multiplayer card game. Tycoon, also known as Daifugo, is a Japanese card game. I created an online version of the game so that I can play it with my friends remotely."
+        imgUrl="https://github.com/ioneone/tycoon/raw/main/res/favicon.png"
+        githubUrl="https://github.com/ioneone/tycoon"
+        demoUrl="https://ioneone-tycoon.herokuapp.com/"
       />
       <Spacing height={32} />
       <Project
-        title="Pixel"
-        description="2D side scrolling multiplayer game. The objective is to learn multiplayer client-server architechture. Built a simple chat system 💬."
-        imgUrl="https://github.com/ioneone/pixel/raw/master/icon.png?raw=true"
-        githubUrl="https://github.com/ioneone/pixel"
-        demoUrl="https://ioneone-pixel.herokuapp.com/"
+        title="Museum 3D"
+        description="Virtual museum explorer. This was a group project from a computer graphics class at UCLA. You can explore a beautiful 3D world we created from home."
+        imgUrl="https://github.com/ioneone/museum-3d/blob/master/icon.png?raw=true"
+        githubUrl="https://github.com/ioneone/museum-3d"
+        demoUrl="https://intro-graphics-master.github.io/term-project-8/"
       />
     </Root>
   )

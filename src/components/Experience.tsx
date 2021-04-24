@@ -94,7 +94,7 @@ export default function Experience() {
         by 20%. Integrated GraphQL Subscription with AWS API Gateway WebSocket
         and reduced the load on the server significantly."
         url="/experience/appfolio"
-        imgUrl="https://media-exp1.licdn.com/dms/image/C560BAQEZzWml4YYbEQ/company-logo_200_200/0/1609798850247?e=1619049600&v=beta&t=9CddHYc2iB28D1-PQ8dUtHuzIkt1hll0cr5sML376e0"
+        imgUrl="/appfolio-logo.jpeg"
       />
       <Spacing height={32} />
       <Block
@@ -104,7 +104,7 @@ export default function Experience() {
         period="Jun 2019 - Sep 2019 · 4 mos"
         description="Enhanced Graph editing features and increased modeling efficiency/usability. Invented a tree traversal algorithm to navigate users building event trees."
         url="/experience/risksciences"
-        imgUrl="https://media-exp1.licdn.com/dms/image/C4E0BAQH_ztIBjSgx_w/company-logo_200_200/0/1522961601498?e=1619049600&v=beta&t=FbGewlZMEKpr1TC2Ib6-A5gTIVo80DXSuH5hn09dmkk"
+        imgUrl="/risksciences-logo.png"
       />
       <Spacing height={32} />
       <Block
@@ -114,7 +114,7 @@ export default function Experience() {
         period="Jul 2018 - Sep 2018 · 3 mos"
         description="Ranked #23 in the App Store for the shopping category in Japan. Displayed personalized products based on user preferences and purchase histories. Implement skeleton views and tutorial pages."
         url="/experience/teamlab"
-        imgUrl="https://media-exp1.licdn.com/dms/image/C4D0BAQHcWkIkHJZuUw/company-logo_200_200/0/1519952344898?e=1619049600&v=beta&t=rkR_83QL0FuiH2nDjZUTXFvPPG6P9xbDu9IzoMkdbh8"
+        imgUrl="/teamlab-logo.png"
       />
       <Spacing height={32} />
       <Block
@@ -124,7 +124,7 @@ export default function Experience() {
         period="Jun 2016 - Aug 2016 · 3 mos"
         description="Developed a product review app in a team of 2 using Swift that helps consumers make wise purchase decisions. Updated designs of buttons and layouts and built profile pages from scratch."
         url="/experience/marume"
-        imgUrl="https://media-exp1.licdn.com/dms/image/C560BAQEhk76xLOy9uw/company-logo_200_200/0/1519868257412?e=1619049600&v=beta&t=x6efU9R-GWteDFjg33tSLSWLaHY5y3Q5_mCAyrHXCLA"
+        imgUrl="/marume-logo.png"
       />
     </div>
   )
