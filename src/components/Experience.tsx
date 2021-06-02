@@ -81,10 +81,37 @@ const Block: FunctionComponent<BlockProps> = props => {
   )
 }
 
+const createDurationString = (startYear: number, startMonth: number) => {
+  const today = new Date()
+  const currentYear = today.getFullYear()
+  const currentMonth = today.getMonth()
+  const diffYears = startYear - currentYear
+  const diffMonths = Math.max(currentMonth - startMonth, 0)
+  if (diffYears > 0 && diffMonths > 0) {
+    return `${diffYears} yrs ${diffMonths} mos`
+  } else if (diffYears > 0) {
+    return `${diffYears} yrs`
+  } else if (diffMonths > 0) {
+    return `${diffMonths} mos`
+  } else {
+    return `1 mos`
+  }
+}
+
 export default function Experience() {
   return (
     <div>
       <h1>🏋️‍♂️ Work Experience</h1>
+      <Block
+        title="Software Engineer"
+        company="AppFolio, Inc"
+        location="Los Angeles, CA."
+        period={`May 2021 - Present · ${createDurationString(2021, 5)}`}
+        description="Return to AppFolio Dynasty team as a fulltime employee."
+        url="/experience/appfolio"
+        imgUrl="/appfolio-logo.jpeg"
+      />
+      <Spacing height={32} />
       <Block
         title="Software Engineer Intern"
         company="AppFolio, Inc"
@@ -93,7 +120,7 @@ export default function Experience() {
         description="Optimized GraphQL/MySQL queries and reduced the server CPU utilization
         by 20%. Integrated GraphQL Subscription with AWS API Gateway WebSocket
         and reduced the load on the server significantly."
-        url="/experience/appfolio"
+        url="/experience/appfolio-intern"
         imgUrl="/appfolio-logo.jpeg"
       />
       <Spacing height={32} />
