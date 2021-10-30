@@ -31,27 +31,23 @@ const Root = styled.div`
 
 const Body = styled.div``;
 
-interface MarkdownProps {
-}
-
 const Markdown = () => {
-  
-const params = useParams<{ id: string }>();
+  const params = useParams<{ id: string }>();
   const { filename } = params;
 
-  const [rawString, setRawString] = React.useState<string | null>(null)
+  const [rawString, setRawString] = React.useState<string | null>(null);
 
-    React.useEffect(() => {
-        fetch(`/${filename}.md`)
-        .then(res => res.text())
-        .then(data => setRawString(data))
-    }, [filename])
+  React.useEffect(() => {
+    fetch(`/${filename}.md`)
+      .then((res) => res.text())
+      .then((data) => setRawString(data));
+  }, [filename]);
 
-    console.log(filename, rawString)
+  console.log(filename, rawString);
 
-    if (rawString == null) {
-        return <Root>Loading...</Root>
-    }
+  if (rawString == null) {
+    return <Root>Loading...</Root>;
+  }
 
   return (
     <Root>
