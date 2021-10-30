@@ -9,7 +9,7 @@ const ProjectList = () => {
         name="Tycoon"
         logoUrl="https://github.com/ioneone/tycoon/raw/main/res/favicon.png"
         shortDescription="Real-time multiplayer card game"
-        demoUrl="https://ioneone-tycoon.herokuapp.com/"
+        demoUrl="https://github.com/ioneone/tycoon"
       />
       <ProjectListItem
         name="Museum 3D"

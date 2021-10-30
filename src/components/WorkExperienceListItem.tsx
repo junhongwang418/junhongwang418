@@ -5,7 +5,7 @@ import RouterLink from "./RouterLink";
 
 interface BlockProps {
   jobTitle: string;
-  postId: number;
+  markdown: string;
   employer: string;
   employerUrl: string;
   employerLogoUrl: string;
@@ -16,7 +16,7 @@ interface BlockProps {
 const WorkExperienceListItem: React.FunctionComponent<BlockProps> = (props) => {
   const {
     jobTitle,
-    postId,
+    markdown,
     employer,
     employerUrl,
     employerLogoUrl,
@@ -26,7 +26,7 @@ const WorkExperienceListItem: React.FunctionComponent<BlockProps> = (props) => {
   return (
     <ListItem
       imgUrl={employerLogoUrl}
-      title={<RouterLink to={`/posts/${postId}`}>{jobTitle}</RouterLink>}
+      title={<RouterLink to={`/md/${markdown}`}>{jobTitle}</RouterLink>}
       subtitle={
         <>
           <Link href={employerUrl}>{employer}</Link> · {duration} · {location}

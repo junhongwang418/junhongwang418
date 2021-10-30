@@ -7,7 +7,7 @@ const WorkExperienceList = () => {
     <List spacing={36}>
       <WorkExperienceListItem
         jobTitle="Software Engineer"
-        postId={5}
+        markdown="appfolio"
         employer="AppFolio, Inc"
         employerUrl="https://www.appfolio.com/"
         employerLogoUrl="/appfolio-logo.jpeg"
@@ -16,7 +16,7 @@ const WorkExperienceList = () => {
       />
       <WorkExperienceListItem
         jobTitle="Software Engineer Intern"
-        postId={4}
+        markdown="appfolio-intern"
         employer="AppFolio, Inc"
         employerUrl="https://www.appfolio.com/"
         employerLogoUrl="/appfolio-logo.jpeg"
@@ -25,7 +25,7 @@ const WorkExperienceList = () => {
       />
       <WorkExperienceListItem
         jobTitle="Software Developer Intern"
-        postId={3}
+        markdown="risksciences"
         employer="The B. John Garrick Institute for the Risk Sciences"
         employerUrl="https://www.risksciences.ucla.edu/"
         employerLogoUrl="/risksciences-logo.png"
@@ -34,7 +34,7 @@ const WorkExperienceList = () => {
       />
       <WorkExperienceListItem
         jobTitle="iOS App Developer Intern"
-        postId={2}
+        markdown="teamlab"
         employer="TeamLab"
         employerUrl="https://www.teamlab.art/"
         employerLogoUrl="/teamlab-logo.png"
@@ -43,7 +43,7 @@ const WorkExperienceList = () => {
       />
       <WorkExperienceListItem
         jobTitle="iOS App Developer Intern"
-        postId={1}
+        markdown="marume"
         employer="MaruMe"
         employerUrl="https://www.linkedin.com/company/maru-me/about/"
         employerLogoUrl="/marume-logo.png"

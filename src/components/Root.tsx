@@ -6,6 +6,7 @@ import Spacing from "./Spacing";
 import Footer from "./Footer";
 import Home from "./Home";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Markdown from "./Markdown";
 
 const Root = () => {
   const [isDark, setIsDark] = React.useState(false);
@@ -47,6 +48,9 @@ const Root = () => {
             <Switch>
               <Route exact path="/">
                 <Home />
+              </Route>
+              <Route path="/md/:filename">
+                <Markdown />
               </Route>
               <Route>404 Not Found</Route>
             </Switch>
