@@ -1,40 +1,50 @@
-import React from "react"
-import Spacing from "./Spacing"
-import styled from "../styled/index"
+import * as React from "react";
+import styled from "@emotion/styled";
+import Spacing from "./Spacing";
+import Link from "./Link";
+import ThemeToggle from "./ThemeToggle";
 
 const Root = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 96px;
-`
+`;
 
-const Logo = styled.a`
-  color: ${props => props.theme.colors.secondary};
-  cursor: pointer;
-  margin: 0 16px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 24px;
-`
+const Logo = styled.div`
+  font-size: 32px;
+`;
 
-const NavigationItem = styled.a`
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-  :hover {
-    color: ${props => props.theme.colors.comment};
-  }
-`
+const NavigationRight = styled.div`
+  display: flex;
+`;
 
-export default function Header() {
+const NavigationLeft = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+interface HeaderProps {
+  setIsDark: (isDark: boolean) => void;
+}
+
+const Header = (props: HeaderProps) => {
+  const { setIsDark } = props;
+
   return (
     <Root>
-      <Logo href="/">JW</Logo>
-      <Spacing flex={32} />
-      <NavigationItem href="/resume.pdf">📜 Resume</NavigationItem>
-      <Spacing flex={32} />
-      <NavigationItem href="/book-notes">📚 Book Notes</NavigationItem>
+      <NavigationLeft>
+        <Logo>
+          <Link href="/">JW</Link>
+        </Logo>
+        <Spacing width={24} />
+        <ThemeToggle setIsDark={setIsDark} />
+      </NavigationLeft>
+      <NavigationRight>
+        <Link href="/resume.pdf">💼 Resume</Link>
+      </NavigationRight>
     </Root>
-  )
-}
+  );
+};
+
+export default Header;

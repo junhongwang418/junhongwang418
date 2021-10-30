@@ -1,28 +1,21 @@
-import React, { FunctionComponent } from "react"
+import * as React from "react";
+import styled from "@emotion/styled";
 
-interface SpacingProps {
-  width?: number
-  height?: number
-  flex?: number
-  inlineBlock?: boolean
+interface RootProps {
+  width?: number;
+  height?: number;
 }
 
-const Spacing: FunctionComponent<SpacingProps> = props => {
-  const { children, width, height, flex, inlineBlock } = props
-  return (
-    <div
-      style={{
-        width,
-        height,
-        flexBasis: flex,
-        flexGrow: 0,
-        flexShrink: 0,
-        display: inlineBlock ? "inline-block" : "block",
-      }}
-    >
-      {children}
-    </div>
-  )
-}
+const Root = styled.div<RootProps>`
+  width: ${(props) => props.width || 0}px;
+  height: ${(props) => props.height || 0}px;
+`;
 
-export default Spacing
+type SpacingProps = RootProps;
+
+const Spacing: React.FunctionComponent<SpacingProps> = (props) => {
+  const { width, height } = props;
+  return <Root width={width} height={height} />;
+};
+
+export default Spacing;

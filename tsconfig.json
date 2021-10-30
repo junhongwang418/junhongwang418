@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES6",
+    "typeRoots": ["src/typings"],
+    "esModuleInterop": true,
+    "jsx": "preserve"
+  }
+}

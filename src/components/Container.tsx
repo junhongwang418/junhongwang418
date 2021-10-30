@@ -1,23 +1,20 @@
-import React from "react"
-import styled from "../styled/index"
+import * as React from "react";
+import styled from "@emotion/styled";
 
 interface RootProps {
-  maxWidth: number
+  maxWidth: number;
 }
 
-const Root = styled.div`
+const Root = styled.div<RootProps>`
+  max-width: ${(props) => props.maxWidth}px;
   margin: 0 auto;
-  max-width: ${(props: RootProps) => props.maxWidth}px;
-  padding: 0 16px;
-  color: ${props => props.theme.colors.foreground};
-`
+`;
 
-interface ContainerProps {
-  maxWidth: number
-  children: React.ReactNode
-}
+type ContainerProps = React.PropsWithChildren<RootProps>;
 
-export default function Container(props: ContainerProps) {
-  const { maxWidth, children } = props
-  return <Root maxWidth={maxWidth}>{children}</Root>
-}
+const Container: React.FunctionComponent<ContainerProps> = (props) => {
+  const { maxWidth, children } = props;
+  return <Root maxWidth={maxWidth}>{children}</Root>;
+};
+
+export default Container;
