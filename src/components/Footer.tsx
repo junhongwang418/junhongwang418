@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import SimpleIcon from "./SimpleIcon";
 import Spacing from "./Spacing";
 import Link from "./Link";
+import { GitHub, Linkedin, Mail } from "react-feather";
 
 const Root = styled.div`
   text-align: center;
@@ -24,15 +24,15 @@ const Footer = () => {
     <Root>
       <IconList>
         <Link href="mailto:ionejunhong@gmail.com">
-          <SimpleIcon slug="gmail" size={24} />
+          <Mail href="mailto:ionejunhong@gmail.com" />
         </Link>
         <Spacing width={16} />
         <Link href="https://github.com/ioneone">
-          <SimpleIcon slug="github" size={24} />
+          <GitHub />
         </Link>
         <Spacing width={16} />
         <Link href="https://www.linkedin.com/in/junhongwang/">
-          <SimpleIcon slug="linkedin" size={24} />
+          <Linkedin />
         </Link>
       </IconList>
       <Spacing height={16} />

@@ -37,7 +37,7 @@ const Header = (props: HeaderProps) => {
         <Logo>
           <Link href="/">JW</Link>
         </Logo>
-        <Spacing width={24} />
+        <Spacing width={32} />
         <ThemeToggle setIsDark={setIsDark} />
       </NavigationLeft>
       <NavigationRight>

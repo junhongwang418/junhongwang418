@@ -6,9 +6,6 @@ const Link = styled.a`
   :hover {
     color: ${(props) => props.theme.color.blue};
   }
-  :hover svg {
-    fill: ${(props) => props.theme.color.blue};
-  }
 `;
 
 export default Link;

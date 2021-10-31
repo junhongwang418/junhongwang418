@@ -33,6 +33,7 @@ const Root = () => {
       background: ${theme.color.background};
       color: ${theme.color.body};
       font-family: "Roboto Mono", monospace;
+      transition: all 0.2s ease;
     }
   `;
 
