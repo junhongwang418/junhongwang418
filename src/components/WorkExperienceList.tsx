@@ -6,12 +6,21 @@ const WorkExperienceList = () => {
   return (
     <List spacing={36}>
       <WorkExperienceListItem
+        jobTitle="Software Engineer II"
+        markdown="appfolio2"
+        employer="AppFolio, Inc"
+        employerUrl="https://www.appfolio.com/"
+        employerLogoUrl="/appfolio-logo.jpeg"
+        duration="Aug 2022 - Present"
+        location="Los Angeles, CA."
+      />
+      <WorkExperienceListItem
         jobTitle="Software Engineer"
         markdown="appfolio"
         employer="AppFolio, Inc"
         employerUrl="https://www.appfolio.com/"
         employerLogoUrl="/appfolio-logo.jpeg"
-        duration="May 2021 - Present"
+        duration="May 2021 - Aug 2022"
         location="Los Angeles, CA."
       />
       <WorkExperienceListItem
