@@ -14,7 +14,11 @@ const ProjectListItem: React.FunctionComponent<ProjectBlockProps> = (props) => {
   return (
     <ListItem
       imgUrl={logoUrl}
-      title={<Link href={demoUrl}>{name}</Link>}
+      title={
+        <Link href={demoUrl} target="_blank" rel="noopener">
+          {name}
+        </Link>
+      }
       subtitle={shortDescription}
     />
   );

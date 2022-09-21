@@ -27,7 +27,11 @@ const EducationListItem: React.FunctionComponent<EducationBlockProps> = (
   return (
     <ListItem
       imgUrl={universityLogoUrl}
-      title={<Link href={universityUrl}>{university}</Link>}
+      title={
+        <Link href={universityUrl} target="_blank" rel="noopener">
+          {university}
+        </Link>
+      }
       subtitle={`${degree} in ${major}. ${graduationMonth} ${graduationYear}.`}
     />
   );

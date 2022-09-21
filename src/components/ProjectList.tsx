@@ -6,6 +6,12 @@ const ProjectList = () => {
   return (
     <List spacing={36}>
       <ProjectListItem
+        name="KaiSho"
+        logoUrl="https://kaisho.co/images/logo.svg"
+        shortDescription="A web server for my dad's restaurant."
+        demoUrl="https://kaisho.co/"
+      />
+      <ProjectListItem
         name="Tycoon"
         logoUrl="https://github.com/ioneone/tycoon/raw/main/res/favicon.png"
         shortDescription="Real-time multiplayer card game"
