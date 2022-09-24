@@ -7,7 +7,7 @@ const ProjectList = () => {
     <List spacing={36}>
       <ProjectListItem
         name="KaiSho"
-        logoUrl="https://kaisho.co/images/logo.svg"
+        logoUrl="https://github.com/ioneone/ioneone.github.io/blob/master/public/kaisho-logo.svg?raw=true"
         shortDescription="A web server for my dad's restaurant."
         demoUrl="https://kaisho.co/"
       />
