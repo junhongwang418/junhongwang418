@@ -8,7 +8,7 @@ const EducationList = () => {
       <EducationListItem
         university="University of California, Los Angeles."
         universityUrl="https://www.ucla.edu/"
-        universityLogoUrl="/ucla-logo.jpeg"
+        universityLogoUrl="/public/ucla-logo.jpeg"
         degree="Bachelor of Science"
         major="Computer Science"
         graduationYear={2021}
@@ -17,7 +17,7 @@ const EducationList = () => {
       <EducationListItem
         university="Berkeley City College"
         universityUrl="https://www.berkeleycitycollege.edu/"
-        universityLogoUrl="/bcc-logo.png"
+        universityLogoUrl="/public/bcc-logo.png"
         degree="Associate of Science"
         major="Mathematics"
         graduationYear={2018}

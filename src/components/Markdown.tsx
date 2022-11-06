@@ -35,12 +35,10 @@ const Markdown = () => {
   const [rawString, setRawString] = React.useState<string | null>(null);
 
   React.useEffect(() => {
-    fetch(`/${filename}.md`)
+    fetch(`/public/${filename}.md`)
       .then((res) => res.text())
       .then((data) => setRawString(data));
   }, [filename]);
-
-  console.log(filename, rawString);
 
   if (rawString == null) {
     return <Root>Loading...</Root>;

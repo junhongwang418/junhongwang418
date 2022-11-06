@@ -10,7 +10,7 @@ const WorkExperienceList = () => {
         markdown="appfolio2"
         employer="AppFolio, Inc"
         employerUrl="https://www.appfolio.com/"
-        employerLogoUrl="/appfolio-logo.jpeg"
+        employerLogoUrl="/public/appfolio-logo.jpeg"
         duration="Aug 2022 - Present"
         location="Los Angeles, CA."
       />
@@ -19,7 +19,7 @@ const WorkExperienceList = () => {
         markdown="appfolio"
         employer="AppFolio, Inc"
         employerUrl="https://www.appfolio.com/"
-        employerLogoUrl="/appfolio-logo.jpeg"
+        employerLogoUrl="/public/appfolio-logo.jpeg"
         duration="May 2021 - Aug 2022"
         location="Los Angeles, CA."
       />
@@ -28,7 +28,7 @@ const WorkExperienceList = () => {
         markdown="appfolio-intern"
         employer="AppFolio, Inc"
         employerUrl="https://www.appfolio.com/"
-        employerLogoUrl="/appfolio-logo.jpeg"
+        employerLogoUrl="/public/appfolio-logo.jpeg"
         duration="Jun 2020 - Sep 2020"
         location="Los Angeles, CA."
       />
@@ -37,7 +37,7 @@ const WorkExperienceList = () => {
         markdown="risksciences"
         employer="The B. John Garrick Institute for the Risk Sciences"
         employerUrl="https://www.risksciences.ucla.edu/"
-        employerLogoUrl="/risksciences-logo.png"
+        employerLogoUrl="/public/risksciences-logo.png"
         duration="Jun 2019 - Sep 2019"
         location="Los Angeles, CA."
       />
@@ -46,7 +46,7 @@ const WorkExperienceList = () => {
         markdown="teamlab"
         employer="TeamLab"
         employerUrl="https://www.teamlab.art/"
-        employerLogoUrl="/teamlab-logo.png"
+        employerLogoUrl="/public/teamlab-logo.png"
         duration="Jul 2018 - Sep 2018"
         location="Tokyo, Japan."
       />
@@ -55,7 +55,7 @@ const WorkExperienceList = () => {
         markdown="marume"
         employer="MaruMe"
         employerUrl="https://www.linkedin.com/company/maru-me/about/"
-        employerLogoUrl="/marume-logo.png"
+        employerLogoUrl="/public/marume-logo.png"
         duration="Jun 2016 - Aug 2016"
         location="Berkeley, CA."
       />
