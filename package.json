@@ -24,7 +24,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.12",
-    "marked": "^3.0.8",
+    "marked": "^4.0.10",
     "parcel": "^2.7.0",
     "parcel-reporter-static-files-copy": "^1.4.0",
     "react": "^17.0.2",
