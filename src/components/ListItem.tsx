@@ -19,7 +19,6 @@ const Title = styled.div`
 
 const Subtitle = styled.div`
   font-size: 16px;
-  color: ${(props) => props.theme.color.comment};
 `;
 
 interface ListItemProps {

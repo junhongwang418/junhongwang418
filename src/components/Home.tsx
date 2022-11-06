@@ -5,7 +5,7 @@ import IntroductionSection from "./IntroductionSection";
 import WorkExperienceSection from "./WorkExperienceSection";
 import ProjectsSection from "./ProjectsSection";
 import EducationSection from "./EducationSection";
-import Container from "./Container";
+import { Container } from "@mui/material";
 
 const Root = styled.div``;
 
@@ -14,7 +14,7 @@ const Home = () => {
     <Root>
       <IntroductionSection />
       <Spacing height={256} />
-      <Container maxWidth={700}>
+      <Container maxWidth="md">
         <WorkExperienceSection />
         <Spacing height={128} />
         <ProjectsSection />

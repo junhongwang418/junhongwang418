@@ -25,11 +25,11 @@ const NavigationLeft = styled.div`
 `;
 
 interface HeaderProps {
-  setIsDark: (isDark: boolean) => void;
+  toggleTheme: () => void;
 }
 
 const Header = (props: HeaderProps) => {
-  const { setIsDark } = props;
+  const { toggleTheme } = props;
 
   return (
     <Root>
@@ -38,7 +38,7 @@ const Header = (props: HeaderProps) => {
           <Link href="/">JW</Link>
         </Logo>
         <Spacing width={32} />
-        <ThemeToggle setIsDark={setIsDark} />
+        <ThemeToggle toggleTheme={toggleTheme} />
       </NavigationLeft>
       <NavigationRight>
         <Link href="/resume.pdf">💼 Resume</Link>

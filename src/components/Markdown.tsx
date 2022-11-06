@@ -7,7 +7,6 @@ const Root = styled.div`
   a {
     color: inherit;
     :hover {
-      color: ${(props) => props.theme.color.blue};
     }
   }
   img {
@@ -23,8 +22,6 @@ const Root = styled.div`
   blockquote {
     margin-inline-start: 0;
     margin-inline-end: 0;
-    border-left: 0.25em solid ${(props) => props.theme.color.comment};
-    color: ${(props) => props.theme.color.comment};
     padding: 0 1em;
   }
 `;

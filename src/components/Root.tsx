@@ -1,38 +1,42 @@
 import * as React from "react";
-import { Global, css, ThemeProvider, Theme } from "@emotion/react";
-import Container from "./Container";
+import { Global, css } from "@emotion/react";
 import Header from "./Header";
 import Spacing from "./Spacing";
 import Footer from "./Footer";
 import Home from "./Home";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Markdown from "./Markdown";
+import { Container, createTheme, ThemeProvider } from "@mui/material";
 
 const Root = () => {
-  const [isDark, setIsDark] = React.useState(false);
+  const [isDark, setIsDark] = React.useState<boolean>(
+    JSON.parse(localStorage.getItem("isDark")) === true
+  );
+  const toggleTheme = React.useCallback(() => {
+    setIsDark(!isDark);
+    localStorage.setItem("isDark", (!isDark).toString());
+  }, [isDark]);
 
-  const theme: Theme = {
-    isDark,
-    color: {
-      black: "#2e2e2e",
-      comment: "#797979",
-      white: "#d6d6d6",
-      yellow: "#e5b567",
-      green: "#b4d273",
-      orange: "#e87d3e",
-      purple: "#9e86c8",
-      pink: "#b05279",
-      blue: "#6c99bb",
-      body: isDark ? "#d6d6d6" : "#2e2e2e",
-      background: isDark ? "#2e2e2e" : "#d6d6d6",
+  const theme = createTheme({
+    palette: {
+      mode: isDark ? "dark" : "light",
+      primary: {
+        main: "#6c99bb",
+      },
+      secondary: {
+        main: "#9e86c8",
+      },
     },
-  };
+    typography: {
+      fontFamily: ["Roboto Mono", "sans-serif"].join(", "),
+    },
+  });
 
   const styles = css`
     body {
-      background: ${theme.color.background};
-      color: ${theme.color.body};
-      font-family: "Roboto Mono", monospace;
+      background: ${theme.palette.background.default};
+      color: ${theme.palette.text.primary};
+      font-family: ${theme.typography.fontFamily};
       transition: all 0.2s ease;
     }
   `;
@@ -41,21 +45,19 @@ const Root = () => {
     <ThemeProvider theme={theme}>
       <Global styles={styles} />
       <BrowserRouter>
-        <Container maxWidth={1260}>
+        <Container>
           <Spacing height={16} />
-          <Header setIsDark={setIsDark} />
+          <Header toggleTheme={toggleTheme} />
           <Spacing height={128} />
-          <Container maxWidth={960}>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/md/:filename">
-                <Markdown />
-              </Route>
-              <Route>404 Not Found</Route>
-            </Switch>
-          </Container>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/md/:filename">
+              <Markdown />
+            </Route>
+            <Route>404 Not Found</Route>
+          </Switch>
           <Spacing height={128} />
           <Footer />
           <Spacing height={16} />

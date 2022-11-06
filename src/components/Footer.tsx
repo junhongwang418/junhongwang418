@@ -2,7 +2,9 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import Spacing from "./Spacing";
 import Link from "./Link";
-import { GitHub, Linkedin, Mail } from "react-feather";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Root = styled.div`
   text-align: center;
@@ -24,15 +26,15 @@ const Footer = () => {
     <Root>
       <IconList>
         <Link href="mailto:ionejunhong@gmail.com">
-          <Mail href="mailto:ionejunhong@gmail.com" />
+          <EmailIcon />
         </Link>
         <Spacing width={16} />
         <Link href="https://github.com/ioneone">
-          <GitHub />
+          <GitHubIcon />
         </Link>
         <Spacing width={16} />
         <Link href="https://www.linkedin.com/in/junhongwang/">
-          <Linkedin />
+          <LinkedInIcon />
         </Link>
       </IconList>
       <Spacing height={16} />
