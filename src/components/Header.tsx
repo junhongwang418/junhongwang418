@@ -41,7 +41,7 @@ const Header = (props: HeaderProps) => {
         <ThemeToggle toggleTheme={toggleTheme} />
       </NavigationLeft>
       <NavigationRight>
-        <Link href="/resume.pdf">💼 Resume</Link>
+        <Link href="/public/resume.pdf">💼 Resume</Link>
       </NavigationRight>
     </Root>
   );
