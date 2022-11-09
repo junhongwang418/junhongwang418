@@ -5,7 +5,7 @@ import ListItem from "./ListItem";
 interface EducationBlockProps {
   university: string;
   universityUrl: string;
-  universityLogoUrl: string;
+  image: React.ReactNode;
   degree: string;
   major: string;
   graduationYear: number;
@@ -18,7 +18,7 @@ const EducationListItem: React.FunctionComponent<EducationBlockProps> = (
   const {
     university,
     universityUrl,
-    universityLogoUrl,
+    image,
     degree,
     major,
     graduationYear,
@@ -26,7 +26,7 @@ const EducationListItem: React.FunctionComponent<EducationBlockProps> = (
   } = props;
   return (
     <ListItem
-      imgUrl={universityLogoUrl}
+      image={image}
       title={
         <Link href={universityUrl} target="_blank" rel="noopener">
           {university}

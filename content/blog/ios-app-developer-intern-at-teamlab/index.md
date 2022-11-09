@@ -1,4 +1,7 @@
-## iOS App Developer Intern at TeamLab
+---
+title: iOS App Developer Intern at TeamLab
+date: 2018-10-01
+---
 
 I joined [TeamLab](https://www.teamlab.art/)'s iOS app development team to build a shopping app for [BigCamera](https://www.biccamera.com/bc/main/), one of the largest electronics retailers in Japan (kind of like BestBuy).
 

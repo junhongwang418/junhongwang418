@@ -1,16 +1,27 @@
 import * as React from "react";
 import ListItem from "./ListItem";
-import Link from "./Link";
-import RouterLink from "./RouterLink";
+import { Link } from "gatsby";
+import { Link as MuiLink } from "@mui/material";
+import styled from "@emotion/styled";
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${(props) => props.theme.palette.text.primary};
+`;
+
+const StyledMuiLink = styled(MuiLink)`
+  text-decoration: none;
+  color: ${(props) => props.theme.palette.text.primary};
+`;
 
 interface BlockProps {
   jobTitle: string;
   markdown: string;
   employer: string;
   employerUrl: string;
-  employerLogoUrl: string;
   duration: string;
   location: string;
+  image: React.ReactNode;
 }
 
 const WorkExperienceListItem: React.FunctionComponent<BlockProps> = (props) => {
@@ -19,17 +30,18 @@ const WorkExperienceListItem: React.FunctionComponent<BlockProps> = (props) => {
     markdown,
     employer,
     employerUrl,
-    employerLogoUrl,
     duration,
     location,
+    image,
   } = props;
   return (
     <ListItem
-      imgUrl={employerLogoUrl}
-      title={<RouterLink to={`/md/${markdown}`}>{jobTitle}</RouterLink>}
+      image={image}
+      title={<StyledLink to={markdown}>{jobTitle}</StyledLink>}
       subtitle={
         <>
-          <Link href={employerUrl}>{employer}</Link> · {duration} · {location}
+          <StyledMuiLink href={employerUrl}>{employer}</StyledMuiLink> ·{" "}
+          {duration} · {location}
         </>
       }
     />

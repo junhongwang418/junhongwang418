@@ -1,8 +1,9 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import Spacing from "./Spacing";
-import Link from "./Link";
+import { Link } from "gatsby";
 import ThemeToggle from "./ThemeToggle";
+import { Link as MuiLink, Typography } from "@mui/material";
 
 const Root = styled.div`
   display: flex;
@@ -10,12 +11,10 @@ const Root = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.div`
-  font-size: 32px;
-`;
-
 const NavigationRight = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const NavigationLeft = styled.div`
@@ -24,24 +23,36 @@ const NavigationLeft = styled.div`
   align-items: center;
 `;
 
-interface HeaderProps {
-  toggleTheme: () => void;
-}
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${(props) => props.theme.palette.text.primary};
+`;
 
-const Header = (props: HeaderProps) => {
-  const { toggleTheme } = props;
+const StyledMuiLink = styled(MuiLink)`
+  text-decoration: none;
+  color: ${(props) => props.theme.palette.text.primary};
+`;
 
+const Header = () => {
   return (
     <Root>
       <NavigationLeft>
-        <Logo>
-          <Link href="/">JW</Link>
-        </Logo>
+        <Typography variant="h4">
+          <StyledLink to="/">JW</StyledLink>
+        </Typography>
         <Spacing width={32} />
-        <ThemeToggle toggleTheme={toggleTheme} />
+        <ThemeToggle />
       </NavigationLeft>
       <NavigationRight>
-        <Link href="/public/resume.pdf">💼 Resume</Link>
+        <Typography>
+          <StyledLink to="/blog">✏️ Blog</StyledLink>
+        </Typography>
+        <Spacing width={32} />
+        <Typography>
+          <StyledMuiLink href="resume.pdf" target="_blank" rel="noopener">
+            💼 Resume
+          </StyledMuiLink>
+        </Typography>
       </NavigationRight>
     </Root>
   );

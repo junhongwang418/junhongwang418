@@ -1,4 +1,7 @@
-## Software Engineer Intern at AppFolio
+---
+title: Software Engineer Intern at AppFolio
+date: 2020-10-01
+---
 
 I joined AppFolio's [Dynasty](https://www.dynasty.com/) team to develop the AI for real estate — Lisa.
 

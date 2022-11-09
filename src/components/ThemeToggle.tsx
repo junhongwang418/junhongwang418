@@ -4,6 +4,7 @@ import Spacing from "./Spacing";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useTheme } from "@mui/material";
+import SiteContext from "../contexts/SiteContext";
 
 const Root = styled.div`
   display: flex;
@@ -30,23 +31,26 @@ const ToggleInner = styled.div<{ isDark: boolean }>`
   transition: all 0.2s ease;
 `;
 
-interface ThemeToggleProps {
-  toggleTheme: () => void;
-}
+const ThemeToggle = () => {
+  const siteContext = React.useContext(SiteContext);
 
-const ThemeToggle = (props: ThemeToggleProps) => {
-  const { toggleTheme } = props;
   const theme = useTheme();
 
   return (
     <Root>
-      <LightModeIcon onClick={toggleTheme} style={{ cursor: "pointer" }} />
+      <LightModeIcon
+        onClick={siteContext.toggleDark}
+        style={{ cursor: "pointer" }}
+      />
       <Spacing width={8} />
-      <Toggle onClick={toggleTheme}>
+      <Toggle onClick={siteContext.toggleDark}>
         <ToggleInner isDark={theme.palette.mode === "dark"} />
       </Toggle>
       <Spacing width={8} />
-      <DarkModeIcon onClick={toggleTheme} style={{ cursor: "pointer" }} />
+      <DarkModeIcon
+        onClick={siteContext.toggleDark}
+        style={{ cursor: "pointer" }}
+      />
     </Root>
   );
 };

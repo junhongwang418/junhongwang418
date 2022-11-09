@@ -1,4 +1,7 @@
-## Software Engineer at AppFolio
+---
+title: Software Engineer at AppFolio
+date: 2022-09-01
+---
 
 I accepted the return offer from AppFolio after the internship. I develop the leasing scheduling AI — Lisa.
 
