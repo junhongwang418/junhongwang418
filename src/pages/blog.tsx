@@ -1,4 +1,4 @@
-import { Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import { graphql, Link as GatsbyLink } from "gatsby";
 import * as React from "react";
 import Bio from "../components/Bio";
@@ -11,6 +11,7 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       <Bio />
+      <Box sx={{ mb: 4 }} />
       <ol style={{ listStyle: `none` }}>
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;

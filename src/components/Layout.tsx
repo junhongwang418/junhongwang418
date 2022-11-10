@@ -1,18 +1,29 @@
 import * as React from "react";
-import { Box, Container } from "@mui/material";
+import {
+  Box,
+  Container,
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SiteContext from "../contexts/SiteContext";
+import { ListItemButton } from "gatsby-theme-material-ui";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Layout = ({ children }) => {
   return (
     <Container>
-      <Box sx={{ mb: 2 }} />
+      <Box sx={{ pt: 3 }} />
       <Header />
       <Box sx={{ mb: 16 }} />
       {children}
       <Box sx={{ mb: 16 }} />
       <Footer />
-      <Box sx={{ mb: 2 }} />
+      <Box sx={{ mb: 3 }} />
     </Container>
   );
 };

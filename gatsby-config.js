@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Junhong Wang`,
+    title: "Junhong Wang",
     author: {
       name: "Junhong Wang",
-      summary: `I'm Junhong. I'm a Software Engineer based in LA. I specialize in full stack web development and writing readable code.`,
+      summary: "I'm Junhong. I'm a Software Engineer based in LA. I specialize in full stack web development and writing readable code.",
     },
     description: "Junhong Wang's portfolio website.",
     siteUrl: `https://www.junhong.wang/`
@@ -120,7 +120,7 @@ module.exports = {
     'gatsby-theme-material-ui',
     'gatsby-plugin-material-ui'
   ],
-  // flags: {
-  //   DEV_SSR: true,
-  // },
+  flags: {
+    DEV_SSR: true,
+  },
 }
