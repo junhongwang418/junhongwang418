@@ -1,14 +1,15 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+import type { GatsbyNode } from "gatsby"
+import path from "path"
+import { createFilePath } from "gatsby-source-filesystem"
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
 
   // Get all markdown blog posts sorted by date
-  const result = await graphql(
+  const result = await graphql<any>(
     `
       {
         allMarkdownRemark(
@@ -58,7 +59,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+export const onCreateNode: GatsbyNode["onCreateNode"] = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
@@ -72,7 +73,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.createSchemaCustomization = ({ actions }) => {
+export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] = ({ actions }) => {
   const { createTypes } = actions
 
   // Explicitly define the siteMetadata {} object

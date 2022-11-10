@@ -1,4 +1,6 @@
-module.exports = {
+import type { GatsbyConfig } from "gatsby"
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: "Junhong Wang",
     author: {
@@ -124,3 +126,5 @@ module.exports = {
     DEV_SSR: true,
   },
 }
+
+export default config;
