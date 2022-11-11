@@ -33,14 +33,24 @@ if (condition) {
 >
 > _source: Software Engineering at Google page 195_
 
-We follow the same documentation guideline at Dynasty. Function comments usually doesn't include special tags like `@param` or `@returns`. It's simply a markdown comment.
+We follow the same documentation guideline at Dynasty. Function comments usually doesn't include special tags like [`@param`](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/javadoc.html#param) or [`@return`](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/javadoc.html#return). It's simply a markdown comment.
 
 ```java
 // Do something to the given foo and returns the 
 // processed foo.
 // 
-// If foo is null, it throws NullPointerException. 
+// If foo is `null`, it throws `NullPointerException`. 
 public String doSomething(String foo) {
   ...
 }
 ```
+
+### Conceptual Documentation
+
+_source: Software Engineering at Google page 198_
+
+There are two types of documentation.
+
+- **Reference documentation** covers the needy greedy details of a function, class, or API. It's like unit tests. Usually this lives with the code as comments.
+- **Conceptual documentation** covers a higher level explanation of how a function, class, or API works. It's like integration tests. A good example of conceptual documentation is Google's guide for [`absl::StrFormat()`](https://abseil.io/docs/cpp/guides/format#abslstrformat). Usually this lives along with the code as `.md` files.
+- **README** links to other pages for more information.

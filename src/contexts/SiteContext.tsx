@@ -56,7 +56,7 @@ export const SiteContextProvider = (props: SiteContextProps) => {
       value={{ isDark, toggleDark, isDrawerOpen, toggleDrawer }}
     >
       <ThemeProvider theme={theme}>
-        <CssBaseline />
+        <CssBaseline enableColorScheme />
         {children}
         <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
           <Box role="presentation" sx={{ width: "100vw" }}>
