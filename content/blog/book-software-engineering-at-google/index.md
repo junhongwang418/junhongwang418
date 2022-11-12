@@ -1,6 +1,7 @@
 ---
-title: "Book: Software Engineering at Google"
+title: "[book] Software Engineering at Google"
 date: 2022-11-10
+description: In this blog post, I share my key takeaways from Software Engineering at Google. 
 ---
 
 This is my note/review of [Software Engineering at Google](https://www.oreilly.com/library/view/software-engineering-at/9781492082781/).
@@ -71,3 +72,27 @@ There are two types of documentation.
 I found this very relevant to my day to day job. At AppFolio, we have internal engineering wiki, but some of them are outdated.
 
 💡 Idea: We could create a bot that scan all the files in `docs/` and look for the comment `freshness: { ... }`. Then, we parse the last reviewed date of that document. If it was last reviewd more than 3 months ago, the bot automatically creates a Github issue and requests for a documentation review.
+
+### Properties common to all test sizes
+
+> ... we also strongly discourage the use of control flow statements like conditionals and loops in a test (https://oreil.ly/fQSuk). More complex test flows risk containing bugs themselves and make it more difficult to determine the cause of a test failure.
+
+This reminds me why I felt uncomfortable when I saw `for loop` in a test at work. It was too clever.
+
+```java
+// ❌
+@Test
+void canAppendOne() {
+  List<String> args = List.of("foo", "bar", "book", "");
+  args.forEach(arg -> assertEquals(arg + "1", appendOne(arg)));
+}
+
+// ✅
+@Test
+void canAppendOne() {
+  assertEquals("foo1", appendOne("foo"));
+  assertEquals("bar1", appendOne("bar"));
+  assertEquals("book1", appendOne("book"));
+  assertEquals("1", appendOne(""));
+}
+```

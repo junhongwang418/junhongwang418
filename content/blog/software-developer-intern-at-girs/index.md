@@ -1,6 +1,7 @@
 ---
 title: Software Developer Intern at GIRS
 date: 2019-10-01
+description: In this blog post, I summarize key achievements during my time at The B. John Grarrik Institute for The Risk Sciences as a Software Developer intern.
 ---
 
 [The B. John Grarrik Institute for The Risk Sciences](https://www.risksciences.ucla.edu/) (GIRS) is a research lab at UCLA that studies the quantification and management of the risk of complex natural and engineered systems and processes. I joined GIRS as a student developer to design, prototype, and build NASA Jet Propulsion Laboratory's internal software for system reliability analysis.
