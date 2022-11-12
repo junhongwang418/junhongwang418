@@ -54,3 +54,20 @@ There are two types of documentation.
 - **Reference documentation** covers the needy greedy details of a function, class, or API. It's like unit tests. Usually this lives with the code as comments.
 - **Conceptual documentation** covers a higher level explanation of how a function, class, or API works. It's like integration tests. A good example of conceptual documentation is Google's guide for [`absl::StrFormat()`](https://abseil.io/docs/cpp/guides/format#abslstrformat). Usually this lives along with the code as `.md` files.
 - **README** links to other pages for more information.
+
+### Deprecating Documents
+
+> At Google, we often attach "freshness dates" to documentation. Such documents note the last time a document was reviewed, and metadata in the documentation set will send email reminders when the document hasn't been touched in, for example, three months. Such freshness dates, as shown in the following example -- and tracking your documents as bugs -- can help make documentation set easier to maintain over time, which is the main concern for a document.
+>
+> ```html
+> <!--*
+> # Document freshness: For more information, see go/fresh-source.
+> freshness: { owner: `username` reviewed: '2019-02-27'}
+> *-->
+> ```
+> 
+> _source: Software Engineering at Google page 203_
+
+I found this very relevant to my day to day job. At AppFolio, we have internal engineering wiki, but some of them are outdated.
+
+💡 Idea: We could create a bot that scan all the files in `docs/` and look for the comment `freshness: { ... }`. Then, we parse the last reviewed date of that document. If it was last reviewd more than 3 months ago, the bot automatically creates a Github issue and requests for a documentation review.
