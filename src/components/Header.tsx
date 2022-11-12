@@ -20,18 +20,6 @@ const Root = styled.div`
   align-items: center;
 `;
 
-const NavigationRight = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const NavigationLeft = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.palette.text.primary};

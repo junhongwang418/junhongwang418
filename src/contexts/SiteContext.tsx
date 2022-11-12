@@ -76,7 +76,10 @@ export const SiteContextProvider = (props: SiteContextProps) => {
                       navigate("/");
                     }}
                   >
-                    <ListItemText primary="🏠 Home" />
+                    <ListItemText
+                      primary="🏠 Home"
+                      primaryTypographyProps={{ variant: "h6" }}
+                    />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -86,7 +89,10 @@ export const SiteContextProvider = (props: SiteContextProps) => {
                       navigate("/blog");
                     }}
                   >
-                    <ListItemText primary="✏️ Blog" />
+                    <ListItemText
+                      primary="✏️ Blog"
+                      primaryTypographyProps={{ variant: "h6" }}
+                    />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -96,13 +102,18 @@ export const SiteContextProvider = (props: SiteContextProps) => {
                       window.open("/resume.pdf", "_blank");
                     }}
                   >
-                    <ListItemText primary="💼 Resume" />
+                    <ListItemText
+                      primary="💼 Resume"
+                      primaryTypographyProps={{ variant: "h6" }}
+                    />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton disableRipple>
+                    <ListItemText primary={<ThemeToggle />} />
                   </ListItemButton>
                 </ListItem>
               </List>
-              <Box sx={{ ml: 1, mt: 1 }}>
-                <ThemeToggle />
-              </Box>
             </Container>
           </Box>
         </Drawer>
