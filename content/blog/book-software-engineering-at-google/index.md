@@ -76,6 +76,8 @@ I found this very relevant to my day to day job. At AppFolio, we have internal e
 ### Properties common to all test sizes
 
 > ... we also strongly discourage the use of control flow statements like conditionals and loops in a test (https://oreil.ly/fQSuk). More complex test flows risk containing bugs themselves and make it more difficult to determine the cause of a test failure.
+>
+> _source: Software Engineering at Google page 218_
 
 This reminds me why I felt uncomfortable when I saw `for loop` in a test at work. It was too clever.
 
