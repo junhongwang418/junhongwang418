@@ -1,5 +1,5 @@
 ---
-title: "[book] Software Engineering at Google"
+title: "book: Software Engineering at Google"
 date: 2022-11-10
 description: In this blog post, I share my key takeaways from Software Engineering at Google.
 ---
@@ -55,7 +55,12 @@ public String doSomething(String foo) {
 > // str_cat.h
 > // -------------------
 > //
-> // This header file contains functions for efficiently concatenating and appending strings: StrCat() and StrAppend(). Most of the work within these routines is actually handled through the use of a special AlphaNum type, which was designed to be used as a parameter type that efficiently manages conversion to strings and avoids copies in the above operations.
+> // This header file contains functions for efficiently concatenating and 
+> // appending strings: StrCat() and StrAppend(). Most of the work within 
+> // these routines is actually handled through the use of a special 
+> // AlphaNum type, which was designed to be used as a parameter type that
+> // efficiently manages conversion to strings and avoids copies in the 
+> // above operations.
 > // ...
 > ```
 >
@@ -72,11 +77,13 @@ It was never clear to me what should be included in file comments until I read t
 > Class comments should generally begin with a comment of the following form:
 >
 > ```cpp
-> // --------
+> // -------------------------------------------------------------------
 > // AlphaNum
-> // --------
+> // -------------------------------------------------------------------
 > //
-> // The AlphaNum class acts as the main parameter type for StrCat() and StrAppend(), providing efficient conversion of numeric, boolean, and hexadecimal values (through the Hex type) into string.
+> // The AlphaNum class acts as the main parameter type for StrCat() and 
+> // StrAppend(), providing efficient conversion of numeric, boolean, 
+> // and hexadecimal values (through the Hex type) into string.
 > ```
 >
 > _source: Software Engineering at Google page 194_
@@ -92,7 +99,8 @@ In the case the file only contains a class, rather than list of static methods, 
 > ```cpp
 > // StrCat()
 > //
-> // Merged the given strings or numbers, using no delimiter(s), returning the merged result as a string.
+> // Merged the given strings or numbers, using no delimiter(s), returning
+> // the merged result as a string.
 > ```
 >
 > _source: Software Engineering at Google page 195_
@@ -174,6 +182,4 @@ void canAppendOne() {
 >
 > _source: Software Engineering at Google page 227-228_
 
-I'm quoting this here, so I can use this as a conversation starter 😂.
-
-Also here's the [link](https://testing.googleblog.com/) to TotT.
+I'm quoting this here, so I can use this as a conversation starter 😂. Here's the [link](https://testing.googleblog.com/) to TotT.
