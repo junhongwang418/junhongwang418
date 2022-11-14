@@ -183,3 +183,57 @@ void canAppendOne() {
 > _source: Software Engineering at Google page 227-228_
 
 I'm quoting this here, so I can use this as a conversation starter 😂. Here's the [link](https://testing.googleblog.com/) to TotT.
+
+### Test via Public API
+
+> Define an appropriate scope for a unit and hence what should be considered the public API is more art than science, but here are some rules of thumb:
+>
+> - If a method or class exists only to support one or two other classes (i.e., it is a "helper class"), it probably shouldn't be considered its own unit, and its functionality should be tested through those classes instead of directly.
+> - If a package or class is designed to be accessible by anyone without having to consult with its owners, it almost certainly constitutes a unit that should be tested directly, where its tests acess the uint in the same way that the users would.
+> - If a package or class can be accessed only by the people who own it, but it is designed to provide a general piece of functionality useful in a range of contexts (i.e., it is a "support library"), it should also be considered a unit and tested directly. This will usually create some redundancy in testing given that the support library's code will be covered both by its own tests and the tests of its users. However, such redundancy can be valuable: without it, a gap in test coverage could be introduced if one of the library's users (and its tests) were ever removed.
+>
+> At Google, we've found that engineers sometimes need to be persuaded that testing via public APIs is better than testing against implementation details. The reluctance is understandable because it's often much easier to write tests focused on the piece of code you just wrote rather than figuring out how that code affects the system as a whole.
+>
+> _source: Software Engineering at Google page 237_
+
+The first bullet point of mind blowing to me because I used to think "testing public APIs" means testing public methods of a class. But appearently, that's not the case.
+
+### Test State, Not Interactions
+
+> Another way that tests commonly depend on implementation details involves not which methods of the sytem the test calls, but how the results of those calls are verified. In general, there are two ways to verify that a system under test behaves as expected. With _state testing_, you observe the system itself to see what it looks like after invoking it. With _interaction testing_, you instead check that the system took an expected sequence of actions on its collaborators in response to invoking it (https://oreil.ly/3S8AL). Many tests will perform a combination of state and interaction validation.
+>
+> Interaction tests tend to be more brittle than state tests for the same reason that it's more brittle to test a private method than to test a public method: interaction tests check how a system arrived at its result, whereas usually you should care only _what_ the result is. Example 12-4 illustrates a test that uses a test double (explained further in Chapter 13) to verify how a system interacts with a database.
+>
+> _Example 12-4. A brittle interaction test_
+>
+> ```java
+> @Test
+> public void shouldWriteToDatabase() {
+>   accounts.createUser("foobar");
+>   verify(database).put("foobar"); 
+> }
+> ```
+>
+> The test verifies that a specific call was made against a database API, but there are a couple different ways it could go wrong:
+>
+> - If a bug in the system under test causes the record to be deleted from the database shortly after it was written, the test will pass even though we would have wanted it to fail.
+> - If the system under test is refactored to call a slightly different API to write an equivalent record, the test will fail even though we would have wanted it to pass.
+>
+> It's much less brittle to directly test against the state of the system, as demonstrated in Example 12-5.
+>
+> _Example 12-5. Testing against state_
+>
+> ```java
+> @Test
+> public void shouldCreateUsers() {
+>   accounts.createUser("foobar");
+>   assertThat(accounts.getUser("foobar")).isNotNull();  
+> }
+> ```
+>
+> This test more accurately expresses what we care about: the state of the system under test after interacting with it.
+>
+> The most common reason for problematic interaction tests is an over reliance on mocking frameworks. These frameworks make it easy to create test doubles that record and verify every call made against them, and to use those doubles in place of real objects in tests. This strategy leads directly to brittle interaction tests, and so we tend to prefer the use of real objects in favor of mocked objects, as long as the real objects are fast and deterministic.
+> _source: Software Engineering at Google page 238-239_
+
+This section of the book is a gem. At AppFolio, or at least in my current team, we do interaction testing heavily. The tests break when we introduce a small change most of the time, but now that I think about it, it was affecting our team's productivity negatively.
