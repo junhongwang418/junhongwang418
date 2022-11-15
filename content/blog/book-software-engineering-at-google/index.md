@@ -12,7 +12,7 @@ Here are some Google's software engineering best practices I decided to follow:
 
 > …, we recognize that they are shorter than `if` statement and therefore more convenient for code authors. However, because they tend to be more diffucult for readers to understand than the more verbose `if` statements, we restrict their usage ([https://orei.ly/ftyvG](https://google.github.io/styleguide/pyguide.html#211-conditional-expressions)).
 >
-> _source: Software Engineering at Google page 144_
+> _source: [Software Engineering at Google chapter 8](https://abseil.io/resources/swe-book/html/ch08.html)_
 
 In Java, a simple if then return statement can be written in one line.
 
@@ -32,7 +32,7 @@ if (condition) {
 
 > Some documentation styles (and some documentation generators) require various forms of boilerplate on function comments, like “Returns:”, “Throws:”, and so forth, but at Google we haven’t found them to be necessary. It is often clearer to present such information in a single prose comment that’s not broken up into artificial section boundaries:
 >
-> _source: Software Engineering at Google page 195_
+> _source: [Software Engineering at Google chapter 10](https://abseil.io/resources/swe-book/html/ch10.html)_
 
 We follow the same documentation guideline at Dynasty. Function comments usually doesn't include special tags like [`@param`](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/javadoc.html#param) or [`@return`](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/javadoc.html#return). It's simply a markdown comment.
 
@@ -66,7 +66,7 @@ public String doSomething(String foo) {
 >
 > Generally, a file comment should begin with an outline of what's contained in hte code you are reading. It should identify the code's main use cases and intended audience (in the preceding case, developers who want to cancatenate strings). Any API that cannot be succinctly described in the first paragraph or two is usually the sign of an API that is not well thought out. Consider breaking the API into separate components in those cases.
 >
-> _source: Software Engineering at Google page 194_
+> _source: [Software Engineering at Google chapter 10](https://abseil.io/resources/swe-book/html/ch10.html)_
 
 It was never clear to me what should be included in file comments until I read this section of the book. I used to think that the class name should be suffice to show what the file is about. But it looks like we should also include the overview of the public functions (i.e. APIs) included in the file.
 
@@ -86,7 +86,7 @@ It was never clear to me what should be included in file comments until I read t
 > // and hexadecimal values (through the Hex type) into string.
 > ```
 >
-> _source: Software Engineering at Google page 194_
+> _source: [Software Engineering at Google chapter 10](https://abseil.io/resources/swe-book/html/ch10.html)_
 
 In the case the file only contains a class, rather than list of static methods, then I think file comments are unnecessary and class comments should do.
 
@@ -103,13 +103,13 @@ In the case the file only contains a class, rather than list of static methods, 
 > // the merged result as a string.
 > ```
 >
-> _source: Software Engineering at Google page 195_
+> _source: [Software Engineering at Google chapter 10](https://abseil.io/resources/swe-book/html/ch10.html)_
 
 Notice there are some redundency in function comments and class comments. In production code, it's important not to repeat yourself ([DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)). However, repetition in documentation is good because it helps readers understand how different components of the system connect together.
 
 > Most engineers loathe redundancy, and with good reason. But in documentation, redundancy is often useful. An important point buried within a wall of text can be difficult to remember or tease out. On the other hand, placing that point at a more prominent location early can lose context provided later on. Usually, the solution is to introduce and summarize the point within an introductory paragraph, and then use the rest of the section to make your case in a more detailed fashion. In this case, redundancy helps the reader understand the importance of what is being stated.
 >
-> _source: Software Engineering at Google page 202_
+> _source: [Software Engineering at Google chapter 10](https://abseil.io/resources/swe-book/html/ch10.html)_
 
 The quote above is about documentation, but I think it's also applicable to class comments and function comments. Class comments are like the introduction and conclusion. Function comments are like the body of the documentation.
 
@@ -140,7 +140,7 @@ There are two types of documentation.
 > *-->
 > ```
 >
-> _source: Software Engineering at Google page 203_
+> _source: [Software Engineering at Google chapter 10](https://abseil.io/resources/swe-book/html/ch10.html)_
 
 I found this very relevant to my day to day job. At AppFolio, we have internal engineering wiki, but some of them are outdated.
 
@@ -150,7 +150,7 @@ I found this very relevant to my day to day job. At AppFolio, we have internal e
 
 > ... we also strongly discourage the use of control flow statements like conditionals and loops in a test (https://oreil.ly/fQSuk). More complex test flows risk containing bugs themselves and make it more difficult to determine the cause of a test failure.
 >
-> _source: Software Engineering at Google page 218_
+> _source: [Software Engineering at Google chapter 11](https://abseil.io/resources/swe-book/html/ch11.html)_
 
 This reminds me why I felt uncomfortable when I saw `for loop` in a test at work. It was too clever.
 
@@ -180,7 +180,7 @@ void canAppendOne() {
 >
 > In April 2006, a short writeup covering how to imorove testing in Python appeared in restroom stalls across Google. This first episode was posted by a small band of colunteers. To say the reaction was polarized is an understatement; some saw it as an invation of personal space, and they objected strongly. Mailing lists lit ip with complaints, but the TotT creators were content: the people complaining were still talking about testing.
 >
-> _source: Software Engineering at Google page 227-228_
+> _source: [Software Engineering at Google chapter 11](https://abseil.io/resources/swe-book/html/ch11.html)_
 
 I'm quoting this here, so I can use this as a conversation starter 😂. Here's the [link](https://testing.googleblog.com/) to TotT.
 
@@ -194,7 +194,7 @@ I'm quoting this here, so I can use this as a conversation starter 😂. Here's 
 >
 > At Google, we've found that engineers sometimes need to be persuaded that testing via public APIs is better than testing against implementation details. The reluctance is understandable because it's often much easier to write tests focused on the piece of code you just wrote rather than figuring out how that code affects the system as a whole.
 >
-> _source: Software Engineering at Google page 237_
+> _source: [Software Engineering at Google chapter 12](https://abseil.io/resources/swe-book/html/ch12.html)_
 
 The first bullet point of mind blowing to me because I used to think "testing public APIs" means testing public methods of a class. But appearently, that's not the case.
 
@@ -234,6 +234,7 @@ The first bullet point of mind blowing to me because I used to think "testing pu
 > This test more accurately expresses what we care about: the state of the system under test after interacting with it.
 >
 > The most common reason for problematic interaction tests is an over reliance on mocking frameworks. These frameworks make it easy to create test doubles that record and verify every call made against them, and to use those doubles in place of real objects in tests. This strategy leads directly to brittle interaction tests, and so we tend to prefer the use of real objects in favor of mocked objects, as long as the real objects are fast and deterministic.
-> _source: Software Engineering at Google page 238-239_
+>
+> _source: [Software Engineering at Google chapter 12](https://abseil.io/resources/swe-book/html/ch12.html)_
 
 This section of the book is a gem. At AppFolio, or at least in my current team, we do interaction testing heavily. The tests break when we introduce a small change most of the time, but now that I think about it, it was affecting our team's productivity negatively.

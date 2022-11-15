@@ -33,10 +33,7 @@ const Footer = () => {
       </Grid>
       <Box sx={{ mb: 4 }} />
       <Box sx={{ textAlign: "center" }}>
-        <Typography
-          variant="caption"
-          align="center"
-        >{`© Junhong Wang ${year}`}</Typography>
+        <Typography variant="caption">{`© Junhong Wang ${year}`}</Typography>
       </Box>
     </Root>
   );

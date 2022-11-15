@@ -17,13 +17,13 @@ import CloseIcon from "@mui/icons-material/Close";
 const Layout = ({ children }) => {
   return (
     <Container>
-      <Box sx={{ pt: 3 }} />
+      <Box sx={{ pt: 4 }} />
       <Header />
       <Box sx={{ mb: 16 }} />
       {children}
       <Box sx={{ mb: 16 }} />
       <Footer />
-      <Box sx={{ mb: 3 }} />
+      <Box sx={{ pb: 4 }} />
     </Container>
   );
 };
