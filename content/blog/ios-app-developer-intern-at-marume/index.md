@@ -17,3 +17,5 @@ Here are some highlights of what I implemented:
 - **Profile**: I created an user profile page where they can review what products they reviewed. They can also check their followers and followees in the page.
 
     ![profile](./marume-profile.jpeg)
+
+I still didn't know exactly what I was doing at the end of the internship, but I was glad that I at leasted exposed myself to the software industry. When you learn a new programming language, the first task you do is to print "Hello World!" to the console. This internship was the "Hello World!" of my software engineering career.
