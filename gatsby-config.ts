@@ -5,9 +5,9 @@ const config: GatsbyConfig = {
     title: "Junhong Wang",
     author: {
       name: "Junhong Wang",
-      summary: "I'm Junhong. I'm a Software Engineer based in LA. I specialize in full stack web development and writing readable code.",
+      summary: "I'm Junhong Wang. I'm a Software Engineer based in LA. I specialize in full stack web development and writing readable code.",
     },
-    description: "This is Junhong Wang's portfolio website. Junhong is a Software Engineer based in LA. He specializes in full stack web development and writing readable code. He is currently working at AppFolio.",
+    description: "This is Junhong Wang's portfolio website. Junhong Wang is a Software Engineer based in LA. He specializes in full stack web development and writing readable code. He is currently working at AppFolio.",
     siteUrl: `https://www.junhong.wang/`
   },
   plugins: [
