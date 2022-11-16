@@ -4,6 +4,13 @@ import Bio from "../components/Bio";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import { Box, Container, Link } from "@mui/material";
+import styled from "@emotion/styled";
+
+const Section = styled.section`
+  & svg path {
+    fill: ${(props) => props.theme.palette.text.primary};
+  }
+`;
 
 const BlogPostTemplate = ({
   data: { previous, next, markdownRemark: post },
@@ -16,7 +23,7 @@ const BlogPostTemplate = ({
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
             <p>{post.frontmatter.date}</p>
           </header>
-          <section
+          <Section
             dangerouslySetInnerHTML={{ __html: post.html }}
             itemProp="articleBody"
           />
