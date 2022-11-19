@@ -238,3 +238,42 @@ The first bullet point of mind blowing to me because I used to think "testing pu
 > _source: [Software Engineering at Google chapter 12](https://abseil.io/resources/swe-book/html/ch12.html)_
 
 This section of the book is a gem. At AppFolio, or at least in my current team, we do interaction testing heavily. The tests break when we introduce a small change most of the time, but now that I think about it, it was affecting our team's productivity negatively.
+
+### Don't Put Logic in Tests
+
+> Clear tests are trivially correct upon inspection; that is, it is obvious that a test is doing the correct thing just from glancing at it. This is possible in test code because each test needs to handle only a particular set of inputs, whereas production code must be generalized to handle any input. For production code, we're able to write tests that ensure complex logic is correct. But test code doesn't have that luxury -- if you feel like you need to write a test to verify your test, something has to gone wrong!
+>
+> Complexity is most often introduced in the form of _logic_. Logic is defined via the imperative parts of programming languages such as operators, loops, and conditionals. When a piece of code contains logic, you need to do a bit of mental computation to determine its result instead of just reading it off of the screen. It doesn't take much logic to make a test more difficult to reason about. For example, does the test in Example 12-15 look correct to you (https://oreil.ly/yJDqh)?
+>
+> _Example 12-15. Logic concealing a bug_
+>
+> ```java
+> @Test
+> public void shouldNavigateToAlbumsPage() {
+>   String baseUrl = "http://photos.google.com/";
+>   Navigator nav = new Navigator(baseUrl);
+>   nav.goToAlbumPage();
+>   assertThat(nav.getCurrentUrl()).isEqualTo(baseUrl + "/albums"); 
+> }
+> ```
+>
+> There's not much logic here: really just one string concatenation. But if we simplify the test by removing that one bit of logic, a bug immediately becomes clear, as demonstrated in Example 12-16.
+>
+> _Example 12-16. A text without logic reveals the bug_
+>
+> ```java
+> @Test
+> public void shouldNavigateToPhotosPage() {
+>   Navigator nav = new Navigator("http://photos.google.com/");
+>   nav.goToPhotosPage();
+>   assertThat(nav.getCurrentUrl()).isEqualTo("http://photos.google.com//albums"); // Oops! 
+> }
+> ```
+> 
+> When the whole string is written out, we can see right away that we're expecting two slashes in the URL instead of just one. If the production code made a similar mistake, this test would fail to detect a bug. Duplicating the base URL was a small price to pay for making the test more descriptive and meaningful (see the discussion of DAMP versus DRY tests later in this chapter).
+>
+> If humans are bad at spotting bugs from string concatenation, we're ven worse at spotting bugs that come from more sophisticated programming constrcuts like loops and conditionals. The lession is clear: in test code, stick to straight-line code over clever logic, and consider tolerating some duplication when it makes the test more descriptive and meaningful. We'll discuss ideas around duplication and code sharing later in this chapter.
+>
+> _source: [Software Engineering at Google chapter 12](https://abseil.io/resources/swe-book/html/ch12.html)_
+
+What's being written in this section all makes sense. I'm very glad the authors were able to put them in words because I wouldn't be able to -- Logics help us generalize our code in production with the cost of additional complexity. We generally don't need logics in tests because we only need to handle a specific input.
