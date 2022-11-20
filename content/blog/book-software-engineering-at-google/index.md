@@ -294,8 +294,61 @@ At AppFolio, we already follow this pattern of creating shared objects, but we d
 
 ### Shared Setup
 
-...
+> A related way tha t tests shared code is via setup/initialization logic.  Many test frameworks allow engineers to define methods to execute before each test in a suite is run. Used appropriately, these methods can make tests clearer and more concise by obviating the repetition of tedious and irrelevant initialization logic. Used inappropriately, these methods can harm a test’s completeness by hiding important details in a separate initialization method.
+>
+> The best use case for setup methods is to construct the object under tests and its collaborators. This is useful when the majority of tests don’t care about the specific arguments used to construct those objects and can let them stay in their default states. The same idea also applies to stubbing return values for test doubles, which is a concept that we explore in more detail in Test Doubles.
+>
+> One risk in using setup methods is that they can lead to unclear tests if those tests begin to depend on the particular values used in setup. For example, the test in Dependencies on values in setup methods seems incomplete because a reader of the test needs to go hunting to discover where the string "Donald Knuth" came from.
+>
+> Example 12-23. Dependencies on values in setup methods
+>
+> ```java
+> private NameService nameService;
+> private UserStore userStore;
+> 
+> @Before
+> public void setUp() {
+>   nameService = new NameService();
+>   nameService.set("user1", "Donald Knuth");
+>   userStore = new UserStore(nameService);
+> }
+>
+> // [... hundreds of lines of tests ...]
+>
+> @Test
+> public void shouldReturnNameFromService() {
+>   UserDetails user = userStore.get("user1");
+>   assertThat(user.getName()).isEqualTo("Donald Knuth");
+> }
+> ```
+>
+> Tests like these that explicitly care about particular values should state those values directly, overriding the default defined in the setup method if need be. The resulting test contains slightly more repetition, as shown in Overriding values in setup methods, but the result is far more descriptive and meaningful.
+>
+> _source: [Software Engineering at Google chapter 12](https://abseil.io/resources/swe-book/html/ch12.html)_
+
+This makes sense. I used to be not sure about what code should go in setup vs the test body. My philosophy was that try as much code as possible to put code in test body to be DAMP. For example, I would put `nameService = new NameService();` in every test. But appearently, it's okay to put a simple construction like this in the setup.
 
 ### Shared Helpers and Validation
 
-...
+> The last common way that code is shared across tests is via "helper methods" called from the body of the test methods.   We already discussed how helper methods can be a useful way for concisely constructing test values—this usage is warranted, but other types of helper methods can be dangerous.
+>
+> One common type of helper is a method that performs a common set of assertions against a system under test.   The extreme example is a validate method called at the end of every test method, which performs a set of fixed checks against the system under test. Such a validation strategy can be a bad habit to get into because tests using this approach are less behavior driven. With such tests, it is much more difficult to determine the intent of any particular test and to infer what exact case the author had in mind when writing it. When bugs are introduced, this strategy can also make them more difficult to localize because they will frequently cause a large number of tests to start failing.
+>
+> More focused validation methods can still be useful, however. The best validation helper methods assert a single conceptual fact about their inputs, in contrast to general-purpose validation methods that cover a range of conditions. Such methods can be particularly helpful when the condition that they are validating is conceptually simple but requires looping or conditional logic to implement that would reduce clarity were it included in the body of a test method. For example, the helper method in A conceptually simple test might be useful in a test covering several different cases around account access.
+>
+> Example 12-25. A conceptually simple test
+>
+> ```java
+> private void assertUserHasAccessToAccount(User user, Account account) {
+>   for (long userId : account.getUsersWithAccess()) {
+>     if (user.getId() == userId) {
+>       return;
+>     }
+>   }
+>   fail(user.getName() + " cannot access " + account.getName());
+> }
+> ```
+>
+> _source: [Software Engineering at Google chapter 12](https://abseil.io/resources/swe-book/html/ch12.html)_
+
+Good stuff here. I used to not know what logic is allowed to be a helper function in tests. But looks like if the assertion concept involves complex logic like `if/else` or `loop`, then should be a helper function. 
