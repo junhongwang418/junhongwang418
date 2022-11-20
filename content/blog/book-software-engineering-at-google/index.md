@@ -277,3 +277,25 @@ This section of the book is a gem. At AppFolio, or at least in my current team, 
 > _source: [Software Engineering at Google chapter 12](https://abseil.io/resources/swe-book/html/ch12.html)_
 
 What's being written in this section all makes sense. I'm very glad the authors were able to put them in words because I wouldn't be able to -- Logics help us generalize our code in production with the cost of additional complexity. We generally don't need logics in tests because we only need to handle a specific input.
+
+### Shared Values
+
+> Engineers are usually drawn to using shared constants because constructing individual values in each test can be verbose. A better way to accomplish this goal is to construct data using helper methods (https://oreil.ly/Jc4VJ) (see Example 12-22) that require the test author to specify only values they care about, and setting reasonable defaults for all other values. This construction is trivial to do in languages that support named parameters, but language without named parameters can use constructs such as the _Builder_ pattern to emulate them (often with the assistance of tools such as AutoValue (http://oreil.ly.cVYK6)):
+> 
+> ...
+> 
+> In many cases, it can even be useful to slightly randomize the default values returned for fields that aren't explicitly set. This helps to ensure that two different instances won't accidentally compare as equal, and makes it more difficult for engineers to hardcode dependencies on the defaults.
+>
+> _source: [Software Engineering at Google chapter 12](https://abseil.io/resources/swe-book/html/ch12.html)_
+
+At AppFolio, we already follow this pattern of creating shared objects, but we don't do randomization for the defaults. 
+
+💡 Idea: I might introduce this randomization feature to my team.
+
+### Shared Setup
+
+...
+
+### Shared Helpers and Validation
+
+...
