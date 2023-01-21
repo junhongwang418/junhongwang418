@@ -45,3 +45,32 @@ This is an idea I kinda knew, but didn't know how to put it in words. Hash is us
 > _source: Designing Data-Intensive Applications chapter 4_ 
 
 I originally thought DB driver is for installing a protocol the database uses. But it makes much more sense that a driver is a layer for encoding/decoding. Different database systems store the serialized data differently.
+
+### Partitioning
+
+Chapter 6 explains how database partitioning (sharding) works in theory. This was a very interesting read because I learned about [B-tree](https://en.wikipedia.org/wiki/B-tree), but not partioning in my database class at UCLA.
+
+Paritioning is done by first splitting data into small chunks via primary key (typically ID). We hash the key with a 32-bit hash function (which returns a number between `0` and `2^32 - 1`), then assign ranges of hash keys to database nodes. Using hash allows us to distribute data evenly across partitions. However, range queries will be inefficient because it mostly will need to get the data from multiple partitions.
+
+This example below assumes 2-bit hash function and 2 partitions.
+
+```
+{ id: 1, ... } -> chunk 1 -> partition 1
+{ id: 2, ... } -> chunk 2 -> partition 1
+{ id: 3, ... } -> chunk 3 -> partition 2
+{ id: 4, ... } -> chunk 4 -> partition 2
+{ id: 5, ... } -> chunk 1 -> partition 1
+```
+
+Secondary indexes are paritioned similarly except it stores the id instead of the actual row.
+
+Rebalancing (adding/removing a partition) is done by redefining the assignments of chunks to partitions.
+
+```
+partition 1: chunk 1, chunk 2, chunk 3
+partition 2: chunk 4, chunk 5
+
+new partition: steals chunk 3 from partition 1 and keep chunk 1, 2, 4, 5 intact
+```
+
+_source: Designing Data-Intensive Applications chapter 6_ 
