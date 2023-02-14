@@ -8,5 +8,6 @@ I was promoted from Software Engineer to Software Engineer II in August 2022.
 
 ### 🌟 Highlights
 
-- Build next-gen revenue management software.
-- First team to use [RBS](https://github.com/ruby/rbs).
+- Build prototype of next-gen revenue management software.
+- Introduce [RBS](https://github.com/ruby/rbs) to revenue management team.
+- Introduce [BFF pattern](https://samnewman.io/patterns/architectural/bff/) to revenue management team.
