@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <VStack>
       <VStack
-        className="max-w-[980px] mx-auto space-y-2 justify-center"
+        className="max-w-[980px] mx-auto space-y-2 justify-center translate-y-[-28px]"
         style={{ height: "calc(100vh - 56px)" }}
       >
         <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]">
