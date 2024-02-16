@@ -5,6 +5,9 @@ import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "next-themes";
 import { Providers } from "@/components/Providers";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { cn } from "@/lib/cn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={cn("dark", GeistSans.variable)}
+      suppressHydrationWarning
+    >
       <body className={inter.className}>
         <Providers>
           <Header />
