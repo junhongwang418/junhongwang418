@@ -1,7 +1,6 @@
 ---
 title: Software Engineer II at AppFolio
 date: "2023-06-27"
-description: In this blog post, I summarize key achievements during my time at AppFolio as Software Engineer II.
 ---
 
 I was promoted from Software Engineer to Software Engineer II in August 2022.

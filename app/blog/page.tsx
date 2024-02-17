@@ -9,6 +9,7 @@ import {
 import { getSortedPostsData } from "@/lib/posts";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { format } from "date-fns";
 
 export const metadata: Metadata = {
   title: "Blog | Junhong Wang",
@@ -16,8 +17,8 @@ export const metadata: Metadata = {
     "I'm Junhong Wang, an LA-based Software Engineer specializing in web, iOS, and desktop app development.",
 };
 
-export default function Blog() {
-  const posts = getSortedPostsData();
+export default async function Blog() {
+  const posts = await getSortedPostsData();
 
   return (
     <VStack className="container max-w-[980px] mx-auto py-24">
@@ -25,13 +26,18 @@ export default function Blog() {
         {posts.map((post) => (
           <Card key={post.id} className="flex flex-col">
             <CardHeader>
-              <div className="text-neutral-500 text-sm">{post.date}</div>
+              <div className="text-neutral-500 text-sm">
+                {format(post.date, "MMMM do, yyyy")}
+              </div>
               <h2 className="font-bold hover:text-foreground text-foreground/80">
                 <Link href={`/blog/${post.id}`}>{post.title}</Link>
               </h2>
             </CardHeader>
             <CardContent>
-              <div className="text-[15px]">{post.description}</div>
+              <div
+                className="prose dark:prose-invert prose-sm"
+                dangerouslySetInnerHTML={{ __html: post.previewHtml }}
+              />
             </CardContent>
             <Spacer />
             <CardFooter>

@@ -1,10 +1,9 @@
 ---
 title: iOS App Developer Intern at TeamLab
 date: "2018-10-01"
-description: In this blog post, I summarize key achievements during my time at TeamLab as an iOS App Developer intern.
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cLFaLSaN9b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="w-full h-full" style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/cLFaLSaN9b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I joined [TeamLab](https://www.teamlab.art/)'s iOS app development team to build a shopping app for [BigCamera](https://www.biccamera.com/bc/main/), one of the largest electronics retailers in Japan (kind of like [BestBuy](https://www.bestbuy.com/)).
 

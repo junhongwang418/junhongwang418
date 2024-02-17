@@ -1,10 +1,9 @@
 ---
 title: Software Engineer at AppFolio
 date: "2022-09-01"
-description: In this blog post, I summarize key achievements during my time at AppFolio as Software Engineer.
 ---
 
-I accepted the return offer from AppFolio after [the internship](/software-engineer-intern-at-appfolio). I continued to develop the leasing scheduling AI — Lisa.
+I accepted the return offer from AppFolio after [the internship](/blog/2020-10-01-software-engineer-intern-at-appfolio). I continued to develop the leasing scheduling AI — Lisa.
 
 I became a key contributor of the lisa repo. Here are some of the impacts I made:
 

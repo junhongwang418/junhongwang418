@@ -1,6 +1,5 @@
 ---
 title: Software Engineer Intern at AppFolio
-description: In this blog post, I summarize my experience at AppFolio as a Software Engineer intern and explain what I worked on in details.
 date: "2020-10-01"
 ---
 

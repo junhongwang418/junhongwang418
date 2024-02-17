@@ -7,6 +7,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { Metadata, ResolvingMetadata } from "next";
+import { format } from "date-fns";
 
 export async function generateStaticParams() {
   const posts = await getSortedPostsData();
@@ -39,7 +40,7 @@ export async function generateMetadata(
 
   return {
     title: post.data.title,
-    description: post.data.description,
+    description: post.description,
   };
 }
 
@@ -67,11 +68,13 @@ export default async function Post(props: PostProps) {
         </Link>
       </div>
       <VStack className="border-b pb-4 space-y-3">
-        <div className="text-neutral-500 text-sm">{post.data.date}</div>
+        <div className="text-neutral-500 text-sm">
+          {format(post.data.date, "MMMM do, yyyy")}
+        </div>
         <h2 className="text-xl md:text-3xl font-bold">{post.data.title}</h2>
       </VStack>
       <div
-        className="prose dark:prose-invert max-w-none"
+        className="prose dark:prose-invert max-w-none prose-img:rounded prose-img:mx-auto"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </VStack>

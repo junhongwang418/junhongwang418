@@ -20,9 +20,7 @@ export const ExperienceRow = (props: ExperienceRowProps) => {
     <VStack className="space-y-1">
       <VStack>
         <div className="font-bold text-lg dark:text-neutral-200 text-neutral-800">
-          {jobTitle}
-        </div>
-        <div>
+          {jobTitle}{" "}
           <Link
             className="hover:text-foreground/80 text-foreground/60 font-bold hover:underline"
             href={employerHref}
@@ -33,13 +31,15 @@ export const ExperienceRow = (props: ExperienceRowProps) => {
         </div>
         <div className="text-sm text-neutral-500">{period}</div>
       </VStack>
-      <div className="text-neutral-500">{description}</div>
-      <Link href={`/blog/${postSlug}`}>
-        <HStack className="space-x-1 text-sm hover:text-foreground/80 text-foreground/60">
-          <span>Read More</span>
-          <ArrowRight size={16} />
-        </HStack>
-      </Link>
+      <div className="text-neutral-500">
+        {description}{" "}
+        <Link href={`/blog/${postSlug}`}>
+          <HStack className="space-x-1 text-sm hover:text-foreground/80 text-foreground/60 inline-flex">
+            <span>Read More</span>
+            <ArrowRight size={16} />
+          </HStack>
+        </Link>
+      </div>
     </VStack>
   );
 };

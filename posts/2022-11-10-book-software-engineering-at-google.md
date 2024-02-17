@@ -1,12 +1,11 @@
 ---
 title: "book: Software Engineering at Google"
 date: "2022-11-10"
-description: In this blog post, I share my key takeaways from Software Engineering at Google.
 ---
 
 This is my note/review of [Software Engineering at Google](https://www.oreilly.com/library/view/software-engineering-at/9781492082781/).
 
-Here are some Google's software engineering best practices I decided to follow:
+Here are some Google's software engineering best practices I decided to follow.
 
 ### Optimize for the reader
 

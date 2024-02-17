@@ -1,10 +1,11 @@
 ---
 title: "book: Designing Data-Intensive Applications"
 date: "2022-12-08"
-description: In this blog post, I share my key takeaways from Designing Data-Intensive Applications.
 ---
 
 This is my note/review of [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/).
+
+Here are my key takeaways from the book.
 
 ### Convergence of relational and document databases
 
