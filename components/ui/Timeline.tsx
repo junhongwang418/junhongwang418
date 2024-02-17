@@ -41,7 +41,7 @@ const Timeline: React.FC<TimelineProps> = ({ children }) => {
           <div className="flex flex-col space-y-4 items-center">
             <TimelineDot />
             {index < timelineItems.length - 1 && (
-              <div className={cn("w-[3px] bg-neutral-500 grow")}></div>
+              <div className={cn("w-[3px] bg-neutral-500 grow rounded")}></div>
             )}
           </div>
           {child}

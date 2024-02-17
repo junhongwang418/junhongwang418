@@ -3,6 +3,7 @@ import { ExperienceRow } from "@/components/ExperienceRow";
 import { HStack } from "@/components/HStack";
 import { VStack } from "@/components/VStack";
 import { Timeline, TimelineItem } from "@/components/ui/Timeline";
+import { Topic } from "@/lib/topic";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -39,6 +40,17 @@ export default function Home() {
               description="Made key contributions to deliver the MVP of revenue management. Continued to integrate Lisa into APM."
               employerHref="https://www.appfolio.com/"
               postSlug="2023-06-27-software-engineer-II-at-appfolio"
+              topics={[
+                Topic.Java,
+                Topic.TypeScript,
+                Topic.React,
+                Topic.NextJS,
+                Topic.Ruby,
+                Topic.Rails,
+                Topic.GraphQL,
+                Topic.MySQL,
+                Topic.AWS,
+              ]}
             />
           </TimelineItem>
           <TimelineItem className="items-start">
@@ -49,6 +61,17 @@ export default function Home() {
               description="Built AI Leasing Assistant — Lisa. Lisa was patented in 2023 (US-11615463-B2)."
               employerHref="https://www.appfolio.com/"
               postSlug="2022-09-01-software-engineer-at-appfolio"
+              topics={[
+                Topic.Java,
+                Topic.TypeScript,
+                Topic.React,
+                Topic.GraphQL,
+                Topic.MySQL,
+                Topic.Jetty,
+                Topic.Python,
+                Topic.Terrraform,
+                Topic.AWS,
+              ]}
             />
           </TimelineItem>
           <TimelineItem className="items-start">
@@ -59,6 +82,15 @@ export default function Home() {
               description="Optimized GraphQL/MySQL queries and reduced the server CPU utilization by 20%. Integrated GraphQL Subscription with AWS API Gateway WebSocket and reduced the load on the server significantly."
               employerHref="https://www.appfolio.com/"
               postSlug="2020-10-01-software-engineer-intern-at-appfolio"
+              topics={[
+                Topic.TypeScript,
+                Topic.React,
+                Topic.Java,
+                Topic.Jetty,
+                Topic.GraphQL,
+                Topic.MySQL,
+                Topic.AWS,
+              ]}
             />
           </TimelineItem>
           <TimelineItem className="items-start">
@@ -69,6 +101,7 @@ export default function Home() {
               description="Enhanced Graph editing features and increased modeling efficiency/usability. Invented a tree traversal algorithm to navigate users building event trees."
               employerHref="https://www.risksciences.ucla.edu/"
               postSlug="2019-10-01-software-developer-intern-at-girs"
+              topics={[Topic.TypeScript, Topic.React, Topic.MaterialUI]}
             />
           </TimelineItem>
           <TimelineItem className="items-start">
@@ -79,6 +112,7 @@ export default function Home() {
               description="Ranked #23 in the App Store for the shopping category in Japan. Displayed personalized products based on user preferences and purchase histories. Implement skeleton views and tutorial pages."
               employerHref="https://www.teamlab.art/"
               postSlug="2018-10-01-ios-app-developer-intern-at-teamlab"
+              topics={[Topic.Swift, Topic.RxSwift, Topic.ReSwift]}
             />
           </TimelineItem>
           <TimelineItem className="items-start">
@@ -89,6 +123,7 @@ export default function Home() {
               description="Developed a product review app in a team of 2 using Swift that helps consumers make wise purchase decisions. Updated designs of buttons and layouts and built profile pages from scratch."
               employerHref="https://www.linkedin.com/company/maru-me/about/"
               postSlug="2016-09-01-ios-app-developer-intern-at-marume"
+              topics={[Topic.Swift, Topic.PHP]}
             />
           </TimelineItem>
         </Timeline>
