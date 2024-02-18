@@ -119,7 +119,7 @@ export default function Home() {
             <ExperienceRow
               jobTitle="iOS App Developer Intern"
               employer="MaruMe"
-              period="July 2018 - September 2018"
+              period="June 2016 - August 2016"
               description="Developed a product review app in a team of 2 using Swift that helps consumers make wise purchase decisions. Updated designs of buttons and layouts and built profile pages from scratch."
               employerHref="https://www.linkedin.com/company/maru-me/about/"
               postSlug="2016-09-01-ios-app-developer-intern-at-marume"
