@@ -35,6 +35,16 @@ export const ExperienceRow = (props: ExperienceRowProps) => {
           {jobTitle}
         </Link>
       </div>
+      <HStack className="space-x-2">
+        <Link
+          className="text-sm hover:text-foreground/80 text-foreground/60 font-medium hover:underline"
+          href={employerHref}
+          target="_blank"
+        >
+          @{employer}
+        </Link>
+        <div className="text-sm text-neutral-500">{period}</div>
+      </HStack>
       <div className="text-neutral-500">{description}</div>
       <HStack className="flex-wrap gap-1">
         {topics.map((topic) => (
@@ -47,16 +57,6 @@ export const ExperienceRow = (props: ExperienceRowProps) => {
             </Badge>
           </Link>
         ))}
-      </HStack>
-      <HStack className="space-x-2">
-        <Link
-          className="text-sm hover:text-foreground/80 text-foreground/60 font-medium hover:underline"
-          href={employerHref}
-          target="_blank"
-        >
-          @{employer}
-        </Link>
-        <div className="text-sm text-neutral-500">{period}</div>
       </HStack>
     </VStack>
   );
