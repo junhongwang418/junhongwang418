@@ -26,7 +26,7 @@ export default async function Blog() {
         {posts.map((post) => (
           <Card key={post.id} className="flex flex-col">
             <CardHeader>
-              <div className="text-neutral-500 text-sm">
+              <div className="text-primary/50 text-sm">
                 {format(post.date, "MMMM do, yyyy")}
               </div>
               <h2 className="font-bold hover:text-foreground text-foreground/80">

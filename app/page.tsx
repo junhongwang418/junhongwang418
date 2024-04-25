@@ -28,10 +28,34 @@ export default function Home() {
         </span>
       </VStack>
       <VStack className="max-w-[980px] mx-auto container space-y-8 pb-24">
-        <h2 className="text-xl md:text-3xl font-bold dark:text-neutral-200 text-neutral-800 text-center">
+        <h2 className="text-xl md:text-3xl font-bold text-primary/90 text-center">
           Where I’ve Worked
         </h2>
         <Timeline>
+          <TimelineItem className="items-start">
+            <ExperienceRow
+              jobTitle="Software Engineer"
+              employer="StealthStartup"
+              period="July 2023 - Present"
+              description="Early employee of YC Winter 2023 tech startup."
+              employerHref="https://www.linkedin.com/company/stealth-startup-51/"
+              postSlug=""
+              topics={[
+                Topic.Electron,
+                Topic.NextJS,
+                Topic.TRPC,
+                Topic.React,
+                Topic.TypeScript,
+                Topic.TailwindCSS,
+                Topic.Vercel,
+                Topic.AWS,
+                Topic.PostgreSQL,
+                Topic.GraphQL,
+                Topic.Swift,
+                Topic.SwiftUI,
+              ]}
+            />
+          </TimelineItem>
           <TimelineItem className="items-start">
             <ExperienceRow
               jobTitle="Software Engineer II"
@@ -129,7 +153,7 @@ export default function Home() {
         </Timeline>
       </VStack>
       <VStack className="max-w-[980px] mx-auto container space-y-8 pb-24">
-        <h2 className="text-xl md:text-3xl font-bold dark:text-neutral-200 text-neutral-800 text-center">
+        <h2 className="text-xl md:text-3xl font-bold text-primary/90 text-center">
           Where I studied
         </h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">

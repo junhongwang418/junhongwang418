@@ -18,17 +18,15 @@ export const EducationRow = (props: EducationRowProps) => {
 
   return (
     <Link href={href} target="_blank">
-      <Card className="hover:opacity-80 hover:bg-opacity-80">
+      <Card className="opacity-80 hover:opacity-100 bg-opacity-80 hover:bg-opacity-100">
         <CardHeader>
           <img src={logoSrc} width="48" height="48" />
         </CardHeader>
         <CardContent>
           <VStack>
-            <div className="text-lg font-bold dark:text-neutral-200 text-neutral-800">
-              {school}
-            </div>
-            <div className="text-neutral-500 texs-sm">{degree}</div>
-            <div className="text-neutral-500 text-sm">{graduationDate}</div>
+            <div className="text-lg font-bold text-foregound">{school}</div>
+            <div className="text-primary/50 texs-sm">{degree}</div>
+            <div className="text-primary/50 text-sm">{graduationDate}</div>
           </VStack>
         </CardContent>
       </Card>

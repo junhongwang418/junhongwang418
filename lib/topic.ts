@@ -16,6 +16,12 @@ export enum Topic {
   PHP,
   AWS,
   Terrraform,
+  TailwindCSS,
+  Vercel,
+  Electron,
+  TRPC,
+  SwiftUI,
+  PostgreSQL,
 }
 
 export function topicDisplayName(topic: Topic): string {
@@ -54,6 +60,18 @@ export function topicDisplayName(topic: Topic): string {
       return "aws";
     case Topic.Terrraform:
       return "terraform";
+    case Topic.TailwindCSS:
+      return "tailwindcss";
+    case Topic.Vercel:
+      return "vercel";
+    case Topic.Electron:
+      return "electron";
+    case Topic.TRPC:
+      return "trpc";
+    case Topic.SwiftUI:
+      return "swiftui";
+    case Topic.PostgreSQL:
+      return "postgresql";
   }
 }
 
@@ -93,5 +111,17 @@ export function topicLink(topic: Topic): string {
       return "https://aws.amazon.com/";
     case Topic.Terrraform:
       return "https://www.terraform.io/";
+    case Topic.TailwindCSS:
+      return "https://tailwindcss.com/";
+    case Topic.Vercel:
+      return "https://vercel.com/";
+    case Topic.Electron:
+      return "https://www.electronjs.org/";
+    case Topic.TRPC:
+      return "https://trpc.io/";
+    case Topic.SwiftUI:
+      return "https://developer.apple.com/xcode/swiftui/";
+    case Topic.PostgreSQL:
+      return "https://www.postgresql.org/";
   }
 }

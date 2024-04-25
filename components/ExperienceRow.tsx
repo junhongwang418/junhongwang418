@@ -43,9 +43,9 @@ export const ExperienceRow = (props: ExperienceRowProps) => {
         >
           @{employer}
         </Link>
-        <div className="text-sm text-neutral-500">{period}</div>
+        <div className="text-sm text-primary/50">{period}</div>
       </HStack>
-      <div className="text-neutral-500">{description}</div>
+      <div className="text-primary/50">{description}</div>
       <HStack className="flex-wrap gap-1">
         {topics.map((topic) => (
           <Link key={topic} href={topicLink(topic)} target="_blank">

@@ -68,7 +68,7 @@ export default async function Post(props: PostProps) {
         </Link>
       </div>
       <VStack className="border-b pb-4 space-y-3">
-        <div className="text-neutral-500 text-sm">
+        <div className="text-primary/50 text-sm">
           {format(post.data.date, "MMMM do, yyyy")}
         </div>
         <h2 className="text-xl md:text-3xl font-bold">{post.data.title}</h2>
