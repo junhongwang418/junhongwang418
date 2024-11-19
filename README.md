@@ -4,6 +4,7 @@ I'm Junhong Wang, an LA-based Software Engineer specializing in web, iOS, and de
 
 #### 💼 Work Experience
 
+- Software Engineer: [Stealth Startup](https://www.linkedin.com/company/stealth-startup-51/) · July 2023 - Present · Los Angeles, CA.
 - Software Engineer II: [AppFolio, Inc](https://www.appfolio.com/) · Aug 2022 - Present · Los Angeles, CA.
 - Software Engineer: [AppFolio, Inc](https://www.appfolio.com/) · May 2021 - Aug 2022 · Los Angeles, CA.
 - Software Engineer Intern: [AppFolio, Inc](https://www.appfolio.com/) · Jun 2020 - Sep 2020 · Los Angeles, CA.
@@ -19,5 +20,5 @@ I'm Junhong Wang, an LA-based Software Engineer specializing in web, iOS, and de
 
 #### 📚 Education
 
-- [University of California, Los Angeles.](https://www.ucla.edu/): Bachelor of Science in Computer Science. March 2021.
+- [University of California, Los Angeles](https://www.ucla.edu/): Bachelor of Science in Computer Science. March 2021.
 - [Berkeley City College](https://www.berkeleycitycollege.edu/): Associate of Science in Mathematics. May 2018.
