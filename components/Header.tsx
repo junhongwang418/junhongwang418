@@ -1,118 +1,85 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-import { HStack } from "./HStack";
 import Link from "next/link";
-import {
-  ExternalLink,
-  GanttChart,
-  Github,
-  Linkedin,
-  MoonIcon,
-  SunIcon,
-  Terminal,
-  TerminalSquare,
-} from "lucide-react";
-import { cn } from "@/lib/cn";
-import { Spacer } from "./Spacer";
-import { Button } from "./ui/Button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/DropdownMenu";
-import { useTheme } from "next-themes";
+import { FileText } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
-export default function Header() {
-  const pathname = usePathname();
+const primaryLinks = [
+  { href: "/ucla", label: "UCLA" },
+  { href: "/appfolio", label: "AppFolio" },
+  { href: "/stealth-startup", label: "Stealth Startup" },
+];
 
-  const { setTheme, resolvedTheme } = useTheme();
+const profileLinks = [
+  {
+    href: "https://github.com/junhongwang418",
+    label: "GitHub",
+    shortLabel: "GH",
+  },
+  {
+    href: "https://www.linkedin.com/in/junhongwang/",
+    label: "LinkedIn",
+    shortLabel: "in",
+  },
+];
 
+export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <HStack className="w-full space-x-2 container flex h-14 max-w-screen-2xl items-center">
-        <Link className="font-bold text-md p-2" href="/">
-          <HStack className="space-x-2">
-            <TerminalSquare />
-            <span>JW</span>
-          </HStack>
-        </Link>
-        <Link
-          className={cn(
-            "text-sm transition-colors hover:text-foreground/80",
-            pathname.startsWith("/blog")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-          href="/blog"
-        >
-          Blog
-        </Link>
-        <Spacer />
-        <HStack className="space-x-2">
+    <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/75">
+      <nav className="mx-auto grid max-w-[980px] grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-2 px-4 py-3 sm:flex sm:min-h-14 sm:flex-nowrap sm:px-6">
+        <div className="flex min-w-0 items-center gap-5 sm:flex-1">
+          <Link className="shrink-0 text-sm font-medium" href="/">
+            Junhong Wang
+          </Link>
+          <div className="hidden items-center gap-4 sm:flex">
+            {primaryLinks.map((link) => (
+              <Link
+                className="text-sm text-foreground/70 hover:text-foreground"
+                href={link.href}
+                key={link.href}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="ml-auto flex shrink-0 items-center gap-1 sm:gap-3">
+          {profileLinks.map((link) => (
+            <Link
+              aria-label={link.label}
+              className="inline-flex h-8 min-w-8 items-center justify-center rounded-md border border-border bg-background px-2 text-xs font-medium text-foreground/80 hover:bg-accent hover:text-accent-foreground sm:h-auto sm:min-w-0 sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0 sm:text-sm sm:font-normal sm:text-foreground/70 sm:hover:bg-transparent sm:hover:text-foreground"
+              href={link.href}
+              key={link.href}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <span className="hidden sm:inline">{link.label}</span>
+              <span className="font-medium sm:hidden">{link.shortLabel}</span>
+            </Link>
+          ))}
           <Link
-            className="text-sm transition-colors hover:text-foreground/80 text-foreground/60"
+            aria-label="Resume"
+            className="inline-flex h-8 min-w-8 items-center justify-center rounded-md border border-border bg-background px-2 text-sm text-foreground/80 hover:bg-accent hover:text-accent-foreground sm:h-auto sm:min-w-0 sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0 sm:text-foreground/70 sm:hover:bg-transparent sm:hover:text-foreground"
             href="/resume.pdf"
             target="_blank"
           >
-            <HStack className="space-x-1">
-              <span>Resume</span>
-              <ExternalLink size={14} />
-            </HStack>
+            <span className="hidden sm:inline">Resume</span>
+            <FileText className="h-4 w-4 sm:hidden" />
           </Link>
-          <HStack>
-            <Link href="https://github.com/junhongwang418" target="_blank">
-              <Button variant="ghost" size="icon" asChild>
-                <span>
-                  <Github size={16} />
-                </span>
-              </Button>
-            </Link>
+          <ThemeToggle />
+        </div>
+
+        <div className="col-span-2 flex w-full items-center gap-5 sm:hidden">
+          {primaryLinks.map((link) => (
             <Link
-              href="https://www.linkedin.com/in/junhongwang/"
-              target="_blank"
+              className="text-sm text-foreground/70 hover:text-foreground"
+              href={link.href}
+              key={link.href}
             >
-              <Button variant="ghost" size="icon" asChild>
-                <span>
-                  <Linkedin size={16} />
-                </span>
-              </Button>
+              {link.label}
             </Link>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="w-9 px-0">
-                  <SunIcon
-                    className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
-                    size={16}
-                  />
-                  <MoonIcon
-                    className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
-                    size={16}
-                  />
-                  <span className="sr-only">Toggle theme</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align="end"
-                onCloseAutoFocus={(e) => {
-                  e.preventDefault();
-                }}
-              >
-                <DropdownMenuItem onClick={() => setTheme("light")}>
-                  Light
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
-                  Dark
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("system")}>
-                  System
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </HStack>
-        </HStack>
-      </HStack>
+          ))}
+        </div>
+      </nav>
     </header>
   );
 }
