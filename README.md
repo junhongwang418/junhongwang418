@@ -12,12 +12,6 @@ I'm Junhong Wang, an LA-based Software Engineer specializing in web, iOS, and de
 - iOS App Developer Intern: [TeamLab](https://www.teamlab.art/) · Jul 2018 - Sep 2018 · Tokyo, Japan.
 - iOS App Developer Intern: [MaruMe](https://www.linkedin.com/company/maru-me/about/) · Jun 2016 - Aug 2016 · Berkeley, CA.
 
-#### 🚀 Projects
-
-- [KaiSho](https://kaisho.co/): A web server for my dad's restaurant.
-- [Tycoon](https://github.com/ioneone/tycoon): Real-time multiplayer card game
-- [Museum 3D](https://intro-graphics-master.github.io/term-project-8/): Virtual museum explorer.
-
 #### 📚 Education
 
 - [University of California, Los Angeles](https://www.ucla.edu/): Bachelor of Science in Computer Science. March 2021.
